@@ -154,7 +154,7 @@ ul#SliderList {
   ul#SliderList li.image-container {
     width: 100vw;
     height: 100vh;
-    background: blue no-repeat center /100% 100%; }
+    background: black no-repeat center /100% 100%; }
   ul#SliderList li.navigation-container {
     width: 100%;
     position: absolute;
