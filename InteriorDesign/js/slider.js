@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(e.target.tagName == 'IMG'){
 
 
-
+            body.style.overflow = 'hidden';
             var parentLi = e.target.parentElement;
             var fullscreenDiv = document.createElement('div');
             var htmlCode = '<header class="pages">' + (galleryUlChildrenInitial.indexOf(parentLi) + 1) + '/5</header>' +
@@ -136,9 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 switch (e.target){
                     case fullscreenDiv:
                         body.removeChild(fullscreenDiv);
+                        body.style.overflow = 'auto';
                         break;
                     case exitCross:
                         body.removeChild(fullscreenDiv);
+                        body.style.overflow = 'auto';
                         break;
                     case nextImg:
                         loadNextImg();
