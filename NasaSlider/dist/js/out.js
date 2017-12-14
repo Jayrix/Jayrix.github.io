@@ -10102,6 +10102,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+//brak synchronizacji miedzy this.state.date, a data zdjecia w api wynikajacy z roznicy czasowej
+
 var NasaSlider = function (_React$Component) {
     _inherits(NasaSlider, _React$Component);
 
@@ -10121,25 +10123,31 @@ var NasaSlider = function (_React$Component) {
                     throw new Exception('nie otrzymano obiektu');
                 }
             }).then(function (result) {
-                if (result.media_type !== "image") {
-                    if (_this.prevDateTime < _this.state.date.getTime()) {
-                        console.log('not an image, proceeding to prev apod');
-                        _this.getNextApod(1, result);
+                _this.setState({ date: new Date(result.date) }, function () {
+                    if (result.media_type !== "image") {
+                        if (_this.prevDateTime < _this.state.date.getTime()) {
+                            console.log('not an image, proceeding to prev apod');
+                            _this.getNextApod(1, result);
+                        } else {
+                            console.log('not an image, proceeding to next apod');
+                            _this.getNextApod(-1, result);
+                        }
                     } else {
-                        console.log('not an image, proceeding to next apod');
-                        _this.getNextApod(-1, result);
+                        if (!_this.imagesDatesArr.includes(result.date)) {
+                            _this.imagesDatesArr.push(result.date);
+                        }
+                        console.log(_this.imagesDatesArr);
+                        _this.setState({
+                            apod: result,
+                            imgLoaded: false,
+                            fetchInProgress: false
+                        }, function () {
+                            console.log(_this.state.apod);
+                            _this.addressImg = _this.state.apod.url;
+                            _this.img.src = _this.addressImg;
+                        });
                     }
-                } else {
-                    if (!_this.imagesDatesArr.includes(result.date)) {
-                        _this.imagesDatesArr.push(result.date);
-                    }
-                    console.log(_this.imagesDatesArr);
-                    _this.setState({ apod: result, imgLoaded: false, fetchInProgress: false }, function () {
-                        console.log(_this.state.apod);
-                        _this.addressImg = _this.state.apod.url;
-                        _this.img.src = _this.addressImg;
-                    });
-                }
+                });
             }).catch(function (e) {
                 return console.log("exception: " + e);
             });
