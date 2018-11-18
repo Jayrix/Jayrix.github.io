@@ -1,0 +1,130 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    font-size:16px;
+}
+
+body{
+    height:100vh;
+}
+
+li.announcementRoot {
+    list-style-type: none;
+    
+
+}
+
+h2.announcementTitle{
+    text-align: center;
+    font-size: 4rem;
+    margin: 2vh auto 4vh auto;
+    padding: 0 5% 0 5%;
+    width: 100%;
+    text-transform: uppercase;
+    
+}
+
+
+article.announcementContent{
+    margin-left:10%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+section.overviewSection div.textContainer{
+    display: inline-block;
+    width: 50%;
+    /* margin-right: 10%; */
+    font-size: 1.5rem;
+    vertical-align: top;
+}
+
+div.personData{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 3%;
+}
+
+div.personData h3 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    width: 100%;
+}
+
+div.personData ul.specializationList{
+    width: 100%;
+    
+
+}
+
+div.personData ul.specializationList li{
+    margin-left: 25%;
+    list-style-type: circle;
+    font-weight: 500;
+    
+
+}
+
+section.overviewSection div.imageContainer{
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%;
+    /* vertical-align: top; */
+}
+
+section.overviewSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+}
+
+section.servicesSection {
+    width: 100%;
+}
+
+div.additionalInfo p {
+    font-size: 0.9em;
+}
+
+div.additionalInfo div.appointementInfo {
+    font-size: 1.1em;
+    margin-top: 6%;
+    font-weight: 600;
+
+}
+
+.servicesSection {
+    padding-top:1%;
+}
+
+.servicesSection h3{
+    margin-left: 11%;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.servicesSection ul{
+    margin-left: 0;
+    margin-top: 0.5%;
+    font-size: 1.5rem;
+    
+}
+
+.servicesSection ul ul{
+    margin-top: 0;
+    margin-left: 5%;
+}
+
+
+.servicesSection p:last-of-type{
+    margin-top: 2%;
+    margin-left: 8%;
+    font-size:2.7rem;
+}
