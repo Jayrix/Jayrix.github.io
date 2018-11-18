@@ -23657,7 +23657,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
         _react2.default.createElement(
             "h2",
             { "class": "announcementTitle" },
-            "Otwarcie gabinetu edokrynologicznego od grudnia 2018"
+            "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
         ),
         _react2.default.createElement(
             "article",
@@ -23697,7 +23697,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                         _react2.default.createElement(
                             "p",
                             null,
-                            "Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w poradni endokrynologicznej tamtejszegoo szpitala."
+                            "Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala."
                         ),
                         _react2.default.createElement(
                             "div",
