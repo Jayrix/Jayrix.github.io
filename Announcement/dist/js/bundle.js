@@ -501,6 +501,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 document.addEventListener('DOMContentLoaded', function () {
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
+    window.scroll(0, 0);
+
     setTimeout(function () {
         window.location.reload(true);
     }, 7200000);
