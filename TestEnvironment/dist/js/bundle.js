@@ -522,12 +522,12 @@ function reloadThePage(url) {
             window.location.reload(true);
         } else {
             //console.log("resolved but status is  " + e.target.status)
-            reloadOncePerTime(reloadThePage, url, 2000);
+            reloadOncePerTime(reloadThePage, url, 5000);
         }
     }, function (e) {
         //rejected
         console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 2000);
+        reloadOncePerTime(reloadThePage, url, 5000);
     });
 }
 
@@ -23760,7 +23760,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                 _react2.default.createElement(
                     "div",
                     { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Obrazk przedstawiaj\u0105cy logo endokrynologii", title: "Gabinet Endokrynologiczny" })
+                    _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Endokrynologia", title: "Gabinet Endokrynologiczny" })
                 )
             ),
             _react2.default.createElement(
