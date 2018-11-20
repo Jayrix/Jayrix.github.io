@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         console.log("performing reload...................");
-        reloadThePage("https://jayrix.github.io/Announcement/");
+        reloadThePage("https://jayrix.github.io/TestEnvironment/");
     }, 5000);
 });
 
