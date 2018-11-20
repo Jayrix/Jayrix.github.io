@@ -515,20 +515,22 @@ function reloadOncePerTime(reloadFunction, url, ms) {
 }
 
 function reloadThePage(url) {
-    makeGetRequest(url).then(function (e) {
-        //resolved
-        console.log(e.target.status);
-        if (e.target.status === 200) {
-            window.location.reload(true);
-        } else {
-            //console.log("resolved but status is  " + e.target.status)
+    if (window.navigator.onLine === true) {
+        makeGetRequest(url).then(function (e) {
+            //resolved
+            console.log(e.target.status);
+            if (e.target.status === 200) {
+                window.location.reload(true);
+            } else {
+                //console.log("resolved but status is  " + e.target.status)
+                reloadOncePerTime(reloadThePage, url, 5000);
+            }
+        }, function (e) {
+            //rejected
+            console.log("error " + e.target.status);
             reloadOncePerTime(reloadThePage, url, 5000);
-        }
-    }, function (e) {
-        //rejected
-        console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 5000);
-    });
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
