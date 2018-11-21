@@ -8,14 +8,14 @@
 html {
     font-size:16px;
     overflow: hidden;
-    /* background: rgba(255,255,255,1);
+    background: rgba(255,255,255,1);
 background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(228,242,246,1) 41%, rgba(161,209,222,1) 100%);
 background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(41%, rgba(228,242,246,1)), color-stop(100%, rgba(161,209,222,1)));
 background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(228,242,246,1) 41%, rgba(161,209,222,1) 100%);
 background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(228,242,246,1) 41%, rgba(161,209,222,1) 100%);
 background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(228,242,246,1) 41%, rgba(161,209,222,1) 100%);
 background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(228,242,246,1) 41%, rgba(161,209,222,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a1d1de', GradientType=1 ); */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a1d1de', GradientType=1 );
     
 }
 
