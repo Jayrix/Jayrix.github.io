@@ -514,6 +514,24 @@ function reloadOncePerTime(reloadFunction, url, ms) {
     }, ms);
 }
 
+// function reloadThePage(url) {
+//     makeGetRequest(url)
+//         .then(function (e) {
+//             //resolved
+//             console.log(e.target.status)
+//             if (e.target.status === 200) {
+//                 window.location.reload(true);
+//             } else {
+//                 //console.log("resolved but status is  " + e.target.status)
+//                 reloadOncePerTime(reloadThePage, url, 5000);
+//             }
+//         }, function (e) {
+//             //rejected
+//             console.log("error " + e.target.status)
+//             reloadOncePerTime(reloadThePage, url, 5000);
+//         });
+// }
+
 function reloadThePage(url) {
     makeGetRequest(url).then(function (e) {
         //resolved
@@ -524,7 +542,7 @@ function reloadThePage(url) {
             //console.log("resolved but status is  " + e.target.status)
             reloadOncePerTime(reloadThePage, url, 5000);
         }
-    }, function (e) {
+    }).catch(function (e) {
         //rejected
         console.log("error " + e.target.status);
         reloadOncePerTime(reloadThePage, url, 5000);
