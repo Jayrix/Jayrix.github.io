@@ -547,22 +547,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var isOnline = __webpack_require__(20);
 
 //funkcje odpowiedzialne za odswiezanie
-var reloadIntervalID = void 0;
-
 function makeGetRequest(url) {
-    isOnline().then(function (online) {
-        if (online) {
-            clearInterval(reloadIntervalID);
-            return new Promise(function (resolve, reject) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", url, true);
-                xhr.onload = resolve;
-                xhr.onerror = reject;
-                xhr.send();
-            });
-        } else {
-            console.log("Brak polaczenia z netem");
-        }
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onload = resolve;
+        xhr.onerror = reject;
+        xhr.send();
     });
 }
 
@@ -580,12 +571,12 @@ function reloadThePage(url) {
             window.location.reload(true);
         } else {
             console.log("resolved but status is  " + e.target.status);
-            reloadOncePerTime(reloadThePage, url, 5000);
+            reloadOncePerTime(reloadThePage, url, 300000);
         }
     }, function (e) {
         //rejected
         console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 5000);
+        reloadOncePerTime(reloadThePage, url, 300000);
     });
 }
 
@@ -596,9 +587,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.scroll(0, 0);
 
+    var reloadIntervalID = void 0;
     reloadIntervalID = setInterval(function () {
-        reloadThePage("https://jayrix.github.io/TestEnvironment/");
-    }, 5000);
+        isOnline().then(function (online) {
+            if (online) {
+                clearInterval(reloadIntervalID);
+                console.log("performing reload...................");
+                reloadThePage("https://jayrix.github.io/TestEnvironment/");
+            } else {
+                console.log("Brak połączenia internetowego");
+            }
+        });
+    }, 1800000);
 });
 
 /***/ }),
