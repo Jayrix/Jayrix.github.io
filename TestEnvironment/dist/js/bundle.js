@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (online) {
                 clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
-                reloadThePage("https://jayrix.github.io/TestEnvironment/");
+                reloadThePage("https://wp.pl/");
             } else {
                 console.log("Brak połączenia internetowego");
             }
