@@ -571,12 +571,12 @@ function reloadThePage(url) {
             window.location.reload(true);
         } else {
             console.log("resolved but status is  " + e.target.status);
-            reloadOncePerTime(reloadThePage, url, 300000);
+            reloadOncePerTime(reloadThePage, url, 3000);
         }
     }, function (e) {
         //rejected
         console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 300000);
+        reloadOncePerTime(reloadThePage, url, 3000);
     });
 }
 
@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("Brak połączenia internetowego");
             }
         });
-    }, 1800000);
+    }, 5000);
 });
 
 /***/ }),
@@ -23664,6 +23664,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -23672,14 +23674,57 @@ var _BozenaHandzlik = __webpack_require__(19);
 
 var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
 
+var _SzczepionkiOdra = __webpack_require__(24);
+
+var _SzczepionkiOdra2 = _interopRequireDefault(_SzczepionkiOdra);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AnnouncementList = function AnnouncementList(props) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    return _react2.default.createElement(_BozenaHandzlik2.default, null);
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AnnouncementList = function (_Component) {
+    _inherits(AnnouncementList, _Component);
+
+    function AnnouncementList(props) {
+        _classCallCheck(this, AnnouncementList);
+
+        return _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
+    }
+
+    _createClass(AnnouncementList, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'section',
+                { className: 'mainListContainer' },
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'mainList' },
+                    _react2.default.createElement(_BozenaHandzlik2.default, null),
+                    _react2.default.createElement(_SzczepionkiOdra2.default, null)
+                )
+            );
+        }
+    }]);
+
+    return AnnouncementList;
+}(_react.Component);
 
 exports.default = AnnouncementList;
+
+// const AnnouncementList = (props) => {
+
+//     return (
+//         <BozenaHandzlik/>
+//     )
+
+// }
+
+// export default AnnouncementList;
 
 /***/ }),
 /* 19 */
@@ -23702,7 +23747,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// class BozenaHandzlik extends ReactDOM.Component{
+// class BozenaHandzlik extends Component{
 //     constructor(props){
 //         super(props)
 //     }
@@ -23735,8 +23780,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //                         </div>
 //                         <div className='imageContainer'>
-//                             <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
-//                             {/* <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             {/* <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
 //                         </div>
 //                     </section>
 //                     <section className="servicesSection">
@@ -23764,7 +23809,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //                 </article>
 //                 {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe>  */}
 //             </li>
-//         );
+//         )
 //     }
 
 // }
@@ -24048,6 +24093,47 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepionkiOdra = function SzczepionkiOdra(props) {
+
+    return _react2.default.createElement(
+        "li",
+        { className: "announcementRoot" },
+        _react2.default.createElement(
+            "article",
+            { className: "vaccineContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "", alt: "Szczepionka", title: "Szczepionka" })
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "vaccineText" },
+                "Informujemy, \u017Ce szczepienia na odr\u0119 dla os\xF3b powy\u017Cej 65 roku \u017Cycia s\u0105\xA0darmowe"
+            )
+        )
+    );
+};
+
+exports.default = SzczepionkiOdra;
 
 /***/ })
 /******/ ]);
