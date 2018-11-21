@@ -514,24 +514,6 @@ function reloadOncePerTime(reloadFunction, url, ms) {
     }, ms);
 }
 
-// function reloadThePage(url) {
-//     makeGetRequest(url)
-//         .then(function (e) {
-//             //resolved
-//             console.log(e.target.status)
-//             if (e.target.status === 200) {
-//                 window.location.reload(true);
-//             } else {
-//                 //console.log("resolved but status is  " + e.target.status)
-//                 reloadOncePerTime(reloadThePage, url, 5000);
-//             }
-//         }, function (e) {
-//             //rejected
-//             console.log("error " + e.target.status)
-//             reloadOncePerTime(reloadThePage, url, 5000);
-//         });
-// }
-
 function reloadThePage(url) {
     makeGetRequest(url).then(function (e) {
         //resolved
@@ -542,7 +524,7 @@ function reloadThePage(url) {
             //console.log("resolved but status is  " + e.target.status)
             reloadOncePerTime(reloadThePage, url, 5000);
         }
-    }).catch(function (e) {
+    }, function (e) {
         //rejected
         console.log("error " + e.target.status);
         reloadOncePerTime(reloadThePage, url, 5000);
@@ -554,10 +536,18 @@ document.addEventListener('DOMContentLoaded', function () {
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
     window.scroll(0, 0);
+    var isOnline = __webpack_require__(20);
 
     setTimeout(function () {
-        console.log("performing reload...................");
-        reloadThePage("https://jayrix.github.io/TestEnvironment/");
+        isOnline().then(function (online) {
+            if (online) {
+                console.log("We have internet");
+                console.log("performing reload...................");
+                reloadThePage("https://jayrix.github.io/TestEnvironment/");
+            } else {
+                console.log("Houston we have a problem");
+            }
+        });
     }, 5000);
 });
 
@@ -23868,6 +23858,121 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
 };
 
 exports.default = BozenaHandzlik;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(21);
+
+const defaults = {
+	timeout: 5000,
+	version: 'v4'
+};
+
+module.exports = options => {
+	options = Object.assign({}, defaults, options);
+	return publicIp[options.version](options).then(() => true).catch(() => false);
+};
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const isIp = __webpack_require__(22);
+
+const defaults = {
+	timeout: 5000
+};
+
+const urls = {
+	v4: 'https://ipv4.icanhazip.com/',
+	v6: 'https://ipv6.icanhazip.com/'
+};
+
+function queryHttps(version, opts) {
+	return new Promise((resolve, reject) => {
+		const doReject = () => reject(new Error('Couldn\'t find your IP'));
+		const xhr = new XMLHttpRequest();
+
+		xhr.onerror = doReject;
+		xhr.ontimeout = doReject;
+		xhr.onload = () => {
+			const ip = xhr.responseText.trim();
+
+			if (!ip || !isIp[version](ip)) {
+				doReject();
+			}
+
+			resolve(ip);
+		};
+
+		xhr.open('GET', urls[version]);
+		xhr.timeout = opts.timeout;
+		xhr.send();
+	});
+}
+
+module.exports.v4 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v4', opts);
+};
+
+module.exports.v6 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v6', opts);
+};
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const ipRegex = __webpack_require__(23);
+
+const isIp = module.exports = x => ipRegex({exact: true}).test(x);
+isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
+isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
+
+const v6seg = '[0-9a-fA-F]{1,4}';
+const v6 = `
+(
+(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
+(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
+(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
+(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
+(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
+(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
+(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
+(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
+)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
+`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
+
+const ip = module.exports = opts => opts && opts.exact ?
+	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
+	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
+
+ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
+ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
+
 
 /***/ })
 /******/ ]);
