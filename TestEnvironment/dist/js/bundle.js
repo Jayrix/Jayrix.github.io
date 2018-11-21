@@ -501,7 +501,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function makeGetRequest(url) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
+        xhr.open("HEAD", url, true);
         xhr.onload = resolve;
         xhr.onerror = reject;
         xhr.send(null);
@@ -515,22 +515,20 @@ function reloadOncePerTime(reloadFunction, url, ms) {
 }
 
 function reloadThePage(url) {
-    if (window.navigator.onLine === true) {
-        makeGetRequest(url).then(function (e) {
-            //resolved
-            console.log(e.target.status);
-            if (e.target.status === 200) {
-                window.location.reload(true);
-            } else {
-                //console.log("resolved but status is  " + e.target.status)
-                reloadOncePerTime(reloadThePage, url, 5000);
-            }
-        }, function (e) {
-            //rejected
-            console.log("error " + e.target.status);
+    makeGetRequest(url).then(function (e) {
+        //resolved
+        console.log(e.target.status);
+        if (e.target.status === 200) {
+            window.location.reload(true);
+        } else {
+            //console.log("resolved but status is  " + e.target.status)
             reloadOncePerTime(reloadThePage, url, 5000);
-        });
-    }
+        }
+    }, function (e) {
+        //rejected
+        console.log("error " + e.target.status);
+        reloadOncePerTime(reloadThePage, url, 5000);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -538,9 +536,6 @@ document.addEventListener('DOMContentLoaded', function () {
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
     window.scroll(0, 0);
-    window.addEventListener('offline', function () {
-        console.log('jest offline');
-    });
 
     setTimeout(function () {
         console.log("performing reload...................");
