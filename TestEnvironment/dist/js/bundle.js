@@ -501,10 +501,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function makeGetRequest(url) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open("HEAD", url, true);
+        xhr.open("GET", url, true);
         xhr.onload = resolve;
         xhr.onerror = reject;
-        xhr.send(null);
+        xhr.send();
     });
 }
 
