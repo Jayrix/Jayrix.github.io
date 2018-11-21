@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(6);
-} else {
   module.exports = __webpack_require__(7);
+} else {
+  module.exports = __webpack_require__(8);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -382,7 +382,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(8);
+  var ReactPropTypesSecret = __webpack_require__(9);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -471,10 +471,41 @@ module.exports = checkPropTypes;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (process.env.NODE_ENV !== 'production') {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(11);
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(10);
 } else {
-  module.exports = __webpack_require__(12);
+  module.exports = __webpack_require__(13);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -484,13 +515,28 @@ if (process.env.NODE_ENV === 'production') {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(11);
+} else {
+  module.exports = __webpack_require__(12);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(9);
+var _reactDom = __webpack_require__(4);
 
 var _Root = __webpack_require__(17);
 
@@ -501,13 +547,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var isOnline = __webpack_require__(20);
 
 //funkcje odpowiedzialne za odswiezanie
+var reloadIntervalID = void 0;
+
 function makeGetRequest(url) {
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", url, true);
-        xhr.onload = resolve;
-        xhr.onerror = reject;
-        xhr.send();
+    isOnline().then(function (online) {
+        if (online) {
+            clearInterval(reloadIntervalID);
+            return new Promise(function (resolve, reject) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.onload = resolve;
+                xhr.onerror = reject;
+                xhr.send();
+            });
+        } else {
+            console.log("Brak polaczenia z netem");
+        }
     });
 }
 
@@ -541,22 +596,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.scroll(0, 0);
 
-    var reloadIntervalID = void 0;
     reloadIntervalID = setInterval(function () {
-        isOnline().then(function (online) {
-            if (online) {
-                clearInterval(reloadIntervalID);
-                console.log("performing reload...................");
-                reloadThePage("https://jayrix.github.io/TestEnvironment/");
-            } else {
-                console.log("Brak połączenia internetowego");
-            }
-        });
+        reloadThePage("https://jayrix.github.io/TestEnvironment/");
     }, 5000);
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -587,7 +633,7 @@ __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:K,assign:k
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2435,7 +2481,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2454,52 +2500,6 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(10);
-} else {
-  module.exports = __webpack_require__(13);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2516,7 +2516,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),n=__webpack_require__(2),ba=__webpack_require__(4);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
+var aa=__webpack_require__(1),n=__webpack_require__(2),ba=__webpack_require__(5);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
 function t(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);ca(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}aa?void 0:t("227");function da(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}
 var ea=!1,fa=null,ha=!1,ia=null,ja={onError:function(a){ea=!0;fa=a}};function ka(a,b,c,d,e,f,g,h,k){ea=!1;fa=null;da.apply(ja,arguments)}function la(a,b,c,d,e,f,g,h,k){ka.apply(this,arguments);if(ea){if(ea){var l=fa;ea=!1;fa=null}else t("198"),l=void 0;ha||(ha=!0,ia=l)}}var ma=null,na={};
 function oa(){if(ma)for(var a in na){var b=na[a],c=ma.indexOf(a);-1<c?void 0:t("96",a);if(!pa[c]){b.extractEvents?void 0:t("97",a);pa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;qa.hasOwnProperty(h)?t("99",h):void 0;qa[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ra(k[e],g,h);e=!0}else f.registrationName?(ra(f.registrationName,g,h),e=!0):e=!1;e?void 0:t("98",d,a)}}}}
@@ -3455,7 +3455,7 @@ if (process.env.NODE_ENV !== "production") {
 var React = __webpack_require__(1);
 var _assign = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(3);
-var scheduler = __webpack_require__(4);
+var scheduler = __webpack_require__(5);
 var tracing = __webpack_require__(14);
 
 /**
@@ -23696,165 +23696,236 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactDom = __webpack_require__(4);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// class BozenaHandzlik extends ReactDOM.Component{
+//     constructor(props){
+//         super(props)
+//     }
+
+//     render(){
+//         return (
+//             <li className="announcementRoot">
+//                 <h2 className="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
+//                 <article className="announcementContent">
+//                     <section className="overviewSection">
+//                         <div className="textContainer">
+//                             <div className="personData">
+//                                 <h3>dr Bożena Handzlik:</h3>
+//                                 <ul className="specializationList">
+//                                     <li>specjalista endokrynolog</li>
+//                                     <li>specjalista chorób wewnętrznych</li>
+//                                 </ul>
+//                             </div>
+//                             <div className="additionalInfo">
+//                                 <p>
+//                                     Absolwentka Śląskiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chorób Wewnętrznych
+//                                     w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala.
+//                                 </p>
+//                                 <div className="appointementInfo">
+//                                     <p>Przyjęcia odbywać się w poniedziałki, dwa razy w miesiącu.</p>
+//                                     <p>Wizyty tylko prywatne.</p>
+//                                     <p>Koszt: 110 zł, w tym USG tarczycy.</p>
+//                                 </div>
+//                             </div>
+
+//                         </div>
+//                         <div className='imageContainer'>
+//                             <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
+//                             {/* <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                         </div>
+//                     </section>
+//                     <section className="servicesSection">
+//                         <h3>Zakres działalności:</h3>
+//                         <ul>
+//                             <li>
+//                                 leczenie chorób:
+//                                 <ul>
+//                                     <li>tarczycy</li>
+//                                     <li>przysadki mózgowej</li>
+//                                     <li>nadnerczy</li>
+//                                     <li>jajników</li>
+//                                     <li>jąder</li>
+//                                 </ul>
+//                             </li>
+//                             <li>diagnostyka i leczenie otyłości</li>
+//                             <li>prowadzenie kobiet z chorobami endokrynologicznymi w ciąży i po porodzie</li>
+//                             <li>wstępna diagnostyka zaburzeń płodności i miesiączkowania</li>
+//                             <li>diagnostyka trądziku i hirsutyzmu</li>
+//                             <li>USG tarczycy</li>
+//                             <li>również diagnostyka zaburzeń endokrynologicznych u dzieci</li>
+//                         </ul>
+//                         <p>Chętnych zapraszamy do rejestracji na I-szym piętrze</p>
+//                     </section>
+//                 </article>
+//                 {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe>  */}
+//             </li>
+//         );
+//     }
+
+// }
 
 var BozenaHandzlik = function BozenaHandzlik(props) {
 
     return _react2.default.createElement(
-        "li",
-        { className: "announcementRoot" },
+        'li',
+        { className: 'announcementRoot' },
         _react2.default.createElement(
-            "h2",
-            { className: "announcementTitle" },
-            "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
+            'h2',
+            { className: 'announcementTitle' },
+            'Otwarcie gabinetu endokrynologicznego od grudnia 2018'
         ),
         _react2.default.createElement(
-            "article",
-            { className: "announcementContent" },
+            'article',
+            { className: 'announcementContent' },
             _react2.default.createElement(
-                "section",
-                { className: "overviewSection" },
+                'section',
+                { className: 'overviewSection' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "textContainer" },
+                    'div',
+                    { className: 'textContainer' },
                     _react2.default.createElement(
-                        "div",
-                        { className: "personData" },
+                        'div',
+                        { className: 'personData' },
                         _react2.default.createElement(
-                            "h3",
+                            'h3',
                             null,
-                            "dr Bo\u017Cena Handzlik:"
+                            'dr Bo\u017Cena Handzlik:'
                         ),
                         _react2.default.createElement(
-                            "ul",
-                            { className: "specializationList" },
+                            'ul',
+                            { className: 'specializationList' },
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "specjalista endokrynolog"
+                                'specjalista endokrynolog'
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "specjalista chor\xF3b wewn\u0119trznych"
+                                'specjalista chor\xF3b wewn\u0119trznych'
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "additionalInfo" },
+                        'div',
+                        { className: 'additionalInfo' },
                         _react2.default.createElement(
-                            "p",
+                            'p',
                             null,
-                            "Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala."
+                            'Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala.'
                         ),
                         _react2.default.createElement(
-                            "div",
-                            { className: "appointementInfo" },
+                            'div',
+                            { className: 'appointementInfo' },
                             _react2.default.createElement(
-                                "p",
+                                'p',
                                 null,
-                                "Przyj\u0119cia odbywa\u0107 si\u0119 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
+                                'Przyj\u0119cia odbywa\u0107 si\u0119 w poniedzia\u0142ki, dwa razy w miesi\u0105cu.'
                             ),
                             _react2.default.createElement(
-                                "p",
+                                'p',
                                 null,
-                                "Wizyty tylko prywatne."
+                                'Wizyty tylko prywatne.'
                             ),
                             _react2.default.createElement(
-                                "p",
+                                'p',
                                 null,
-                                "Koszt: 110 z\u0142, w tym USG tarczycy."
+                                'Koszt: 110 z\u0142, w tym USG tarczycy.'
                             )
                         )
                     )
                 ),
                 _react2.default.createElement(
-                    "div",
-                    { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Endokrynologia", title: "Gabinet Endokrynologiczny" })
+                    'div',
+                    { className: 'imageContainer' },
+                    _react2.default.createElement('img', { src: './dist/img/endokrynologia.jpg', alt: 'Endokrynologia', title: 'Gabinet Endokrynologiczny' })
                 )
             ),
             _react2.default.createElement(
-                "section",
-                { className: "servicesSection" },
+                'section',
+                { className: 'servicesSection' },
                 _react2.default.createElement(
-                    "h3",
+                    'h3',
                     null,
-                    "Zakres dzia\u0142alno\u015Bci:"
+                    'Zakres dzia\u0142alno\u015Bci:'
                 ),
                 _react2.default.createElement(
-                    "ul",
+                    'ul',
                     null,
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "leczenie chor\xF3b:",
+                        'leczenie chor\xF3b:',
                         _react2.default.createElement(
-                            "ul",
+                            'ul',
                             null,
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "tarczycy"
+                                'tarczycy'
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "przysadki m\xF3zgowej"
+                                'przysadki m\xF3zgowej'
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "nadnerczy"
+                                'nadnerczy'
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "jajnik\xF3w"
+                                'jajnik\xF3w'
                             ),
                             _react2.default.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "j\u0105der"
+                                'j\u0105der'
                             )
                         )
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "diagnostyka i leczenie oty\u0142o\u015Bci"
+                        'diagnostyka i leczenie oty\u0142o\u015Bci'
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "prowadzenie kobiet z chorobami endokrynologicznymi w ci\u0105\u017Cy i po porodzie"
+                        'prowadzenie kobiet z chorobami endokrynologicznymi w ci\u0105\u017Cy i po porodzie'
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "wst\u0119pna diagnostyka zaburze\u0144 p\u0142odno\u015Bci i miesi\u0105czkowania"
+                        'wst\u0119pna diagnostyka zaburze\u0144 p\u0142odno\u015Bci i miesi\u0105czkowania'
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "diagnostyka tr\u0105dziku i hirsutyzmu"
+                        'diagnostyka tr\u0105dziku i hirsutyzmu'
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "USG tarczycy"
+                        'USG tarczycy'
                     ),
                     _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "r\xF3wnie\u017C diagnostyka zaburze\u0144 endokrynologicznych u dzieci"
+                        'r\xF3wnie\u017C diagnostyka zaburze\u0144 endokrynologicznych u dzieci'
                     )
                 ),
                 _react2.default.createElement(
-                    "p",
+                    'p',
                     null,
-                    "Ch\u0119tnych zapraszamy do rejestracji na I-szym pi\u0119trze"
+                    'Ch\u0119tnych zapraszamy do rejestracji na I-szym pi\u0119trze'
                 )
             )
         )
