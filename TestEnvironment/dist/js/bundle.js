@@ -498,6 +498,9 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var isOnline = __webpack_require__(20);
+
+//funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -531,21 +534,22 @@ function reloadThePage(url) {
     });
 }
 
+//render Roota i wywolanie odswiezania po sprawdzeniu polaczenia 
 document.addEventListener('DOMContentLoaded', function () {
 
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
     window.scroll(0, 0);
-    var isOnline = __webpack_require__(20);
 
-    setTimeout(function () {
+    var reloadIntervalID = void 0;
+    reloadIntervalID = setInterval(function () {
         isOnline().then(function (online) {
             if (online) {
-                console.log("We have internet");
+                clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
                 reloadThePage("https://jayrix.github.io/TestEnvironment/");
             } else {
-                console.log("Houston we have a problem");
+                console.log("Brak połączenia internetowego");
             }
         });
     }, 5000);
