@@ -524,7 +524,7 @@ function reloadThePage(url) {
         if (e.target.status === 200) {
             window.location.reload(true);
         } else {
-            //console.log("resolved but status is  " + e.target.status)
+            console.log("resolved but status is  " + e.target.status);
             reloadOncePerTime(reloadThePage, url, 5000);
         }
     }, function (e) {
@@ -534,7 +534,7 @@ function reloadThePage(url) {
     });
 }
 
-//render Roota i wywolanie odswiezania po sprawdzeniu polaczenia 
+//render Roota i wywolanie odswiezania po sprawdzeniu polaczenia
 document.addEventListener('DOMContentLoaded', function () {
 
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (online) {
                 clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
-                reloadThePage("https://wp.pl/");
+                reloadThePage("https://jayrix.github.io/TestEnvironment/");
             } else {
                 console.log("Brak połączenia internetowego");
             }
