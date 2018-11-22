@@ -546,6 +546,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var isOnline = __webpack_require__(21);
 
+//zmienne konfiguracyjne reload
+var GET_URL = "https://jayrix.github.io/Announcement/";
+var STATUS_CHECK_MS = 300000;
+var PAGE_RELOAD_MS = 1800000;
+
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
     return new Promise(function (resolve, reject) {
@@ -571,12 +576,12 @@ function reloadThePage(url) {
             window.location.reload(true);
         } else {
             console.log("resolved but status is  " + e.target.status);
-            reloadOncePerTime(reloadThePage, url, 300000);
+            reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
         }
     }, function (e) {
         //rejected
         console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 300000);
+        reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
     });
 }
 
@@ -593,12 +598,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (online) {
                 clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
-                reloadThePage("https://jayrix.github.io/Announcement/");
+                reloadThePage(GET_URL);
             } else {
                 console.log("Brak połączenia internetowego");
             }
         });
-    }, 1800000);
+    }, PAGE_RELOAD_MS);
 });
 
 /***/ }),
@@ -23674,9 +23679,9 @@ var _BozenaHandzlik = __webpack_require__(19);
 
 var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
 
-var _SzczepionkiOdra = __webpack_require__(20);
+var _SzczepionkiGrypa = __webpack_require__(20);
 
-var _SzczepionkiOdra2 = _interopRequireDefault(_SzczepionkiOdra);
+var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23686,27 +23691,110 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+//zmienne konfiguracyjne sliding w lewo
+var SLIDE_INTERVAL_MS = 60000;
+
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
 
     function AnnouncementList(props) {
         _classCallCheck(this, AnnouncementList);
 
-        return _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
+
+        _this.state = {
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
+            styleConfig: {
+                transition: '0',
+                right: '0px'
+            }
+        };
+
+        _this.announcements = [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)];
+
+        _this.reorderedAnnouncements = [];
+        return _this;
     }
 
     _createClass(AnnouncementList, [{
+        key: 'firstToLast',
+        value: function firstToLast(array) {
+            var newArray = array.slice(0);
+            newArray.push(newArray.shift());
+            return newArray;
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
+            //         ()=> {
+            //                 console.log("at interval " + this.state.styleConfig);
+            //                 this.reappendLiTimeoutID = setTimeout(()=>{
+            //                     this.setState({styleConfig: {transition: '0',right:`${window.screen.width}px`}},
+            //                         ()=> {
+            //                             this.announcements = this.firstToLast(this.announcements);
+            //                             console.log(this.announcements);
+            //                             this.setState({styleConfig: {transition: '0',right:'0px'}});
+            //                         }
+            //                     )
+            //                 },SLIDE_INTERVAL_MS/2);
+            //             }
+            //     )
+            // },SLIDE_INTERVAL_MS);
+
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
+            //         ()=> {
+            //                 console.log("at interval " + this.state.styleConfig);
+            //         }
+            //     )
+            // },SLIDE_INTERVAL_MS);
+
+            this.slideListIntervalID = setInterval(function () {
+                _this2.reorderedAnnouncements = _this2.firstToLast(_this2.state.announcements);
+                //console.log(this.reorderedAnnouncements);
+                _this2.setState({
+                    announcements: _this2.reorderedAnnouncements
+                });
+            }, SLIDE_INTERVAL_MS);
+        }
+    }, {
         key: 'render',
         value: function render() {
+            //console.log("component rendered")
             return _react2.default.createElement(
                 'section',
                 { className: 'mainListContainer' },
                 _react2.default.createElement(
                     'ul',
                     { className: 'mainList' },
-                    _react2.default.createElement(_BozenaHandzlik2.default, null)
+                    this.state.announcements.map(function (el, index) {
+                        return _react2.default.createElement(
+                            'li',
+                            { key: index, className: 'announcementRoot' },
+                            el
+                        );
+                    })
                 )
             );
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            // console.log('component did Update')
+            // setTimeout(()=>{
+            //     console.log("Timeout Activating")
+            //     this.announcements = this.firstToLast(this.announcements);
+            // },3000);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+
+            clearInterval(this.slideListIntervalID);
         }
     }]);
 
@@ -23714,16 +23802,6 @@ var AnnouncementList = function (_Component) {
 }(_react.Component);
 
 exports.default = AnnouncementList;
-
-// const AnnouncementList = (props) => {
-
-//     return (
-//         <BozenaHandzlik/>
-//     )
-
-// }
-
-// export default AnnouncementList;
 
 /***/ }),
 /* 19 */
@@ -23816,8 +23894,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var BozenaHandzlik = function BozenaHandzlik(props) {
 
     return _react2.default.createElement(
-        'li',
-        { className: 'announcementRoot' },
+        'div',
+        null,
         _react2.default.createElement(
             'h2',
             { className: 'announcementTitle' },
@@ -23995,29 +24073,40 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SzczepionkiOdra = function SzczepionkiOdra(props) {
+var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
 
     return _react2.default.createElement(
-        "li",
-        { className: "announcementRoot" },
+        "div",
+        null,
         _react2.default.createElement(
             "article",
             { className: "vaccineContent" },
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "", alt: "Szczepionka", title: "Szczepionka" })
+                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                null,
+                "UWAGA! UWAGA!"
             ),
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce szczepienia na odr\u0119 dla os\xF3b powy\u017Cej 65 roku \u017Cycia s\u0105\xA0darmowe"
+                "Informujemy, \u017Ce wznowiono darmowe szczepienia przeciw grypie dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia).",
+                _react2.default.createElement("br", null),
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "Dla pozosta\u0142ych os\xF3b szczepienia w cenie 35 z\u0142."
+                )
             )
         )
     );
 };
 
-exports.default = SzczepionkiOdra;
+exports.default = SzczepionkiGrypa;
 
 /***/ }),
 /* 21 */
