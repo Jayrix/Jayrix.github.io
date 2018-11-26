@@ -548,8 +548,11 @@ var isOnline = __webpack_require__(21);
 
 //zmienne konfiguracyjne reload
 var GET_URL = "https://jayrix.github.io/Announcement/";
-var STATUS_CHECK_MS = 300000;
-var PAGE_RELOAD_MS = 1800000;
+// const STATUS_CHECK_MS = 300000;
+// const PAGE_RELOAD_MS = 1800000;
+var STATUS_CHECK_MS = 2000;
+var PAGE_RELOAD_MS = 3000;
+var requestingHTTPInProgress = false;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
@@ -573,7 +576,17 @@ function reloadThePage(url) {
         //resolved
         console.log(e.target.status);
         if (e.target.status === 200) {
-            window.location.reload(true);
+            //check if current url is on local drive or not, if true try switching to online
+            if (window.location.href.startsWith("file:")) {
+                console.log("switching to online");
+                window.location.assign(GET_URL);
+            } else {
+                setTimeout(function () {
+                    console.log('timeout');
+                    window.location.reload(true);
+                    requestingHTTPInProgress = false;
+                }, 5000);
+            }
         } else {
             console.log("resolved but status is  " + e.target.status);
             reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
@@ -592,18 +605,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.scroll(0, 0);
 
-    var reloadIntervalID = void 0;
-    reloadIntervalID = setInterval(function () {
-        isOnline().then(function (online) {
-            if (online) {
-                clearInterval(reloadIntervalID);
-                console.log("performing reload...................");
-                reloadThePage(GET_URL);
-            } else {
-                console.log("Brak połączenia internetowego");
-            }
-        });
-    }, PAGE_RELOAD_MS);
+    if (requestingHTTPInProgress) {
+        console.log("SKIPPING: Requests are being made with " + STATUS_CHECK_MS + " time gaps already.");
+    } else {
+        var reloadIntervalID = void 0;
+        reloadIntervalID = setInterval(function () {
+            isOnline().then(function (online) {
+                if (online) {
+                    clearInterval(reloadIntervalID);
+                    console.log("performing reload checks...................");
+                    requestingHTTPInProgress = true;
+                    reloadThePage(GET_URL);
+                } else {
+                    console.log("no internet connection");
+                }
+            });
+        }, PAGE_RELOAD_MS);
+    }
 });
 
 /***/ }),
@@ -23692,7 +23710,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 3000;
+var SLIDE_INTERVAL_MS = 6000;
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23704,6 +23722,7 @@ var AnnouncementList = function (_Component) {
 
         _this.state = {
             announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
+            movedLeft: false,
             styleConfig: {
                 transition: '0',
                 right: '0px'
@@ -23717,6 +23736,20 @@ var AnnouncementList = function (_Component) {
     }
 
     _createClass(AnnouncementList, [{
+        key: 'copyFirstToLast',
+        value: function copyFirstToLast(array) {
+            var newArray = array.slice(0);
+            newArray.push(newArray[0]);
+            return newArray;
+        }
+    }, {
+        key: 'removeFirst',
+        value: function removeFirst(array) {
+            var newArray = array.slice(0);
+            newArray.shift();
+            return newArray;
+        }
+    }, {
         key: 'firstToLast',
         value: function firstToLast(array) {
             var newArray = array.slice(0);
@@ -23753,12 +23786,39 @@ var AnnouncementList = function (_Component) {
             //     )
             // },SLIDE_INTERVAL_MS);
 
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
+            //     //console.log(this.reorderedAnnouncements);
+            //     this.setState({
+            //         announcements : this.reorderedAnnouncements
+            //     })
+            // },SLIDE_INTERVAL_MS);
+
+
+            //initialize the announcements by copying the first element to the new arrays end
+            this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
+            this.setState({
+                announcements: this.reorderedAnnouncements
+            });
+
             this.slideListIntervalID = setInterval(function () {
-                _this2.reorderedAnnouncements = _this2.firstToLast(_this2.state.announcements);
-                console.log(_this2.reorderedAnnouncements);
-                _this2.setState({
-                    announcements: _this2.reorderedAnnouncements
-                });
+                if (!_this2.state.movedLeft) {
+                    _this2.setState({
+                        movedLeft: true
+                    }, function () {
+                        setTimeout(function () {
+                            if (_this2.state.movedLeft) {
+                                _this2.reorderedAnnouncements = _this2.removeFirst(_this2.state.announcements);
+                                console.log(_this2.reorderedAnnouncements);
+                                _this2.setState({
+                                    announcements: _this2.reorderedAnnouncements,
+                                    movedLeft: false
+
+                                });
+                            }
+                        }, SLIDE_INTERVAL_MS / 2);
+                    });
+                }
             }, SLIDE_INTERVAL_MS);
         }
     }, {
@@ -23770,7 +23830,9 @@ var AnnouncementList = function (_Component) {
                 { className: 'mainListContainer' },
                 _react2.default.createElement(
                     'ul',
-                    { className: 'mainList' },
+                    { className: 'mainList',
+                        style: this.state.movedLeft === false ? { transition: '0', right: '0px' } : { transition: 'right 1.5s', right: window.screen.width + 'px' }
+                    },
                     this.state.announcements.map(function (el, index) {
                         return _react2.default.createElement(
                             'li',
