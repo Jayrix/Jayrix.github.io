@@ -552,7 +552,6 @@ var GET_URL = "https://jayrix.github.io/Announcement/";
 // const PAGE_RELOAD_MS = 1800000;
 var STATUS_CHECK_MS = 2000;
 var PAGE_RELOAD_MS = 3000;
-var requestingHTTPInProgress = false;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
@@ -572,56 +571,49 @@ function reloadOncePerTime(reloadFunction, url, ms) {
 }
 
 function reloadThePage(url) {
-    makeGetRequest(url).then(function (e) {
-        //resolved
-        console.log(e.target.status);
-        if (e.target.status === 200) {
-            //check if current url is on local drive or not, if true try switching to online
-            if (window.location.href.startsWith("file:")) {
-                console.log("switching to online");
-                window.location.assign(GET_URL);
-            } else {
-                setTimeout(function () {
-                    console.log('timeout');
-                    window.location.reload(true);
-                    requestingHTTPInProgress = false;
-                }, 5000);
-            }
+    isOnline().then(function (online) {
+        if (online) {
+            makeGetRequest(url).then(function (e) {
+                //resolved
+                console.log(e.target.status);
+                if (e.target.status === 200) {
+                    //check if current url is on local drive or not, if true switch to online
+                    if (window.location.href.startsWith("file:")) {
+                        console.log("switching to online");
+                        window.location.assign(url);
+                    } else {
+                        window.location.reload(true);
+                    }
+                } else {
+                    console.log("resolved but status is:  " + e.target.status);
+                    reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
+                }
+            }, function (e) {
+                //rejected
+                console.log("error " + e.target.status);
+                reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
+            });
         } else {
-            console.log("resolved but status is  " + e.target.status);
-            reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
+            //not online
+            console.log("no internet connection, retrying a check in " + PAGE_RELOAD_MS + " ms");
+            setTimeout(function () {
+                console.log("retrying online check");
+                reloadThePage(url);
+            }, PAGE_RELOAD_MS);
         }
-    }, function (e) {
-        //rejected
-        console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
     });
 }
 
-//render Roota i wywolanie odswiezania po sprawdzeniu polaczenia
+//render Roota i wywolanie odswiezania po timeoucie
 document.addEventListener('DOMContentLoaded', function () {
 
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
     window.scroll(0, 0);
 
-    if (requestingHTTPInProgress) {
-        console.log("SKIPPING: Requests are being made with " + STATUS_CHECK_MS + " time gaps already.");
-    } else {
-        var reloadIntervalID = void 0;
-        reloadIntervalID = setInterval(function () {
-            isOnline().then(function (online) {
-                if (online) {
-                    clearInterval(reloadIntervalID);
-                    console.log("performing reload checks...................");
-                    requestingHTTPInProgress = true;
-                    reloadThePage(GET_URL);
-                } else {
-                    console.log("no internet connection");
-                }
-            });
-        }, PAGE_RELOAD_MS);
-    }
+    setTimeout(function () {
+        reloadThePage(GET_URL);
+    }, PAGE_RELOAD_MS);
 });
 
 /***/ }),
