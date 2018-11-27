@@ -78,7 +78,7 @@ div.personData{
 
 div.personData h3 {
     font-weight: 600;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     text-align: center;
     width: 100%;
 }
@@ -90,9 +90,10 @@ div.personData ul.specializationList{
 }
 
 div.personData ul.specializationList li{
-    margin-left: 25%;
+    margin-left: 19%;
     list-style-type: circle;
     font-weight: 500;
+    font-size: 1.8rem;
     
 
 }
@@ -121,27 +122,26 @@ div.additionalInfo p {
 }
 
 div.additionalInfo div.appointementInfo {
-    font-size: 1.1em;
-    margin-top: 6%;
+    font-size: 2.5rem;
+    margin-top: 4%;
     font-weight: 600;
 
 }
 
-.servicesSection {
-    padding-top:1%;
-}
+/* .servicesSection {
+} */
 
 .servicesSection h3{
     text-decoration: underline;
-    margin-left: 11%;
-    font-size: 2.4rem;
+    margin-left: 8.5%;
+    font-size: 3rem;
     font-weight: 600;
 }
 
 .servicesSection ul{
     margin-left: 0;
     margin-top: 0.5%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     
 }
@@ -153,7 +153,7 @@ div.additionalInfo div.appointementInfo {
 
 
 .servicesSection p:last-of-type{
-    margin-top: 1.2%;
+    margin-top: 0.7%;
     margin-left: 5%;
     font-size:2.8rem;
     font-weight: 500;
