@@ -500,7 +500,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var isOnline = __webpack_require__(21);
 
-//zmienne konfiguracyjne reload
+//zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
 var STATUS_CHECK_MS = 600000;
 var PAGE_RELOAD_MS = 1800000;
@@ -23741,14 +23741,6 @@ var AnnouncementList = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            // this.slideListIntervalID = setInterval(()=>{
-            //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
-            //     //console.log(this.reorderedAnnouncements);
-            //     this.setState({
-            //         announcements : this.reorderedAnnouncements
-            //     })
-            // },SLIDE_INTERVAL_MS);
-
             this.slideListIntervalID = setInterval(function () {
                 if (!_this2.state.movedLeft) {
                     _this2.reorderedAnnouncements = _this2.copyFirstToLast(_this2.state.announcements);
@@ -24019,13 +24011,8 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce wznowiono darmowe szczepienia przeciw grypie dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia).",
-                _react2.default.createElement("br", null),
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "Dla pozosta\u0142ych os\xF3b szczepienia w cenie 35 z\u0142."
-                )
+                "Informujemy, \u017Ce na ten sezon zako\u0144czyli\u015Bmy program szczepie\u0144 przeciw grypie.",
+                _react2.default.createElement("br", null)
             )
         )
     );
