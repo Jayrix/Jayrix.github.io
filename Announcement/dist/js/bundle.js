@@ -23826,7 +23826,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
         _react2.default.createElement(
             "h2",
             { className: "announcementTitle" },
-            "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
+            "Otwarcie gabinetu endokrynologicznego"
         ),
         _react2.default.createElement(
             "article",
@@ -23869,7 +23869,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                             _react2.default.createElement(
                                 "p",
                                 null,
-                                "Przyj\u0119cia odbywa\u0107 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
+                                "Przyj\u0119cia odbywaj\u0105 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
                             ),
                             _react2.default.createElement(
                                 "p",
@@ -23879,7 +23879,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                             _react2.default.createElement(
                                 "p",
                                 null,
-                                "Koszt: 110 z\u0142, w tym USG tarczycy."
+                                "Koszt: pierwsza wizyta 150 z\u0142, kolejne 130 z\u0142."
                             )
                         )
                     )
