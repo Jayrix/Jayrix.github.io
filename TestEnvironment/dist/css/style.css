@@ -122,7 +122,7 @@ div.additionalInfo p {
 }
 
 div.additionalInfo div.appointementInfo {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin-top: 4%;
     font-weight: 600;
 
@@ -133,6 +133,7 @@ div.additionalInfo div.appointementInfo {
 
 .servicesSection h3{
     text-decoration: underline;
+    margin-top: 2%;
     margin-left: 8.5%;
     font-size: 3rem;
     font-weight: 600;
@@ -141,7 +142,7 @@ div.additionalInfo div.appointementInfo {
 .servicesSection ul{
     margin-left: 0;
     margin-top: 0.5%;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 600;
     
 }
@@ -153,7 +154,7 @@ div.additionalInfo div.appointementInfo {
 
 
 .servicesSection p:last-of-type{
-    margin-top: 0.7%;
+    margin-top: 1.2%;
     margin-left: 5%;
     font-size:2.8rem;
     font-weight: 500;
@@ -204,13 +205,27 @@ article.vaccineContent {
 
 .vaccineContent p.vaccineText{
     width: 100%;
-    font-size: 6rem;
-    padding: 2% 2% 1% 4%;
-    text-indent: 7%;
+    font-size: 6.5rem;
+    padding: 8% 2% 1% 4%;
+    /* text-indent: 7%; */
     font-weight: 600;
 }
 
-.vaccineContent p.vaccineText span {
+/* .vaccineContent p.vaccineText span {
     display: block;
     text-indent: 7%;
+} */
+
+
+div.PSP_imageContainer {
+    display: inline-block;
+    width: 100%;
+}
+
+div.PSP_imageContainer img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+
 }

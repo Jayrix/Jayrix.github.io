@@ -498,9 +498,9 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(21);
+var isOnline = __webpack_require__(22);
 
-//zmienne konfiguracyjne reload
+//zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
 var STATUS_CHECK_MS = 600000;
 var PAGE_RELOAD_MS = 1800000;
@@ -23693,6 +23693,10 @@ var _SzczepionkiGrypa = __webpack_require__(20);
 
 var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
 
+var _PSP = __webpack_require__(21);
+
+var _PSP2 = _interopRequireDefault(_PSP);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23703,7 +23707,20 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 60000;
+var PSP_SLIDE_INTERVAL_MS = 10000;
+var FIRST_ANN_REMOVAL_MS = 4000;
 var SLIDE_DISTANCE = window.screen.width;
+
+//zmienne pomocnicze
+var psp_slide_id = void 0;
+var psp_array = [];
+
+//incjalizacja tablicy z ogloszeniami PSP
+for (psp_slide_id = 1; psp_slide_id < 12; psp_slide_id++) {
+    psp_array.push(_react2.default.createElement(_PSP2.default, { key: psp_slide_id, id: psp_slide_id }));
+}
+
+//console.log(psp_array);
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23714,7 +23731,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)].concat(psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23736,20 +23753,15 @@ var AnnouncementList = function (_Component) {
             newArray.shift();
             return newArray;
         }
+
+        //function responsible for sliding
+
     }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
+        key: 'slideTimeout',
+        value: function slideTimeout(timeout) {
             var _this2 = this;
 
-            // this.slideListIntervalID = setInterval(()=>{
-            //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
-            //     //console.log(this.reorderedAnnouncements);
-            //     this.setState({
-            //         announcements : this.reorderedAnnouncements
-            //     })
-            // },SLIDE_INTERVAL_MS);
-
-            this.slideListIntervalID = setInterval(function () {
+            this.slideListTimeoutID = setTimeout(function () {
                 if (!_this2.state.movedLeft) {
                     _this2.reorderedAnnouncements = _this2.copyFirstToLast(_this2.state.announcements);
                     _this2.setState({
@@ -23766,10 +23778,21 @@ var AnnouncementList = function (_Component) {
 
                                 });
                             }
-                        }, SLIDE_INTERVAL_MS / 2);
+                        }, FIRST_ANN_REMOVAL_MS);
                     });
                 }
-            }, SLIDE_INTERVAL_MS);
+                if (_this2.state.announcements[1].type.name === "PSP") {
+                    _this2.slideTimeout(PSP_SLIDE_INTERVAL_MS);
+                } else {
+                    _this2.slideTimeout(SLIDE_INTERVAL_MS);
+                }
+            }, timeout);
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            this.slideTimeout(SLIDE_INTERVAL_MS);
         }
     }, {
         key: 'render',
@@ -23795,12 +23818,16 @@ var AnnouncementList = function (_Component) {
         }
     }, {
         key: 'componentDidUpdate',
-        value: function componentDidUpdate() {}
+        value: function componentDidUpdate() {
+            // if(this.state.announcements[1].type.name === "PSP"){
+            //     console.log('teraz PSP');
+            // }
+        }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
 
-            clearInterval(this.slideListIntervalID);
+            clearTimeout(this.slideListTimeoutID);
         }
     }]);
 
@@ -23834,7 +23861,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
         _react2.default.createElement(
             "h2",
             { className: "announcementTitle" },
-            "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
+            "Otwarcie gabinetu endokrynologicznego"
         ),
         _react2.default.createElement(
             "article",
@@ -23877,7 +23904,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                             _react2.default.createElement(
                                 "p",
                                 null,
-                                "Przyj\u0119cia odbywa\u0107 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
+                                "Przyj\u0119cia odbywaj\u0105 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
                             ),
                             _react2.default.createElement(
                                 "p",
@@ -23887,7 +23914,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                             _react2.default.createElement(
                                 "p",
                                 null,
-                                "Koszt: 110 z\u0142, w tym USG tarczycy."
+                                "Koszt: pierwsza wizyta 150 z\u0142, kolejne 130 z\u0142."
                             )
                         )
                     )
@@ -24019,13 +24046,8 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce wznowiono darmowe szczepienia przeciw grypie dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia).",
-                _react2.default.createElement("br", null),
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "Dla pozosta\u0142ych os\xF3b szczepienia w cenie 35 z\u0142."
-                )
+                "Informujemy, \u017Ce na ten sezon zako\u0144czyli\u015Bmy program szczepie\u0144 przeciw grypie.",
+                _react2.default.createElement("br", null)
             )
         )
     );
@@ -24040,7 +24062,34 @@ exports.default = SzczepionkiGrypa;
 "use strict";
 
 
-const publicIp = __webpack_require__(22);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PSP = function PSP(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "PSP_imageContainer" },
+        _react2.default.createElement("img", { src: "./dist/img/psp/psp" + props.id + ".png", alt: "Slajd prezentacji PSP" })
+    );
+};
+
+exports.default = PSP;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(23);
 
 const defaults = {
 	timeout: 5000,
@@ -24054,12 +24103,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(23);
+const isIp = __webpack_require__(24);
 
 const defaults = {
 	timeout: 5000
@@ -24105,12 +24154,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(24);
+const ipRegex = __webpack_require__(25);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24118,7 +24167,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
