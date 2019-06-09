@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(23);
+var isOnline = __webpack_require__(24);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23701,6 +23701,10 @@ var _PSP = __webpack_require__(22);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
+var _Geers = __webpack_require__(23);
+
+var _Geers2 = _interopRequireDefault(_Geers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23712,16 +23716,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 60000;
 var PSP_SLIDE_INTERVAL_MS = 10000;
+var GEERS_SLIDE_INTERVAL_MS = 15000;
 var FIRST_ANN_REMOVAL_MS = 4000;
 var SLIDE_DISTANCE = window.screen.width;
 
 //zmienne pomocnicze
 var psp_slide_id = void 0;
 var psp_array = [];
+var geers_slide_id = void 0;
+var geers_array = [];
 
-//incjalizacja tablicy z ogloszeniami PSP
+//incjalizacja tablic z ogloszeniami złożonymi 
 for (psp_slide_id = 1; psp_slide_id < 12; psp_slide_id++) {
     psp_array.push(_react2.default.createElement(_PSP2.default, { key: psp_slide_id, id: psp_slide_id }));
+}
+
+for (geers_slide_id = 1; geers_slide_id < 4; geers_slide_id++) {
+    geers_array.push(_react2.default.createElement(_Geers2.default, { key: geers_slide_id, id: geers_slide_id }));
 }
 
 //console.log(psp_array);
@@ -23735,7 +23746,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null)].concat(psp_array),
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23787,6 +23798,8 @@ var AnnouncementList = function (_Component) {
                 }
                 if (_this2.state.announcements[1].type.name === "PSP") {
                     _this2.slideTimeout(PSP_SLIDE_INTERVAL_MS);
+                } else if (_this2.state.announcements[1].type.name === "Geers") {
+                    _this2.slideTimeout(GEERS_SLIDE_INTERVAL_MS);
                 } else {
                     _this2.slideTimeout(SLIDE_INTERVAL_MS);
                 }
@@ -24153,7 +24166,34 @@ exports.default = PSP;
 "use strict";
 
 
-const publicIp = __webpack_require__(24);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Geers = function Geers(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "Geers_imageContainer" },
+        _react2.default.createElement("img", { src: "./dist/img/geers/geers" + props.id + ".jpg", alt: "Slajd prezentacji Geers" })
+    );
+};
+
+exports.default = Geers;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(25);
 
 const defaults = {
 	timeout: 5000,
@@ -24167,12 +24207,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(25);
+const isIp = __webpack_require__(26);
 
 const defaults = {
 	timeout: 5000
@@ -24218,12 +24258,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(26);
+const ipRegex = __webpack_require__(27);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24231,7 +24271,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
