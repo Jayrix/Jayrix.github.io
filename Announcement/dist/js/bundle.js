@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(24);
+var isOnline = __webpack_require__(25);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23705,6 +23705,10 @@ var _Geers = __webpack_require__(23);
 
 var _Geers2 = _interopRequireDefault(_Geers);
 
+var _CR = __webpack_require__(24);
+
+var _CR2 = _interopRequireDefault(_CR);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23746,7 +23750,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24193,7 +24197,181 @@ exports.default = Geers;
 "use strict";
 
 
-const publicIp = __webpack_require__(25);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CR = function CR(props) {
+
+    return _react2.default.createElement(
+        "div",
+        { className: "CRContent" },
+        _react2.default.createElement(
+            "section",
+            { id: "mainSection" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { className: "human", src: "./dist/img/cr/czlowiek_lewy.png", alt: "" })
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "CRinformation" },
+                _react2.default.createElement(
+                    "article",
+                    null,
+                    _react2.default.createElement(
+                        "div",
+                        { className: "logoContainer" },
+                        _react2.default.createElement("img", { id: "logo", src: "./dist/img/cr/logo.png", alt: "Logo", title: "Logo" })
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "CRtext" },
+                        _react2.default.createElement(
+                            "h1",
+                            null,
+                            "CENTRUM REHABILITACJI"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "dots" },
+                            "....."
+                        ),
+                        _react2.default.createElement(
+                            "ul",
+                            { className: "generalList" },
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                "KOMPLEKSOWA REHABILITACJA"
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                "MASA\u017B"
+                            ),
+                            _react2.default.createElement(
+                                "li",
+                                null,
+                                "TERAPIA INDYWIDUALNA"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "dots" },
+                            "....."
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            { className: "individual" },
+                            "ZABIEGI DOBIERAMY INDYWIDUALNIE DO PACJENTA"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "listContainer" },
+                            _react2.default.createElement(
+                                "p",
+                                null,
+                                "Co leczymy?"
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "list1" },
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "b\xF3le mi\u0119\u015Bni oraz stany przeci\u0105\u017Ceniowe"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "b\xF3le kr\u0119gos\u0142upa i staw\xF3w"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "stany pooperacyjne i powypadkowe"
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "ul",
+                                { className: "list2" },
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "choroby zwyrodnieniowe"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "wady postawy"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "urazy sportowe"
+                                ),
+                                _react2.default.createElement(
+                                    "li",
+                                    null,
+                                    "zaburzenia neurologiczne"
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { className: "human", src: "./dist/img/cr/czlowiek_prawy.png", alt: "" })
+            )
+        ),
+        _react2.default.createElement(
+            "section",
+            { id: "footerSection" },
+            _react2.default.createElement(
+                "p",
+                null,
+                " ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "tel. 793 579 532"
+                ),
+                ", Cieszyn ul. Bielska 37 - II Pi\u0119tro"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "dots" },
+                "....."
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "centrumrehabilitacjicieszyn@gmail.com"
+            )
+        )
+    );
+};
+
+exports.default = CR;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(26);
 
 const defaults = {
 	timeout: 5000,
@@ -24207,12 +24385,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(26);
+const isIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000
@@ -24258,12 +24436,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(27);
+const ipRegex = __webpack_require__(28);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24271,7 +24449,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
