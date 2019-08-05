@@ -301,3 +301,118 @@ article.testContent ul li{
     margin-right: 20%;
     
 }
+
+
+div.CRContent #mainSection{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    height: 83vh;
+    
+
+}
+
+div.CRContent #mainSection .imageContainer{ 
+    align-self: flex-end;
+    width: 10%;
+    line-height: 0px;
+    
+}
+
+
+div.CRContent img.human{ 
+    max-width: 100%;
+    height:auto;
+}
+
+div.CRContent #mainSection .CRinformation{
+    align-self: flex-start;
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    margin-top:1vh;
+   
+}
+
+div.CRContent .logoContainer{ 
+    width: 17%;
+    margin: 0 auto;
+
+}
+
+div.CRContent .logoContainer #logo{ 
+    max-width: 100%;
+    height:auto;
+}
+
+
+.CRinformation h1 {
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+.CRContent .dots {
+   text-align: center;
+   font-size: 3rem;
+   line-height: 1rem;
+   padding-bottom: 3vh;
+}
+
+.CRtext .generalList {
+    list-style-type: none;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.CRtext p.individual {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center
+}
+
+.CRtext .listContainer {
+    margin-top: 5vh;
+}
+
+.CRtext .listContainer p{
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.CRtext .listContainer ul {
+    display: inline-block;
+    width: 38%;
+    list-style-type: disc;
+    font-size: 2.5rem;
+    vertical-align: top;
+    margin-left: 8vw;
+}
+
+.list2 {
+}
+
+
+div.CRContent #footerSection {
+    background: black;
+    height: 17vh;
+    color:white;
+    text-align: center;
+}
+
+div.CRContent #footerSection p:first-of-type {
+    padding-top: 1vh;
+    font-size: 2.5rem;
+}
+
+div.CRContent #footerSection strong {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+div.CRContent #footerSection p:last-of-type {
+    font-size: 2.5rem;
+}
