@@ -205,8 +205,8 @@ article.vaccineContent {
 
 .vaccineContent p.vaccineText{
     width: 100%;
-    font-size: 6.5rem;
-    padding: 8% 2% 1% 4%;
+    font-size: 5.5rem;
+    padding: 6% 2% 1% 4%;
     /* text-indent: 7%; */
     font-weight: 600;
 }

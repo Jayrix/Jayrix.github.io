@@ -23750,7 +23750,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24067,8 +24067,7 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce na ten sezon zako\u0144czyli\u015Bmy program szczepie\u0144 przeciw grypie.",
-                _react2.default.createElement("br", null)
+                "Zbli\u017Ca si\u0119 sezon grypowy. Przypominamy, \u017Ce najskuteczniejsz\u0105 profilaktyk\u0105 przeciw grypie s\u0105 szczepienia (zw\u0142aszcza u os\xF3b starszych)."
             )
         )
     );
