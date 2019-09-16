@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(25);
+var isOnline = __webpack_require__(26);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23709,6 +23709,10 @@ var _CR = __webpack_require__(24);
 
 var _CR2 = _interopRequireDefault(_CR);
 
+var _Podomedis = __webpack_require__(25);
+
+var _Podomedis2 = _interopRequireDefault(_Podomedis);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23750,7 +23754,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24370,7 +24374,163 @@ exports.default = CR;
 "use strict";
 
 
-const publicIp = __webpack_require__(26);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Podomedis = function Podomedis(props) {
+
+    return _react2.default.createElement(
+        "article",
+        { className: "podomedisContent" },
+        _react2.default.createElement(
+            "section",
+            { className: "main" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { id: "logoImg", src: "./dist/img/podomedis/podomedis_logo.png", alt: "" })
+            ),
+            _react2.default.createElement(
+                "h2",
+                null,
+                "Gabinet podologiczny"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "dots" },
+                "....."
+            ),
+            _react2.default.createElement(
+                "h3",
+                null,
+                "Zakres us\u0142ug:"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "listsContainer" },
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "pedicure piel\u0119gnacyjny"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "pedicure podologiczny"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "piel\u0119gnacja zdrowej p\u0142ytki paznokcia oraz zmienionej chorobowo (skracanie, opracowywanie, szlifowanie)"
+                    )
+                ),
+                _react2.default.createElement(
+                    "ul",
+                    null,
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "terapia p\u0119kaj\u0105cych pi\u0119t, rozpadliny"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "terapia nadpotliwo\u015Bci sk\xF3ry st\xF3p"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "rekonstrukcja paznokci"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "paznokcie wrastaj\u0105ce"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "brodawki wirusowe"
+                    ),
+                    _react2.default.createElement(
+                        "li",
+                        null,
+                        "usuwanie hiperkeratoz (odciski, modzele)"
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "div",
+                { id: "podologyContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/podomedis/podologia.jpg", alt: "" })
+            )
+        ),
+        _react2.default.createElement(
+            "footer",
+            null,
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/podomedis/podomedis_logo2.png", alt: "" })
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "footerText" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    _react2.default.createElement(
+                        "strong",
+                        null,
+                        "tel. 735 049 669"
+                    ),
+                    ", Cieszyn ul. Bielska 37 / II pi\u0119tro"
+                ),
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    ". . . . . . ."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "www.podolog.cieszyn.pl"
+                ),
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    ". . . . . . ."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "gabinet@podolog.cieszyn.pl"
+                )
+            )
+        )
+    );
+};
+
+exports.default = Podomedis;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000,
@@ -24384,12 +24544,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(27);
+const isIp = __webpack_require__(28);
 
 const defaults = {
 	timeout: 5000
@@ -24435,12 +24595,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(28);
+const ipRegex = __webpack_require__(29);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24448,7 +24608,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
