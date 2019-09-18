@@ -24065,13 +24065,19 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             ),
             _react2.default.createElement(
                 "strong",
-                null,
+                { id: "title" },
                 "UWAGA! UWAGA!"
             ),
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Zbli\u017Ca si\u0119 sezon grypowy. Przypominamy, \u017Ce najskuteczniejsz\u0105 profilaktyk\u0105 przeciw grypie s\u0105 szczepienia (zw\u0142aszcza u os\xF3b starszych)."
+                "Zbli\u017Ca si\u0119 sezon grypowy. Informujemy, \u017Ce wznowiono ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "PROGRAM DARMOWYCH SZCZEPIE\u0143 PRZECIW GRYPIE"
+                ),
+                " dla os\xF3b powy\u017Cej 65 roku \u017Cycia (dla pierwszych 300 zg\u0142osze\u0144)."
             )
         )
     );

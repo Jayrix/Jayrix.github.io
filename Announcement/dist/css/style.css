@@ -193,7 +193,7 @@ article.vaccineContent {
     box-shadow: 10px -10px 12px 2px rgba(0,0,0,0.75);
 }
 
-.vaccineContent strong {
+.vaccineContent strong#title {
     display: inline-block;
     width: 60%;
     font-size: 8rem;
@@ -209,6 +209,11 @@ article.vaccineContent {
     padding: 6% 2% 1% 4%;
     /* text-indent: 7%; */
     font-weight: 600;
+}
+
+
+.vaccineContent p.vaccineText strong{
+    color:red;
 }
 
 /* .vaccineContent p.vaccineText span {
