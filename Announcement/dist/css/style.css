@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda:700&display=swap'); 
+ 
  * {
     box-sizing: border-box;
     margin: 0;
@@ -567,3 +569,146 @@ div.CRContent #footerSection p:last-of-type {
     color: white;
 }
 
+/********************************************************/
+
+.medeaContent {
+    height: 100vh;
+    width: 100vw;
+}
+
+.medeaContent header{
+    height: 27%;
+    padding-left:17.5%;
+    padding-top: 2%;
+}
+
+.medeaContent header p{
+    color:red;
+    display: inline-block;
+    font-size: 11rem;
+    font-weight: bold;
+    
+}
+
+.medeaContent header .medeaLogo{
+    display: inline-block;
+    height: 11vh;
+    width: 22vh;
+    margin: 50px 0 0 50px;
+    border: 0.9vh solid red;
+    border-right:transparent;
+    position:relative;
+    background: white;
+    z-index: 0;
+}
+
+.medeaContent header .medeaLogoVr{
+    border: 0.9vh solid red; 
+    position: absolute; 
+    height: 22vh;
+    width: 11vh;
+    top:calc(( -1 * (22vh - 11vh) / 2) - 0.9vh);
+    left:calc(( 1 * (22vh - 11vh) / 2) - 0.9vh);
+    background:white;
+    z-index: 1;
+}
+
+ .medeaContent header .borderHider{
+    height: calc(11vh - (2 * 0.9vh));
+    width: calc(22vh - (2 * 0.9vh));
+    position:absolute;
+    top:0;
+    left:0;
+    background: white;
+    z-index: 2;
+} 
+
+.medeaContent header strong{
+    font-family: 'Merienda', cursive;
+    font-size:130px;
+    display: inline-block;
+    color:darkblue;
+    font-weight: bold;
+    position:absolute;
+    left:6.5vh;
+    top:1vh;
+    z-index: 3;
+    background: white;
+    line-height: 130px;
+
+}
+
+
+.medeaContent section{
+    height: 46%;
+    width: 100%;
+    padding-top:3.3%;
+    padding-left: 18%;
+}
+
+.medeaContent section .medeaLogo{
+    display: inline-block;
+    height: 23vh;
+    width: 44vh;
+    margin: 50px 0 0 50px;
+    border: 2.5vh solid red;
+    border-right:transparent;
+    position:relative;
+    background: white;
+    z-index: 0;
+}
+
+.medeaContent section .medeaLogoVr{
+    border: 2.5vh solid red; 
+    position: absolute; 
+    height: 44vh;
+    width: 23vh;
+    top:calc(( -1 * (44vh - 23vh) / 2) - 2.5vh);
+    left:calc(( 1 * (44vh - 23vh) / 2) - 2.5vh);
+    background:white;
+    z-index: 1;
+}
+
+ .medeaContent section .borderHider{
+    height: calc(23vh - (2 * 2.5vh));
+    width: calc(44vh - (2 * 2.5vh));
+    position:absolute;
+    top:0;
+    left:0;
+    background: white;
+    z-index: 2;
+} 
+
+.medeaContent .workingHours{
+    font-size:4.2rem;
+    display: inline-block;
+    position:absolute;
+    left:14vh;
+    top:1.5vh;
+    z-index: 3;
+    background: white;
+    width:50vw;
+    font-weight: bold;
+
+}
+
+.medeaContent .workingHours h3 {
+    font-size: 5.5rem;
+    
+}
+
+.medeaContent footer {
+    padding-top:1.3%;
+    text-align: center;
+}
+
+.medeaContent footer h2 {
+    color:red;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.medeaContent footer p {
+    font-size: 90px;
+    font-weight: bold;
+}

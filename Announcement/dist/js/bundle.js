@@ -23713,6 +23713,10 @@ var _Podomedis = __webpack_require__(25);
 
 var _Podomedis2 = _interopRequireDefault(_Podomedis);
 
+var _Medea = __webpack_require__(30);
+
+var _Medea2 = _interopRequireDefault(_Medea);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23754,7 +23758,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24643,6 +24647,107 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Medea = function Medea(props) {
+
+    return _react2.default.createElement(
+        "article",
+        { className: "medeaContent" },
+        _react2.default.createElement(
+            "header",
+            null,
+            _react2.default.createElement(
+                "p",
+                null,
+                "APTEKA"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "medeaLogo" },
+                _react2.default.createElement("div", { className: "medeaLogoVr" }),
+                _react2.default.createElement("div", { className: "borderHider" }),
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "Medea"
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "section",
+            null,
+            _react2.default.createElement(
+                "div",
+                { className: "medeaLogo" },
+                _react2.default.createElement("div", { className: "medeaLogoVr" }),
+                _react2.default.createElement("div", { className: "borderHider" }),
+                _react2.default.createElement(
+                    "div",
+                    { className: "workingHours" },
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Godziny otwarcia"
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Pon.-Pt. 7.",
+                        _react2.default.createElement(
+                            "sup",
+                            null,
+                            "30"
+                        ),
+                        "-19.",
+                        _react2.default.createElement(
+                            "sup",
+                            null,
+                            "30"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Sob. nieczynne"
+                    )
+                )
+            )
+        ),
+        _react2.default.createElement(
+            "footer",
+            null,
+            _react2.default.createElement(
+                "h2",
+                null,
+                "ZAPRASZAMY"
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "Wej\u015Bcie z przedsionka"
+            )
+        )
+    );
+};
+
+exports.default = Medea;
 
 /***/ })
 /******/ ]);
