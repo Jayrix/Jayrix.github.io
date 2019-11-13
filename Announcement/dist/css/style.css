@@ -712,3 +712,111 @@ div.CRContent #footerSection p:last-of-type {
     font-size: 90px;
     font-weight: bold;
 }
+
+
+/* *********************************************************** */
+
+
+
+.fibroscanContent {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fibroscanContent header{
+    height: 27vh;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1.2vh;
+    text-transform: uppercase;
+    
+}
+
+.fibroscanContent header h2{
+    color:red;
+    font-size: 5.5rem;
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.fibroscanContent header p{
+    margin-top: -1.2vh;
+    font-size: 3rem;
+}
+
+.fibroscanContent header strong {
+    text-decoration: underline;
+    color:red;
+}
+
+.fibroscanContent section {
+    height: 73vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fibroscanContent .textContainer {
+    width: 76%;
+    padding-left: 6%;
+    padding-right: 1%;
+    font-size: 2.4rem;
+}
+
+.fibroscanContent .textContainer span {
+    font-weight: bold;
+    color:red;
+    font-size: 2.6rem;
+}
+
+.fibroscanContent .textContainer p.fibroscanOverview{
+    margin-top: 2.5%;
+}
+
+.fibroscanContent .textContainer p.fibroscanMethod{
+    margin-top: 3%;
+}
+
+.fibroscanContent .imageContainer {
+    width: 22%;
+    height: 100%;
+}
+
+.fibroscanContent .imageContainer img{
+    max-height:100%;
+    width: auto;
+}
+
+.fibroscanContent .textContainer p.fibroscanIlness{
+    font-weight: bold;
+    color:red;
+    font-size: 2.6rem;
+    margin-top: 2.5%;
+    margin-bottom: 2%;
+}
+
+
+.fibroscanContent .textContainer ul{
+    list-style-type: disc;
+    font-size: 2.4rem;
+    padding-left: 2.5%;
+    
+}
+
+.fibroscanContent .textContainer p.fibroscanAdvert{
+    font-weight: bold;
+    color:red;
+    font-size: 2.6rem;
+    margin-top: 2.5%;
+    margin-bottom: 0.5%;
+}
+
+.fibroscanContent .textContainer p.preparationInfo{
+    margin-top:3.5%;
+    font-weight: bold;
+}
