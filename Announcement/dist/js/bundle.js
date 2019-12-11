@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(27);
+var isOnline = __webpack_require__(30);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23717,18 +23717,6 @@ var _Medea = __webpack_require__(26);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _Fibroscan = __webpack_require__(32);
-
-var _Fibroscan2 = _interopRequireDefault(_Fibroscan);
-
-var _Fibroscan3 = __webpack_require__(33);
-
-var _Fibroscan4 = _interopRequireDefault(_Fibroscan3);
-
-var _Fibroscan5 = __webpack_require__(34);
-
-var _Fibroscan6 = _interopRequireDefault(_Fibroscan5);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23770,7 +23758,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Fibroscan2.default, null), _react2.default.createElement(_Fibroscan4.default, null), _react2.default.createElement(_Fibroscan6.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24647,13 +24635,16 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 27 */
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(28);
+const publicIp = __webpack_require__(31);
 
 const defaults = {
 	timeout: 5000,
@@ -24667,12 +24658,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(29);
+const isIp = __webpack_require__(32);
 
 const defaults = {
 	timeout: 5000
@@ -24718,12 +24709,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(30);
+const ipRegex = __webpack_require__(33);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24731,7 +24722,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 30 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24760,340 +24751,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 31 */,
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Fibroscan1 = function Fibroscan1(props) {
-
-    return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "h2",
-                null,
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Dnia 10.12.2019 od godz. 12.",
-                _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
-                ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanOverview" },
-                    _react2.default.createElement(
-                        "span",
-                        null,
-                        "Czym jest FibroScan\xAE?"
-                    ),
-                    _react2.default.createElement("br", null),
-                    "Jest to pierwsze, innowacyjne urz\u0105dzenie do bezinwazyjnej i tym samym zupe\u0142nie bezpiecznej oceny stopnia w\u0142\xF3knienia w\u0105troby, w przebiegu przewlek\u0142ych zapalnych chor\xF3b w\u0105troby o zr\xF3\u017Cnicowanej etiologii. Jest tym samym alternatyw\u0105 dla wykonania wyj\u015Bciowej i/lub kontrolnej biopsji w\u0105troby."
-                ),
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanMethod" },
-                    _react2.default.createElement(
-                        "span",
-                        null,
-                        "Jak dzia\u0142a FibroScan\xAE?"
-                    ),
-                    _react2.default.createElement("br", null),
-                    "G\u0142owica urz\u0105dzenia, w kontakcie ze sk\xF3r\u0105 pacjenta, generuje impuls mechaniczny. Fala przechodzi przez tkanki podsk\xF3rne i dochodzi do w\u0105troby. W tym czasie g\u0142owica wysy\u0142a ultrad\u017Awi\u0119ki, kt\xF3re s\u0142u\u017C\u0105 pomiarowi pr\u0119dko\u015Bci rozchodzenia si\u0119 fali. Szybko\u015B\u0107 jej przemieszczania jest zale\u017Cna od stopnia twardo\u015Bci w\u0105troby. Pr\u0119dko\u015B\u0107 jest tym wi\u0119ksza im wi\u0119ksze jest zw\u0142\xF3knienie i sztywno\u015B\u0107 w\u0105troby."
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
-            )
-        )
-    );
-};
-
-exports.default = Fibroscan1;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Fibroscan2 = function Fibroscan2(props) {
-
-    return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "h2",
-                null,
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Dnia 10.12.2019 od godz. 12.",
-                _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
-                ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanIlness" },
-                    "FibroScan\xAE mo\u017Ce s\u0142u\u017Cy\u0107 do oceny stopnia zaawansowania w\u0142\xF3knienia w nast\u0119puj\u0105cych chorobach w\u0105troby i sytuacjach klinicznych:"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "ilnessList" },
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Przewlek\u0142e wirusowe zapalenie w\u0105troby typu B"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Przewlek\u0142e wirusowe zapalenie w\u0105troby typu C"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "St\u0142uszczeniowe zapalenie w\u0105troby (NASH)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Alkoholowe zapalenie w\u0105troby (ASH)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Pierwotna marsko\u015B\u0107 \u017C\xF3\u0142ciowa"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Pierwotne stwardniaj\u0105ce zapalenie dr\xF3g \u017C\xF3\u0142ciowych"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Autoimmunologiczne zapalenie w\u0105troby (metoda pomocnicza)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Spichrzeniowe choroby w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Toksyczne zapalenia w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Kryptogenne zapalenia w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Monitorowanie pacjent\xF3w po przeszczepach w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Niewyja\u015Bnione podwy\u017Cszenie aktywno\u015Bci AlAT i AspAT"
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
-            )
-        )
-    );
-};
-
-exports.default = Fibroscan2;
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Fibroscan1 = function Fibroscan1(props) {
-
-    return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "h2",
-                null,
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Dnia 10.12.2019 od godz. 12.",
-                _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
-                ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanAdvert" },
-                    "Dlaczego warto wybra\u0107 badanie FibroScan\xAE?"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "advertList" },
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "jest bezbolesne i nieinwazyjne"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "trwa 5-10 minut"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "mog\u0105 z niego skorzysta\u0107 Pacjenci o r\xF3\u017Cnej budowie cia\u0142a (g\u0142owice o rozmiarach M i XL)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wynik otrzymujemy od razu po jego zako\u0144czeniu"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wynik jest \u015Bredni\u0105 z 10 pomiar\xF3w \u2013 wysoka warto\u015B\u0107 diagnostyczna"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "mo\u017Cna je powtarza\u0107 wielokrotnie i w dowolnych odst\u0119pach czasu"
-                    )
-                ),
-                _react2.default.createElement(
-                    "p",
-                    { className: "preparationInfo" },
-                    "Aby wyeliminowa\u0107 wp\u0142yw spo\u017Cytego posi\u0142ku na wynik badania, zaleca si\u0119 wykonywanie go na czczo lub po up\u0142ywie czterech (optymalnie sze\u015Bciu) godzin po posi\u0142ku. Do badania nale\u017Cy zg\u0142osi\u0107 si\u0119 z dokumentacj\u0105 medyczn\u0105 dotycz\u0105c\u0105 choroby w\u0105troby oraz chor\xF3b towarzysz\u0105cych."
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
-            )
-        )
-    );
-};
-
-exports.default = Fibroscan1;
 
 /***/ })
 /******/ ]);
