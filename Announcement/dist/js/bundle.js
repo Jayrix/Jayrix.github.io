@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(30);
+var isOnline = __webpack_require__(25);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23689,31 +23689,23 @@ var _BozenaHandzlik = __webpack_require__(19);
 
 var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
 
-var _SzczepionkiGrypa = __webpack_require__(20);
-
-var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
-
-var _TestyNaGrype = __webpack_require__(21);
-
-var _TestyNaGrype2 = _interopRequireDefault(_TestyNaGrype);
-
-var _PSP = __webpack_require__(22);
+var _PSP = __webpack_require__(20);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
-var _Geers = __webpack_require__(23);
+var _Geers = __webpack_require__(21);
 
 var _Geers2 = _interopRequireDefault(_Geers);
 
-var _CR = __webpack_require__(24);
+var _CR = __webpack_require__(22);
 
 var _CR2 = _interopRequireDefault(_CR);
 
-var _Podomedis = __webpack_require__(25);
+var _Podomedis = __webpack_require__(23);
 
 var _Podomedis2 = _interopRequireDefault(_Podomedis);
 
-var _Medea = __webpack_require__(26);
+var _Medea = __webpack_require__(24);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
@@ -23758,7 +23750,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24054,118 +24046,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "vaccineContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "vaccineText" },
-                "Zbli\u017Ca si\u0119 sezon grypowy. Informujemy, \u017Ce wznowiono ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "PROGRAM DARMOWYCH SZCZEPIE\u0143 PRZECIW GRYPIE"
-                ),
-                " dla os\xF3b powy\u017Cej 65 roku \u017Cycia (dla pierwszych 300 zg\u0142osze\u0144)."
-            )
-        )
-    );
-};
-
-exports.default = SzczepionkiGrypa;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TestyNaGrype = function TestyNaGrype(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "testContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/grypa.jpg", alt: "Test na grype", title: "Test na grype" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                null,
-                "Testy na gryp\u0119"
-            ),
-            _react2.default.createElement(
-                "ul",
-                null,
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Bez skierowania"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Cena: 30 z\u0142"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "O szczeg\xF3\u0142y prosimy pyta\u0107 w gabinecie zabiegowym"
-                )
-            )
-        )
-    );
-};
-
-exports.default = TestyNaGrype;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var PSP = function PSP(props) {
     return _react2.default.createElement(
         "div",
@@ -24177,7 +24057,7 @@ var PSP = function PSP(props) {
 exports.default = PSP;
 
 /***/ }),
-/* 23 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24204,7 +24084,7 @@ var Geers = function Geers(props) {
 exports.default = Geers;
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24378,7 +24258,7 @@ var CR = function CR(props) {
 exports.default = CR;
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24534,7 +24414,7 @@ var Podomedis = function Podomedis(props) {
 exports.default = Podomedis;
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24635,16 +24515,13 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(31);
+const publicIp = __webpack_require__(26);
 
 const defaults = {
 	timeout: 5000,
@@ -24658,12 +24535,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 31 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(32);
+const isIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000
@@ -24709,12 +24586,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 32 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(33);
+const ipRegex = __webpack_require__(28);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24722,7 +24599,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 33 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
