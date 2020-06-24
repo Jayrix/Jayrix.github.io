@@ -820,3 +820,36 @@ div.CRContent #footerSection p:last-of-type {
     margin-top:3.5%;
     font-weight: bold;
 }
+
+
+/******************************************************************************/
+
+.osteoContent {
+    /* overflow: hidden; */
+    
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+ .osteoContent p{
+    font-size: 5rem;
+    margin: 6% 3.5% 0 3.5%;
+    font-weight: bold;
+}
+
+.osteoContent strong {
+    color:red;
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+.osteoContent #timeInfo {
+    color:red;
+}
+
+.osteoContent #contactInfo {
+    color: brown;
+
+}
+

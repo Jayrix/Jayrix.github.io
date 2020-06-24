@@ -65,21 +65,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(6);
-} else {
-  module.exports = __webpack_require__(7);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -267,6 +252,21 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(6);
+} else {
+  module.exports = __webpack_require__(7);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 2 */
@@ -462,7 +462,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 4 */
@@ -477,7 +477,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(12);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
@@ -486,7 +486,7 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(27);
+var isOnline = __webpack_require__(19);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -2447,7 +2447,7 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 8 */
@@ -2512,7 +2512,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(13);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 10 */
@@ -2531,7 +2531,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),n=__webpack_require__(2),ba=__webpack_require__(4);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
+var aa=__webpack_require__(1),n=__webpack_require__(2),ba=__webpack_require__(4);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
 function t(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);ca(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}aa?void 0:t("227");function da(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}
 var ea=!1,fa=null,ha=!1,ia=null,ja={onError:function(a){ea=!0;fa=a}};function ka(a,b,c,d,e,f,g,h,k){ea=!1;fa=null;da.apply(ja,arguments)}function la(a,b,c,d,e,f,g,h,k){ka.apply(this,arguments);if(ea){if(ea){var l=fa;ea=!1;fa=null}else t("198"),l=void 0;ha||(ha=!0,ia=l)}}var ma=null,na={};
 function oa(){if(ma)for(var a in na){var b=na[a],c=ma.indexOf(a);-1<c?void 0:t("96",a);if(!pa[c]){b.extractEvents?void 0:t("97",a);pa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;qa.hasOwnProperty(h)?t("99",h):void 0;qa[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ra(k[e],g,h);e=!0}else f.registrationName?(ra(f.registrationName,g,h),e=!0):e=!1;e?void 0:t("98",d,a)}}}}
@@ -3443,7 +3443,7 @@ exports.unstable_shouldYield = unstable_shouldYield;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 13 */
@@ -3467,7 +3467,7 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(0);
+var React = __webpack_require__(1);
 var _assign = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(3);
 var scheduler = __webpack_require__(4);
@@ -23178,7 +23178,7 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 14 */
@@ -23193,7 +23193,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(16);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 15 */
@@ -23638,7 +23638,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 17 */
@@ -23651,7 +23651,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23681,53 +23681,37 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _BozenaHandzlik = __webpack_require__(19);
+var _BozenaHandzlik = __webpack_require__(23);
 
 var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
 
-var _SzczepionkiGrypa = __webpack_require__(20);
-
-var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
-
-var _TestyNaGrype = __webpack_require__(21);
-
-var _TestyNaGrype2 = _interopRequireDefault(_TestyNaGrype);
-
-var _PSP = __webpack_require__(22);
+var _PSP = __webpack_require__(24);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
-var _Geers = __webpack_require__(23);
+var _Geers = __webpack_require__(25);
 
 var _Geers2 = _interopRequireDefault(_Geers);
 
-var _CR = __webpack_require__(24);
+var _CR = __webpack_require__(26);
 
 var _CR2 = _interopRequireDefault(_CR);
 
-var _Podomedis = __webpack_require__(25);
+var _Podomedis = __webpack_require__(27);
 
 var _Podomedis2 = _interopRequireDefault(_Podomedis);
 
-var _Medea = __webpack_require__(26);
+var _Medea = __webpack_require__(28);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _Fibroscan = __webpack_require__(32);
+var _Osteoporoza = __webpack_require__(31);
 
-var _Fibroscan2 = _interopRequireDefault(_Fibroscan);
-
-var _Fibroscan3 = __webpack_require__(33);
-
-var _Fibroscan4 = _interopRequireDefault(_Fibroscan3);
-
-var _Fibroscan5 = __webpack_require__(34);
-
-var _Fibroscan6 = _interopRequireDefault(_Fibroscan5);
+var _Osteoporoza2 = _interopRequireDefault(_Osteoporoza);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23770,7 +23754,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Fibroscan2.default, null), _react2.default.createElement(_Fibroscan4.default, null), _react2.default.createElement(_Fibroscan6.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23884,11 +23868,126 @@ exports.default = AnnouncementList;
 "use strict";
 
 
+const publicIp = __webpack_require__(20);
+
+const defaults = {
+	timeout: 5000,
+	version: 'v4'
+};
+
+module.exports = options => {
+	options = Object.assign({}, defaults, options);
+	return publicIp[options.version](options).then(() => true).catch(() => false);
+};
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const isIp = __webpack_require__(21);
+
+const defaults = {
+	timeout: 5000
+};
+
+const urls = {
+	v4: 'https://ipv4.icanhazip.com/',
+	v6: 'https://ipv6.icanhazip.com/'
+};
+
+function queryHttps(version, opts) {
+	return new Promise((resolve, reject) => {
+		const doReject = () => reject(new Error('Couldn\'t find your IP'));
+		const xhr = new XMLHttpRequest();
+
+		xhr.onerror = doReject;
+		xhr.ontimeout = doReject;
+		xhr.onload = () => {
+			const ip = xhr.responseText.trim();
+
+			if (!ip || !isIp[version](ip)) {
+				doReject();
+			}
+
+			resolve(ip);
+		};
+
+		xhr.open('GET', urls[version]);
+		xhr.timeout = opts.timeout;
+		xhr.send();
+	});
+}
+
+module.exports.v4 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v4', opts);
+};
+
+module.exports.v6 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v6', opts);
+};
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const ipRegex = __webpack_require__(22);
+
+const isIp = module.exports = x => ipRegex({exact: true}).test(x);
+isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
+isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
+
+const v6seg = '[0-9a-fA-F]{1,4}';
+const v6 = `
+(
+(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
+(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
+(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
+(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
+(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
+(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
+(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
+(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
+)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
+`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
+
+const ip = module.exports = opts => opts && opts.exact ?
+	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
+	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
+
+ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
+ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24050,7 +24149,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
 exports.default = BozenaHandzlik;
 
 /***/ }),
-/* 20 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24060,119 +24159,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "vaccineContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "vaccineText" },
-                "Zbli\u017Ca si\u0119 sezon grypowy. Informujemy, \u017Ce wznowiono ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "PROGRAM DARMOWYCH SZCZEPIE\u0143 PRZECIW GRYPIE"
-                ),
-                " dla os\xF3b powy\u017Cej 65 roku \u017Cycia (dla pierwszych 300 zg\u0142osze\u0144)."
-            )
-        )
-    );
-};
-
-exports.default = SzczepionkiGrypa;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TestyNaGrype = function TestyNaGrype(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "testContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/grypa.jpg", alt: "Test na grype", title: "Test na grype" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                null,
-                "Testy na gryp\u0119"
-            ),
-            _react2.default.createElement(
-                "ul",
-                null,
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Bez skierowania"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "Cena: 30 z\u0142"
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    "O szczeg\xF3\u0142y prosimy pyta\u0107 w gabinecie zabiegowym"
-                )
-            )
-        )
-    );
-};
-
-exports.default = TestyNaGrype;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24189,7 +24176,7 @@ var PSP = function PSP(props) {
 exports.default = PSP;
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24199,7 +24186,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24216,7 +24203,7 @@ var Geers = function Geers(props) {
 exports.default = Geers;
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24226,7 +24213,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24390,7 +24377,7 @@ var CR = function CR(props) {
 exports.default = CR;
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24400,7 +24387,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24546,7 +24533,7 @@ var Podomedis = function Podomedis(props) {
 exports.default = Podomedis;
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24556,7 +24543,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24647,123 +24634,9 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const publicIp = __webpack_require__(28);
-
-const defaults = {
-	timeout: 5000,
-	version: 'v4'
-};
-
-module.exports = options => {
-	options = Object.assign({}, defaults, options);
-	return publicIp[options.version](options).then(() => true).catch(() => false);
-};
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const isIp = __webpack_require__(29);
-
-const defaults = {
-	timeout: 5000
-};
-
-const urls = {
-	v4: 'https://ipv4.icanhazip.com/',
-	v6: 'https://ipv6.icanhazip.com/'
-};
-
-function queryHttps(version, opts) {
-	return new Promise((resolve, reject) => {
-		const doReject = () => reject(new Error('Couldn\'t find your IP'));
-		const xhr = new XMLHttpRequest();
-
-		xhr.onerror = doReject;
-		xhr.ontimeout = doReject;
-		xhr.onload = () => {
-			const ip = xhr.responseText.trim();
-
-			if (!ip || !isIp[version](ip)) {
-				doReject();
-			}
-
-			resolve(ip);
-		};
-
-		xhr.open('GET', urls[version]);
-		xhr.timeout = opts.timeout;
-		xhr.send();
-	});
-}
-
-module.exports.v4 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v4', opts);
-};
-
-module.exports.v6 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v6', opts);
-};
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const ipRegex = __webpack_require__(30);
-
-const isIp = module.exports = x => ipRegex({exact: true}).test(x);
-isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
-isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
-
-const v6seg = '[0-9a-fA-F]{1,4}';
-const v6 = `
-(
-(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
-(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
-(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
-(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
-(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
-(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
-(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
-(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
-)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
-`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
-
-const ip = module.exports = opts => opts && opts.exact ?
-	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
-	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
-
-ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
-ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
-
-
-/***/ }),
-/* 31 */,
-/* 32 */
+/* 29 */,
+/* 30 */,
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24773,327 +24646,53 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Fibroscan1 = function Fibroscan1(props) {
+var Osteoporoza = function Osteoporoza(props) {
 
     return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
+        "div",
+        null,
         _react2.default.createElement(
-            "header",
-            null,
+            "article",
+            { className: "osteoContent" },
             _react2.default.createElement(
-                "h2",
+                "p",
                 null,
-                "UWAGA! UWAGA!"
+                "Zapraszamy na ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "badanie osteoporozy"
+                ),
+                " z odcinka l\u0119d\u017Awiowego kr\u0119gos\u0142upa lub z szyjki ko\u015Bci udowej, w osteobusie ",
+                _react2.default.createElement(
+                    "span",
+                    { id: "timeInfo" },
+                    "w dniu 17 lipca 2020, od godziny 9:00 do 18:00"
+                ),
+                "."
             ),
             _react2.default.createElement(
                 "p",
                 null,
-                "Dnia 10.12.2019 od godz. 12.",
+                "Zapisy telefoniczne w rejestracji ",
                 _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
+                    "span",
+                    { id: "contactInfo" },
+                    "pod numerem 33 851 40 23."
                 ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanOverview" },
-                    _react2.default.createElement(
-                        "span",
-                        null,
-                        "Czym jest FibroScan\xAE?"
-                    ),
-                    _react2.default.createElement("br", null),
-                    "Jest to pierwsze, innowacyjne urz\u0105dzenie do bezinwazyjnej i tym samym zupe\u0142nie bezpiecznej oceny stopnia w\u0142\xF3knienia w\u0105troby, w przebiegu przewlek\u0142ych zapalnych chor\xF3b w\u0105troby o zr\xF3\u017Cnicowanej etiologii. Jest tym samym alternatyw\u0105 dla wykonania wyj\u015Bciowej i/lub kontrolnej biopsji w\u0105troby."
-                ),
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanMethod" },
-                    _react2.default.createElement(
-                        "span",
-                        null,
-                        "Jak dzia\u0142a FibroScan\xAE?"
-                    ),
-                    _react2.default.createElement("br", null),
-                    "G\u0142owica urz\u0105dzenia, w kontakcie ze sk\xF3r\u0105 pacjenta, generuje impuls mechaniczny. Fala przechodzi przez tkanki podsk\xF3rne i dochodzi do w\u0105troby. W tym czasie g\u0142owica wysy\u0142a ultrad\u017Awi\u0119ki, kt\xF3re s\u0142u\u017C\u0105 pomiarowi pr\u0119dko\u015Bci rozchodzenia si\u0119 fali. Szybko\u015B\u0107 jej przemieszczania jest zale\u017Cna od stopnia twardo\u015Bci w\u0105troby. Pr\u0119dko\u015B\u0107 jest tym wi\u0119ksza im wi\u0119ksze jest zw\u0142\xF3knienie i sztywno\u015B\u0107 w\u0105troby."
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
+                " Koszt badania 39 z\u0142."
             )
         )
     );
 };
 
-exports.default = Fibroscan1;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Fibroscan2 = function Fibroscan2(props) {
-
-    return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "h2",
-                null,
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Dnia 10.12.2019 od godz. 12.",
-                _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
-                ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanIlness" },
-                    "FibroScan\xAE mo\u017Ce s\u0142u\u017Cy\u0107 do oceny stopnia zaawansowania w\u0142\xF3knienia w nast\u0119puj\u0105cych chorobach w\u0105troby i sytuacjach klinicznych:"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "ilnessList" },
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Przewlek\u0142e wirusowe zapalenie w\u0105troby typu B"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Przewlek\u0142e wirusowe zapalenie w\u0105troby typu C"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "St\u0142uszczeniowe zapalenie w\u0105troby (NASH)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Alkoholowe zapalenie w\u0105troby (ASH)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Pierwotna marsko\u015B\u0107 \u017C\xF3\u0142ciowa"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Pierwotne stwardniaj\u0105ce zapalenie dr\xF3g \u017C\xF3\u0142ciowych"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Autoimmunologiczne zapalenie w\u0105troby (metoda pomocnicza)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Spichrzeniowe choroby w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Toksyczne zapalenia w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Kryptogenne zapalenia w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Monitorowanie pacjent\xF3w po przeszczepach w\u0105troby"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "Niewyja\u015Bnione podwy\u017Cszenie aktywno\u015Bci AlAT i AspAT"
-                    )
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
-            )
-        )
-    );
-};
-
-exports.default = Fibroscan2;
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Fibroscan1 = function Fibroscan1(props) {
-
-    return _react2.default.createElement(
-        "article",
-        { className: "fibroscanContent" },
-        _react2.default.createElement(
-            "header",
-            null,
-            _react2.default.createElement(
-                "h2",
-                null,
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Dnia 10.12.2019 od godz. 12.",
-                _react2.default.createElement(
-                    "sup",
-                    null,
-                    "00"
-                ),
-                " mo\u017Cna b\u0119dzie wykona\u0107 u nas szczeg\xF3\u0142owe, nieinwazyjne badanie w\u0105troby metod\u0105 ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "FIBROSCAN\xAE"
-                ),
-                ". Urz\u0105dzenie b\u0119dzie u nas dost\u0119pne tylko tego dnia. Cena: 270 z\u0142."
-            )
-        ),
-        _react2.default.createElement(
-            "section",
-            null,
-            _react2.default.createElement(
-                "div",
-                { className: "textContainer" },
-                _react2.default.createElement(
-                    "p",
-                    { className: "fibroscanAdvert" },
-                    "Dlaczego warto wybra\u0107 badanie FibroScan\xAE?"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    { className: "advertList" },
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "jest bezbolesne i nieinwazyjne"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "trwa 5-10 minut"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "mog\u0105 z niego skorzysta\u0107 Pacjenci o r\xF3\u017Cnej budowie cia\u0142a (g\u0142owice o rozmiarach M i XL)"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wynik otrzymujemy od razu po jego zako\u0144czeniu"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wynik jest \u015Bredni\u0105 z 10 pomiar\xF3w \u2013 wysoka warto\u015B\u0107 diagnostyczna"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "mo\u017Cna je powtarza\u0107 wielokrotnie i w dowolnych odst\u0119pach czasu"
-                    )
-                ),
-                _react2.default.createElement(
-                    "p",
-                    { className: "preparationInfo" },
-                    "Aby wyeliminowa\u0107 wp\u0142yw spo\u017Cytego posi\u0142ku na wynik badania, zaleca si\u0119 wykonywanie go na czczo lub po up\u0142ywie czterech (optymalnie sze\u015Bciu) godzin po posi\u0142ku. Do badania nale\u017Cy zg\u0142osi\u0107 si\u0119 z dokumentacj\u0105 medyczn\u0105 dotycz\u0105c\u0105 choroby w\u0105troby oraz chor\xF3b towarzysz\u0105cych."
-                )
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/fibroscan/fibro.png", alt: "" })
-            )
-        )
-    );
-};
-
-exports.default = Fibroscan1;
+exports.default = Osteoporoza;
 
 /***/ })
 /******/ ]);
