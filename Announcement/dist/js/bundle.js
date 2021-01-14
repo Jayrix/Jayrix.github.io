@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(25);
+var isOnline = __webpack_require__(26);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23709,6 +23709,10 @@ var _Medea = __webpack_require__(24);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
+var _CovidInfo = __webpack_require__(25);
+
+var _CovidInfo2 = _interopRequireDefault(_CovidInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23718,9 +23722,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 60000;
+var SLIDE_INTERVAL_MS = 40000;
 var PSP_SLIDE_INTERVAL_MS = 10000;
-var GEERS_SLIDE_INTERVAL_MS = 15000;
+var GEERS_SLIDE_INTERVAL_MS = 12000;
 var FIRST_ANN_REMOVAL_MS = 4000;
 var SLIDE_DISTANCE = window.screen.width;
 
@@ -23750,7 +23754,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24521,7 +24525,42 @@ exports.default = Medea;
 "use strict";
 
 
-const publicIp = __webpack_require__(26);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// const CovidInfo = (props) => {
+//     return (
+//         <div className="CovidInfo_imageContainer">
+//             <img src={`./dist/img/covidinfo/covidinfo${props.id}.jpg`} alt="Slajd informacyjny o szczepienia"/>
+//         </div>
+//     )
+// }
+
+var CovidInfo = function CovidInfo() {
+    return _react2.default.createElement(
+        "div",
+        { className: "CovidInfo_imageContainer" },
+        _react2.default.createElement("img", { src: "./dist/img/covidinfo/covidinfo1.jpg", alt: "Slajd informacyjny o szczepieniach na Covid" })
+    );
+};
+
+exports.default = CovidInfo;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000,
@@ -24535,12 +24574,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(27);
+const isIp = __webpack_require__(28);
 
 const defaults = {
 	timeout: 5000
@@ -24586,12 +24625,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(28);
+const ipRegex = __webpack_require__(29);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24599,7 +24638,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

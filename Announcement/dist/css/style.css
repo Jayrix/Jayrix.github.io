@@ -156,10 +156,11 @@ div.additionalInfo div.appointementInfo {
 
 
 .servicesSection p:last-of-type{
-    margin-top: 1.2%;
+    margin-top: 0.5%;
     margin-left: 5%;
     font-size:2.8rem;
-    font-weight: 500;
+    font-weight: 600;
+    color:blue;
 }
 
 /* iframe{
@@ -223,6 +224,10 @@ article.vaccineContent {
     text-indent: 7%;
 } */
 
+/*
+*******************************************************************************
+*/
+
 
 div.PSP_imageContainer {
     display: inline-block;
@@ -237,6 +242,10 @@ div.PSP_imageContainer img {
 
 }
 
+/*
+*******************************************************************************
+*/
+
 div.Geers_imageContainer {
     display: inline-block;
     width: 100%;
@@ -249,6 +258,28 @@ div.Geers_imageContainer img {
     height: auto;
 
 }
+/*
+********************************************************************************
+*/
+
+div.CovidInfo_imageContainer {
+    display: inline-block;
+    width: 100%;
+}
+
+div.CovidInfo_imageContainer img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+
+}
+
+/*
+********************************************************************************
+*/
+
+
 
 article.testContent{
     display:flex;
