@@ -568,9 +568,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //set Fullscreen mode in js because of issues with browser rescaling after some TVs being turned on with browser already loaded
     //in Firefox config full-screen-api.allow-trusted-requests-only needs to be FALSE
     //Compiz handled this by itself before
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-    }
+    //document.documentElement.requestFullscreen();
+    //now wmctrl shell script handles this
+
 
     setTimeout(function () {
         reloadThePage(GET_URL);
@@ -23692,10 +23692,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _BozenaHandzlik = __webpack_require__(19);
-
-var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
-
 var _PSP = __webpack_require__(20);
 
 var _PSP2 = _interopRequireDefault(_PSP);
@@ -23761,7 +23757,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23770,14 +23766,14 @@ var AnnouncementList = function (_Component) {
     }
 
     _createClass(AnnouncementList, [{
-        key: 'copyFirstToLast',
+        key: "copyFirstToLast",
         value: function copyFirstToLast(array) {
             var newArray = array.slice(0);
             newArray.push(newArray[0]);
             return newArray;
         }
     }, {
-        key: 'removeFirst',
+        key: "removeFirst",
         value: function removeFirst(array) {
             var newArray = array.slice(0);
             newArray.shift();
@@ -23787,7 +23783,7 @@ var AnnouncementList = function (_Component) {
         //function responsible for sliding
 
     }, {
-        key: 'slideTimeout',
+        key: "slideTimeout",
         value: function slideTimeout(timeout) {
             var _this2 = this;
 
@@ -23821,27 +23817,27 @@ var AnnouncementList = function (_Component) {
             }, timeout);
         }
     }, {
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
 
             this.slideTimeout(SLIDE_INTERVAL_MS);
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             //console.log("component rendered")
             return _react2.default.createElement(
-                'section',
-                { className: 'mainListContainer' },
+                "section",
+                { className: "mainListContainer" },
                 _react2.default.createElement(
-                    'ul',
-                    { className: 'mainList',
-                        style: this.state.movedLeft === false ? { transition: 'right 0s', right: '0px' } : { transition: 'right 1.5s', right: SLIDE_DISTANCE + 'px' }
+                    "ul",
+                    { className: "mainList",
+                        style: this.state.movedLeft === false ? { transition: 'right 0s', right: '0px' } : { transition: 'right 1.5s', right: SLIDE_DISTANCE + "px" }
                     },
                     this.state.announcements.map(function (el, index) {
                         return _react2.default.createElement(
-                            'li',
-                            { key: index, className: 'announcementRoot' },
+                            "li",
+                            { key: index, className: "announcementRoot" },
                             el
                         );
                     })
@@ -23849,14 +23845,14 @@ var AnnouncementList = function (_Component) {
             );
         }
     }, {
-        key: 'componentDidUpdate',
+        key: "componentDidUpdate",
         value: function componentDidUpdate() {
             // if(this.state.announcements[1].type.name === "PSP"){
             //     console.log('teraz PSP');
             // }
         }
     }, {
-        key: 'componentWillUnmount',
+        key: "componentWillUnmount",
         value: function componentWillUnmount() {
 
             clearTimeout(this.slideListTimeoutID);
@@ -23869,178 +23865,7 @@ var AnnouncementList = function (_Component) {
 exports.default = AnnouncementList;
 
 /***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var BozenaHandzlik = function BozenaHandzlik(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "h2",
-            { className: "announcementTitle" },
-            "Otwarcie gabinetu endokrynologicznego"
-        ),
-        _react2.default.createElement(
-            "article",
-            { className: "announcementContent" },
-            _react2.default.createElement(
-                "section",
-                { className: "overviewSection" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "textContainer" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "personData" },
-                        _react2.default.createElement(
-                            "h3",
-                            null,
-                            "dr Bo\u017Cena Handzlik:"
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "specializationList" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "specjalista endokrynolog"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "specjalista chor\xF3b wewn\u0119trznych"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "additionalInfo" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "appointementInfo" },
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Przyj\u0119cia odbywaj\u0105 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Wizyty tylko prywatne."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Koszt: pierwsza wizyta 150 z\u0142, kolejne 130 z\u0142."
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Endokrynologia", title: "Gabinet Endokrynologiczny" })
-                )
-            ),
-            _react2.default.createElement(
-                "section",
-                { className: "servicesSection" },
-                _react2.default.createElement(
-                    "h3",
-                    null,
-                    "Zakres dzia\u0142alno\u015Bci:"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    null,
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "leczenie chor\xF3b:",
-                        _react2.default.createElement(
-                            "ul",
-                            null,
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "tarczycy"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "przysadki m\xF3zgowej"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "nadnerczy"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "jajnik\xF3w i j\u0105der"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "diagnostyka i leczenie oty\u0142o\u015Bci"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "prowadzenie kobiet z chorobami endokrynologicznymi w ci\u0105\u017Cy i po porodzie"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wst\u0119pna diagnostyka zaburze\u0144 p\u0142odno\u015Bci i miesi\u0105czkowania"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "diagnostyka tr\u0105dziku i hirsutyzmu"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "USG tarczycy"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "r\xF3wnie\u017C diagnostyka zaburze\u0144 endokrynologicznych u dzieci"
-                    )
-                ),
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Ch\u0119tnych zapraszamy do rejestracji na I-szym pi\u0119trze"
-                )
-            )
-        )
-    );
-};
-
-exports.default = BozenaHandzlik;
-
-/***/ }),
+/* 19 */,
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
