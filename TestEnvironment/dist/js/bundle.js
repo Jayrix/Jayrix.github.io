@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(26);
+var isOnline = __webpack_require__(25);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -568,9 +568,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //set Fullscreen mode in js because of issues with browser rescaling after some TVs being turned on with browser already loaded
     //in Firefox config full-screen-api.allow-trusted-requests-only needs to be FALSE
     //Compiz handled this by itself before
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-    }
+    //document.documentElement.requestFullscreen();
+    //now wmctrl shell script handles this
+
 
     setTimeout(function () {
         reloadThePage(GET_URL);
@@ -23692,33 +23692,33 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _BozenaHandzlik = __webpack_require__(19);
-
-var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
-
-var _PSP = __webpack_require__(20);
+var _PSP = __webpack_require__(19);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
-var _Geers = __webpack_require__(21);
+var _Geers = __webpack_require__(20);
 
 var _Geers2 = _interopRequireDefault(_Geers);
 
-var _CR = __webpack_require__(22);
+var _CR = __webpack_require__(21);
 
 var _CR2 = _interopRequireDefault(_CR);
 
-var _Podomedis = __webpack_require__(23);
+var _Podomedis = __webpack_require__(22);
 
 var _Podomedis2 = _interopRequireDefault(_Podomedis);
 
-var _Medea = __webpack_require__(24);
+var _Medea = __webpack_require__(23);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _CovidInfo = __webpack_require__(25);
+var _CovidInfo = __webpack_require__(24);
 
 var _CovidInfo2 = _interopRequireDefault(_CovidInfo);
+
+var _SzczepieniaCovid = __webpack_require__(30);
+
+var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23727,6 +23727,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
+
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 40000;
@@ -23761,7 +23764,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23770,14 +23773,14 @@ var AnnouncementList = function (_Component) {
     }
 
     _createClass(AnnouncementList, [{
-        key: 'copyFirstToLast',
+        key: "copyFirstToLast",
         value: function copyFirstToLast(array) {
             var newArray = array.slice(0);
             newArray.push(newArray[0]);
             return newArray;
         }
     }, {
-        key: 'removeFirst',
+        key: "removeFirst",
         value: function removeFirst(array) {
             var newArray = array.slice(0);
             newArray.shift();
@@ -23787,7 +23790,7 @@ var AnnouncementList = function (_Component) {
         //function responsible for sliding
 
     }, {
-        key: 'slideTimeout',
+        key: "slideTimeout",
         value: function slideTimeout(timeout) {
             var _this2 = this;
 
@@ -23821,27 +23824,27 @@ var AnnouncementList = function (_Component) {
             }, timeout);
         }
     }, {
-        key: 'componentDidMount',
+        key: "componentDidMount",
         value: function componentDidMount() {
 
             this.slideTimeout(SLIDE_INTERVAL_MS);
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             //console.log("component rendered")
             return _react2.default.createElement(
-                'section',
-                { className: 'mainListContainer' },
+                "section",
+                { className: "mainListContainer" },
                 _react2.default.createElement(
-                    'ul',
-                    { className: 'mainList',
-                        style: this.state.movedLeft === false ? { transition: 'right 0s', right: '0px' } : { transition: 'right 1.5s', right: SLIDE_DISTANCE + 'px' }
+                    "ul",
+                    { className: "mainList",
+                        style: this.state.movedLeft === false ? { transition: 'right 0s', right: '0px' } : { transition: 'right 1.5s', right: SLIDE_DISTANCE + "px" }
                     },
                     this.state.announcements.map(function (el, index) {
                         return _react2.default.createElement(
-                            'li',
-                            { key: index, className: 'announcementRoot' },
+                            "li",
+                            { key: index, className: "announcementRoot" },
                             el
                         );
                     })
@@ -23849,14 +23852,14 @@ var AnnouncementList = function (_Component) {
             );
         }
     }, {
-        key: 'componentDidUpdate',
+        key: "componentDidUpdate",
         value: function componentDidUpdate() {
             // if(this.state.announcements[1].type.name === "PSP"){
             //     console.log('teraz PSP');
             // }
         }
     }, {
-        key: 'componentWillUnmount',
+        key: "componentWillUnmount",
         value: function componentWillUnmount() {
 
             clearTimeout(this.slideListTimeoutID);
@@ -23885,178 +23888,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var BozenaHandzlik = function BozenaHandzlik(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "h2",
-            { className: "announcementTitle" },
-            "Otwarcie gabinetu endokrynologicznego"
-        ),
-        _react2.default.createElement(
-            "article",
-            { className: "announcementContent" },
-            _react2.default.createElement(
-                "section",
-                { className: "overviewSection" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "textContainer" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "personData" },
-                        _react2.default.createElement(
-                            "h3",
-                            null,
-                            "dr Bo\u017Cena Handzlik:"
-                        ),
-                        _react2.default.createElement(
-                            "ul",
-                            { className: "specializationList" },
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "specjalista endokrynolog"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "specjalista chor\xF3b wewn\u0119trznych"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "additionalInfo" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "appointementInfo" },
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Przyj\u0119cia odbywaj\u0105 si\u0119 b\u0119d\u0105 w poniedzia\u0142ki, dwa razy w miesi\u0105cu."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Wizyty tylko prywatne."
-                            ),
-                            _react2.default.createElement(
-                                "p",
-                                null,
-                                "Koszt: pierwsza wizyta 150 z\u0142, kolejne 130 z\u0142."
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Endokrynologia", title: "Gabinet Endokrynologiczny" })
-                )
-            ),
-            _react2.default.createElement(
-                "section",
-                { className: "servicesSection" },
-                _react2.default.createElement(
-                    "h3",
-                    null,
-                    "Zakres dzia\u0142alno\u015Bci:"
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    null,
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "leczenie chor\xF3b:",
-                        _react2.default.createElement(
-                            "ul",
-                            null,
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "tarczycy"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "przysadki m\xF3zgowej"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "nadnerczy"
-                            ),
-                            _react2.default.createElement(
-                                "li",
-                                null,
-                                "jajnik\xF3w i j\u0105der"
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "diagnostyka i leczenie oty\u0142o\u015Bci"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "prowadzenie kobiet z chorobami endokrynologicznymi w ci\u0105\u017Cy i po porodzie"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "wst\u0119pna diagnostyka zaburze\u0144 p\u0142odno\u015Bci i miesi\u0105czkowania"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "diagnostyka tr\u0105dziku i hirsutyzmu"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "USG tarczycy"
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        "r\xF3wnie\u017C diagnostyka zaburze\u0144 endokrynologicznych u dzieci"
-                    )
-                ),
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Ch\u0119tnych zapraszamy do rejestracji na I-szym pi\u0119trze"
-                )
-            )
-        )
-    );
-};
-
-exports.default = BozenaHandzlik;
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var PSP = function PSP(props) {
     return _react2.default.createElement(
         "div",
@@ -24068,7 +23899,7 @@ var PSP = function PSP(props) {
 exports.default = PSP;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24095,7 +23926,7 @@ var Geers = function Geers(props) {
 exports.default = Geers;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24269,7 +24100,7 @@ var CR = function CR(props) {
 exports.default = CR;
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24425,7 +24256,7 @@ var Podomedis = function Podomedis(props) {
 exports.default = Podomedis;
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24526,7 +24357,7 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24561,13 +24392,13 @@ var CovidInfo = function CovidInfo() {
 exports.default = CovidInfo;
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(27);
+const publicIp = __webpack_require__(26);
 
 const defaults = {
 	timeout: 5000,
@@ -24581,12 +24412,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(28);
+const isIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000
@@ -24632,12 +24463,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(29);
+const ipRegex = __webpack_require__(28);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24645,7 +24476,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24674,6 +24505,45 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 29 */,
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepieniaCovid = function SzczepieniaCovid(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "covidVaccineContent" },
+            _react2.default.createElement(
+                "p",
+                { className: "covidVaccineText" },
+                "Drodzy Rodzice!",
+                _react2.default.createElement("br", null),
+                "Z my\u015Bl\u0105 o swoich dzieciach, szczepcie si\u0119 na COVID-19."
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaCovid;
 
 /***/ })
 /******/ ]);
