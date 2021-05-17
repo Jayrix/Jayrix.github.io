@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(26);
+var isOnline = __webpack_require__(25);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23692,29 +23692,33 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _PSP = __webpack_require__(20);
+var _PSP = __webpack_require__(19);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
-var _Geers = __webpack_require__(21);
+var _Geers = __webpack_require__(20);
 
 var _Geers2 = _interopRequireDefault(_Geers);
 
-var _CR = __webpack_require__(22);
+var _CR = __webpack_require__(21);
 
 var _CR2 = _interopRequireDefault(_CR);
 
-var _Podomedis = __webpack_require__(23);
+var _Podomedis = __webpack_require__(22);
 
 var _Podomedis2 = _interopRequireDefault(_Podomedis);
 
-var _Medea = __webpack_require__(24);
+var _Medea = __webpack_require__(23);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _CovidInfo = __webpack_require__(25);
+var _CovidInfo = __webpack_require__(24);
 
 var _CovidInfo2 = _interopRequireDefault(_CovidInfo);
+
+var _SzczepieniaCovid = __webpack_require__(30);
+
+var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23723,6 +23727,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
+
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 40000;
@@ -23757,7 +23764,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23865,8 +23872,7 @@ var AnnouncementList = function (_Component) {
 exports.default = AnnouncementList;
 
 /***/ }),
-/* 19 */,
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23893,7 +23899,7 @@ var PSP = function PSP(props) {
 exports.default = PSP;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23920,7 +23926,7 @@ var Geers = function Geers(props) {
 exports.default = Geers;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24094,7 +24100,7 @@ var CR = function CR(props) {
 exports.default = CR;
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24250,7 +24256,7 @@ var Podomedis = function Podomedis(props) {
 exports.default = Podomedis;
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24351,7 +24357,7 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24386,13 +24392,13 @@ var CovidInfo = function CovidInfo() {
 exports.default = CovidInfo;
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(27);
+const publicIp = __webpack_require__(26);
 
 const defaults = {
 	timeout: 5000,
@@ -24406,12 +24412,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(28);
+const isIp = __webpack_require__(27);
 
 const defaults = {
 	timeout: 5000
@@ -24457,12 +24463,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(29);
+const ipRegex = __webpack_require__(28);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24470,7 +24476,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24499,6 +24505,45 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 29 */,
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepieniaCovid = function SzczepieniaCovid(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "covidVaccineContent" },
+            _react2.default.createElement(
+                "p",
+                { className: "covidVaccineText" },
+                "Drodzy Rodzice!",
+                _react2.default.createElement("br", null),
+                "Z my\u015Bl\u0105 o swoich dzieciach, szczepcie si\u0119 na COVID-19."
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaCovid;
 
 /***/ })
 /******/ ]);

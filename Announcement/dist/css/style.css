@@ -171,6 +171,10 @@ div.additionalInfo div.appointementInfo {
     display: block;
 } */
 
+
+/**************************************************************************************/
+
+
 article.vaccineContent {
     display: flex;
     justify-content: center;
@@ -884,3 +888,26 @@ div.CRContent #footerSection p:last-of-type {
 
 }
 
+
+/*****************************************************************************************/
+
+
+article.covidVaccineContent {
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.covidVaccineContent p {
+    font-size: 6.5rem;
+    font-weight: bold;
+    margin-left: 6%;
+    margin-right: 5%;
+    color: brown;
+}
