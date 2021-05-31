@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(25);
+var isOnline = __webpack_require__(27);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23716,9 +23716,13 @@ var _CovidInfo = __webpack_require__(24);
 
 var _CovidInfo2 = _interopRequireDefault(_CovidInfo);
 
-var _SzczepieniaCovid = __webpack_require__(30);
+var _SzczepieniaCovid = __webpack_require__(25);
 
 var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
+
+var _LekiCovid = __webpack_require__(26);
+
+var _LekiCovid2 = _interopRequireDefault(_LekiCovid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23764,7 +23768,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_LekiCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24398,7 +24402,91 @@ exports.default = CovidInfo;
 "use strict";
 
 
-const publicIp = __webpack_require__(26);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepieniaCovid = function SzczepieniaCovid(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "covidVaccineContent" },
+            _react2.default.createElement(
+                "p",
+                { className: "covidVaccineText" },
+                "Drodzy Rodzice!",
+                _react2.default.createElement("br", null),
+                "Z my\u015Bl\u0105 o swoich dzieciach, szczepcie si\u0119 na COVID-19."
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaCovid;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LekiCovid = function LekiCovid(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "antiviralDrugsContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/lekicovid/leki_covid.jpg", alt: "Leki_przeciwwirusowe", title: "Leki_przeciwwirusowe" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "LEKI ANTYWIRUSOWE"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "antiviralDrugsText" },
+                "Informujemy, \u017Ce leki antywirusowe s\u0105 dost\u0119pne bez recepty dla os\xF3b powy\u017Cej 1-go roku \u017Cycia. Najlepiej stosowa\u0107 je zaraz od pocz\u0105tku infekcji."
+            )
+        )
+    );
+};
+
+exports.default = LekiCovid;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(28);
 
 const defaults = {
 	timeout: 5000,
@@ -24412,12 +24500,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(27);
+const isIp = __webpack_require__(29);
 
 const defaults = {
 	timeout: 5000
@@ -24463,12 +24551,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(28);
+const ipRegex = __webpack_require__(30);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24476,7 +24564,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24505,45 +24593,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 29 */,
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepieniaCovid = function SzczepieniaCovid(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "covidVaccineContent" },
-            _react2.default.createElement(
-                "p",
-                { className: "covidVaccineText" },
-                "Drodzy Rodzice!",
-                _react2.default.createElement("br", null),
-                "Z my\u015Bl\u0105 o swoich dzieciach, szczepcie si\u0119 na COVID-19."
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaCovid;
 
 /***/ })
 /******/ ]);
