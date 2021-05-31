@@ -23720,9 +23720,9 @@ var _SzczepieniaCovid = __webpack_require__(25);
 
 var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
 
-var _LekiCovid = __webpack_require__(26);
+var _Antiviral = __webpack_require__(26);
 
-var _LekiCovid2 = _interopRequireDefault(_LekiCovid);
+var _Antiviral2 = _interopRequireDefault(_Antiviral);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23768,7 +23768,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_LekiCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24450,7 +24450,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var LekiCovid = function LekiCovid(props) {
+var Antiviral = function Antiviral(props) {
 
     return _react2.default.createElement(
         "div",
@@ -24461,7 +24461,7 @@ var LekiCovid = function LekiCovid(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/lekicovid/leki_covid.jpg", alt: "Leki_przeciwwirusowe", title: "Leki_przeciwwirusowe" })
+                _react2.default.createElement("img", { src: "./dist/img/antiviral/antiviral.jpg", alt: "Leki_przeciwwirusowe", title: "Leki_przeciwwirusowe" })
             ),
             _react2.default.createElement(
                 "strong",
@@ -24477,7 +24477,7 @@ var LekiCovid = function LekiCovid(props) {
     );
 };
 
-exports.default = LekiCovid;
+exports.default = Antiviral;
 
 /***/ }),
 /* 27 */
