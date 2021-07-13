@@ -23724,10 +23724,6 @@ var _Antiviral = __webpack_require__(26);
 
 var _Antiviral2 = _interopRequireDefault(_Antiviral);
 
-var _SzczepionkiGrypa = __webpack_require__(27);
-
-var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23769,7 +23765,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24481,52 +24477,7 @@ var Antiviral = function Antiviral(props) {
 exports.default = Antiviral;
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "vaccineContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "UWAGA! UWAGA!"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "vaccineText" },
-                "WOLNE SZCZEPIONKI NA COVID-19 MARKI PFIZER! Informacja w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = SzczepionkiGrypa;
-
-/***/ }),
+/* 27 */,
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
