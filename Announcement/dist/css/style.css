@@ -963,7 +963,8 @@ article.covidVaccineContent {
     font-weight: bold;
     margin-left: 6%;
     margin-right: 5%;
-    color: brown;
+    color: red;
+    text-transform: uppercase;
 }
 
 
@@ -1014,6 +1015,34 @@ article.antiviralDrugsContent {
     font-weight: 600;
 }
 
+
+
+/*
+*******************************************************************************
+*/
+
+.drFiedorContent {
+    /* overflow: hidden; */
+    
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100vh;
+}
+
+.drFiedorContent p:first-of-type{
+    font-size: 7rem;
+    margin: 4% 1% 0 1%;
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+}
+
+.drFiedorContent p:nth-of-type(2){
+    font-size: 5.5rem;
+    margin: 8% 2% 0 9%;
+    font-weight: bold;
+}
 
 
 /*

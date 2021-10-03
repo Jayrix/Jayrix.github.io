@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(28);
+var isOnline = __webpack_require__(27);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23724,6 +23724,10 @@ var _Antiviral = __webpack_require__(26);
 
 var _Antiviral2 = _interopRequireDefault(_Antiviral);
 
+var _DrFiedor = __webpack_require__(32);
+
+var _DrFiedor2 = _interopRequireDefault(_DrFiedor);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23765,7 +23769,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, [_react2.default.createElement(_CovidInfo2.default, null)], psp_array),
+            announcements: [_react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24420,9 +24424,9 @@ var SzczepieniaCovid = function SzczepieniaCovid(props) {
             _react2.default.createElement(
                 "p",
                 { className: "covidVaccineText" },
-                "Drodzy Rodzice!",
+                "COVID-19 ci\u0105gle gro\u017Any.",
                 _react2.default.createElement("br", null),
-                "Z my\u015Bl\u0105 o swoich dzieciach, szczepcie si\u0119 na COVID-19."
+                "W naszej przychodni dalej mo\u017Cna si\u0119 szczepi\u0107."
             )
         )
     );
@@ -24477,14 +24481,13 @@ var Antiviral = function Antiviral(props) {
 exports.default = Antiviral;
 
 /***/ }),
-/* 27 */,
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(29);
+const publicIp = __webpack_require__(28);
 
 const defaults = {
 	timeout: 5000,
@@ -24498,12 +24501,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(30);
+const isIp = __webpack_require__(29);
 
 const defaults = {
 	timeout: 5000
@@ -24549,12 +24552,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(31);
+const ipRegex = __webpack_require__(30);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24562,7 +24565,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24591,6 +24594,48 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 31 */,
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DrFiedor = function DrFiedor(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "drFiedorContent" },
+            _react2.default.createElement(
+                "p",
+                null,
+                "INFORMACJA DLA PACJENT\xD3W PANI DR FIEDOR"
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "W zwi\u0105zku z przej\u015Bciem Pani Dr Fiedor na emerytur\u0119, pacjenci proszeni s\u0105 o przepisywanie deklaracji do innych lekarzy."
+            )
+        )
+    );
+};
+
+exports.default = DrFiedor;
 
 /***/ })
 /******/ ]);
