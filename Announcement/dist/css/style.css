@@ -1046,5 +1046,98 @@ article.antiviralDrugsContent {
 
 
 /*
+
+********************************************************************************
+*/
+
+article.Profilaktyka40plusContent {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/profilaktyka40plus/profilaktyka40plus.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+p#ageInfo{
+    display: inline-block;
+    height:68%;
+    margin: 2.5% 0% 0% 56%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 5rem;
+}
+
+p#urlInfo{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 3.7rem;
+    margin: 3% 0 0 2%;
+    font-weight: bold;
+}
+
+#urlInfo pre {
+    background-color: rgb(30,63,110);
+    color: white;
+}
+
+
+/*
+********************************************************************************
+*/
+
+article.ReceptyContent {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+.ReceptyContent strong#title {
+    display: inline-block;
+    width: 50%;
+    font-size: 8rem;
+    color:brown;
+    padding-left: 0%;
+    padding-top: 2%;
+    font-weight: 900;
+}
+
+.ReceptyContent .imageContainer {
+    display: inline-block;
+    width: 30%;
+    margin-left: 0%;
+    margin-top: 1%;
+}
+
+.ReceptyContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+    display: block;
+    box-shadow: 10px -10px 12px 2px rgba(0,0,0,0.75);
+}
+
+.ReceptyContent p.ReceptyText{
+    width: 100%;
+    font-size: 5.0rem;
+    padding: 0 3% 0 3%;
+    /* text-indent: 7%; */
+    font-weight: 600;
+    margin-top: -4%;
+}
+
+.ReceptyText strong {
+    background: rgb(0, 94, 201);
+    color: white;
+}
+
+
+
+/*
 *******************************************************************************
 */

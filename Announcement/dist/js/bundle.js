@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(27);
+var isOnline = __webpack_require__(28);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23724,9 +23724,17 @@ var _Antiviral = __webpack_require__(26);
 
 var _Antiviral2 = _interopRequireDefault(_Antiviral);
 
-var _DrFiedor = __webpack_require__(32);
+var _DrFiedor = __webpack_require__(27);
 
 var _DrFiedor2 = _interopRequireDefault(_DrFiedor);
+
+var _Profilaktyka40plus = __webpack_require__(32);
+
+var _Profilaktyka40plus2 = _interopRequireDefault(_Profilaktyka40plus);
+
+var _Recepty = __webpack_require__(33);
+
+var _Recepty2 = _interopRequireDefault(_Recepty);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23769,7 +23777,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_CovidInfo2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24487,7 +24495,48 @@ exports.default = Antiviral;
 "use strict";
 
 
-const publicIp = __webpack_require__(28);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DrFiedor = function DrFiedor(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "drFiedorContent" },
+            _react2.default.createElement(
+                "p",
+                null,
+                "INFORMACJA DLA PACJENT\xD3W PANI DR FIEDOR"
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "W zwi\u0105zku z przej\u015Bciem Pani Dr Fiedor na emerytur\u0119, pacjenci proszeni s\u0105 o przepisywanie deklaracji do innych lekarzy."
+            )
+        )
+    );
+};
+
+exports.default = DrFiedor;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(29);
 
 const defaults = {
 	timeout: 5000,
@@ -24501,12 +24550,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(29);
+const isIp = __webpack_require__(30);
 
 const defaults = {
 	timeout: 5000
@@ -24552,12 +24601,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(30);
+const ipRegex = __webpack_require__(31);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24565,7 +24614,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24596,7 +24645,6 @@ ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g')
 
 
 /***/ }),
-/* 31 */,
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24613,29 +24661,96 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DrFiedor = function DrFiedor(props) {
+var Profilaktyka40plus = function Profilaktyka40plus() {
+    return _react2.default.createElement(
+        "article",
+        { className: "Profilaktyka40plusContent" },
+        _react2.default.createElement(
+            "p",
+            { id: "ageInfo" },
+            _react2.default.createElement(
+                "strong",
+                null,
+                "Masz 40 lat lub wi\u0119cej?"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("br", null),
+            "Skorzystaj z pakietu bezp\u0142atnych bada\u0144 diagnostycznych ",
+            _react2.default.createElement(
+                "strong",
+                null,
+                _react2.default.createElement("br", null),
+                "i b\u0105d\u017A zdr\xF3w!"
+            )
+        ),
+        _react2.default.createElement(
+            "p",
+            { id: "urlInfo" },
+            "SPRAWD\u0179 NA:",
+            _react2.default.createElement("br", null),
+            _react2.default.createElement(
+                "pre",
+                null,
+                " www.pacjent.gov.pl/profilaktyka "
+            )
+        )
+    );
+};
+
+exports.default = Profilaktyka40plus;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Recepty = function Recepty(props) {
 
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
             "article",
-            { className: "drFiedorContent" },
+            { className: "ReceptyContent" },
             _react2.default.createElement(
-                "p",
-                null,
-                "INFORMACJA DLA PACJENT\xD3W PANI DR FIEDOR"
+                "strong",
+                { id: "title" },
+                "RECEPTY - informacja"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/recepty/recepta.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119", title: "Recepta" })
             ),
             _react2.default.createElement(
                 "p",
-                null,
-                "W zwi\u0105zku z przej\u015Bciem Pani Dr Fiedor na emerytur\u0119, pacjenci proszeni s\u0105 o przepisywanie deklaracji do innych lekarzy."
+                { className: "ReceptyText" },
+                "Szanowni Pacjenci,",
+                _react2.default.createElement("br", null),
+                "Informujemy, \u017Ce recepty na STA\u0141E leki mo\u017Cna zamawia\u0107 nie tylko przez telefon i osobi\u015Bcie, ale r\xF3wnie\u017C przez e-mail:",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    " rejestracja.ubezpieczalnia@gmail.com "
+                )
             )
         )
     );
 };
 
-exports.default = DrFiedor;
+exports.default = Recepty;
 
 /***/ })
 /******/ ]);
