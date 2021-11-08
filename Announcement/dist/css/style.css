@@ -1154,7 +1154,7 @@ article.ReceptyContent {
     
 }
 
-.TestNaPrzeciwcialaContent p:first-of-type{
+.TestNaPrzeciwcialaContent h1{
     font-size: 7.5rem;
     margin: 4% 1% 0 1%;
     font-weight: bold;
@@ -1162,14 +1162,18 @@ article.ReceptyContent {
     color: brown;
 }
 
-.TestNaPrzeciwcialaContent p:nth-of-type(2){
+.TestNaPrzeciwcialaContent p{
     font-size: 6rem;
-    margin: 12% 2% 0 5%;
+    margin: 8% 2% 0 5%;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.TestNaPrzeciwcialaContent strong{
+.TestNaPrzeciwcialaContent strong:nth-of-type(1){
+    color:  brown;
+}
+
+.TestNaPrzeciwcialaContent strong:nth-of-type(2){
     background: rgb(0, 94, 201);
     color: white;
 }
