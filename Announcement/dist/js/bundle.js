@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(32);
+var isOnline = __webpack_require__(35);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23744,6 +23744,18 @@ var _TrzeciaSzczepionka = __webpack_require__(31);
 
 var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
 
+var _Maseczki = __webpack_require__(32);
+
+var _Maseczki2 = _interopRequireDefault(_Maseczki);
+
+var _WstrzymanieSzczepien = __webpack_require__(33);
+
+var _WstrzymanieSzczepien2 = _interopRequireDefault(_WstrzymanieSzczepien);
+
+var _ProgramSzczepien = __webpack_require__(34);
+
+var _ProgramSzczepien2 = _interopRequireDefault(_ProgramSzczepien);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23785,7 +23797,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_ProgramSzczepien2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24757,7 +24769,160 @@ exports.default = TrzeciaSzczepionka;
 "use strict";
 
 
-const publicIp = __webpack_require__(33);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Maseczki = function Maseczki(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "maseczkiContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/maseczki/maska.jpg", alt: "maska", title: "maska" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "OBOWI\u0104ZEK NOSZENIA MASECZEK"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "maseczkiText" },
+                "Zawiadamiamy, \u017Ce w zwi\u0105zku z obowi\u0105zujacym prawem w obiektach medycznych (w tym w poradniach) ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "nadal nale\u017Cy nosi\u0107 maseczki zakrywaj\u0105ce nos i usta."
+                )
+            )
+        )
+    );
+};
+
+exports.default = Maseczki;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WstrzymanieSzczepien = function WstrzymanieSzczepien(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "wstrzymanieSzczepienContent" },
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "UWAGA! UWAGA!"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "wstrzymanieSzczepienText" },
+                "Informujemy, \u017Ce w sezonie jesienno-zimowym 2022/23 Min. Zdrowia wstrzyma\u0142o program bezp\u0142atnych szczepie\u0144 przeciwko grypie.",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "Utrzymano bezp\u0142atne szczepionki dla os\xF3b powy\u017Cej 75 r. \u017Cycia i ci\u0119\u017Carnych."
+                )
+            )
+        )
+    );
+};
+
+exports.default = WstrzymanieSzczepien;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProgramSzczepien = function ProgramSzczepien(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "programSzczepienContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/programSzczepien/programSzczepien.jpg", alt: "programSzczepien", title: "programSzczepien" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "SZCZEPIENIA PRZECIW GRYPIE"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "programSzczepienText" },
+                "Informujemy, \u017Ce w sezonie 2022/2023 Burmistrz Cieszyna planuje uruchomi\u0107 program bezp\u0142atnych szczepie\u0144 przeciwko grypie, ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "dla mieszka\u0144c\xF3w Cieszyna powy\u017Cej 60 lub 65 roku \u017Cycia."
+                )
+            )
+        )
+    );
+};
+
+exports.default = ProgramSzczepien;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(36);
 
 const defaults = {
 	timeout: 5000,
@@ -24771,12 +24936,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(34);
+const isIp = __webpack_require__(37);
 
 const defaults = {
 	timeout: 5000
@@ -24822,12 +24987,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(35);
+const ipRegex = __webpack_require__(38);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24835,7 +25000,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
