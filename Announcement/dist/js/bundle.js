@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(35);
+var isOnline = __webpack_require__(36);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23756,6 +23756,10 @@ var _ProgramSzczepien = __webpack_require__(34);
 
 var _ProgramSzczepien2 = _interopRequireDefault(_ProgramSzczepien);
 
+var _Maseczki_Ukraina = __webpack_require__(35);
+
+var _Maseczki_Ukraina2 = _interopRequireDefault(_Maseczki_Ukraina);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23797,7 +23801,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_ProgramSzczepien2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_ProgramSzczepien2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24922,7 +24926,58 @@ exports.default = ProgramSzczepien;
 "use strict";
 
 
-const publicIp = __webpack_require__(36);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Maseczki_Ukraina = function Maseczki_Ukraina(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "maseczki_UkrainaContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/maseczki/maska.jpg", alt: "maska", title: "maska" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "\u0423\u0432\u0430\u0433\u0430 \u0428\u0430\u043D\u043E\u0432\u043D\u0456 \u043F\u0430\u0446\u0456\u0454\u043D\u0442\u0438!"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "maseczki_UkrainaText" },
+                "\u0432\u0445\u043E\u0434\u044F\u0447\u0438 \u0434\u043E \u043F\u0440\u0438\u0439\u043C\u0430\u043B\u044C\u043D\u0456, \u043C\u0435\u0434\u0438\u0447\u043D\u0438\u0445 \u0443\u0441\u0442\u0430\u043D\u043E\u0432 \u0442\u0430 \u0443\u0441\u0442\u0430\u043D\u043E\u0432 \u043E\u0445\u043E\u0440\u043E\u043D\u0438 \u0437\u0434\u043E\u0440\u043E\u0432\u2019\u044F, \u0432\u043A\u043B\u044E\u0447\u0430\u044E\u0447\u0438 \u043B\u0456\u043A\u0430\u0440\u043D\u0456, \u0430\u043C\u0431\u0443\u043B\u0430\u0442\u043E\u0440\u043D\u0456, \u0441\u0442\u043E\u043C\u0430\u0442\u043E\u043B\u043E\u0433\u0456\u0447\u043D\u0456 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438 \u0442\u0430 \u0430\u043F\u0442\u0435\u043A\u0438 \u0431\u0443\u0434\u044C-\u043B\u0430\u0441\u043A\u0430,",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    " \u043D\u0435 \u0437\u0430\u0431\u0443\u0432\u0430\u0439\u0442\u0435 \u043E\u0434\u044F\u0433\u043D\u0443\u0442\u0438 \u0437\u0430\u0445\u0438\u0441\u043D\u0443 \u043C\u0430\u0441\u043A\u0443."
+                )
+            )
+        )
+    );
+};
+
+exports.default = Maseczki_Ukraina;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(37);
 
 const defaults = {
 	timeout: 5000,
@@ -24936,12 +24991,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(37);
+const isIp = __webpack_require__(38);
 
 const defaults = {
 	timeout: 5000
@@ -24987,12 +25042,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(38);
+const ipRegex = __webpack_require__(39);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25000,7 +25055,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
