@@ -1458,3 +1458,35 @@ p.maseczki_UkrainaText strong {
 /*
 *******************************************************************************
 */
+
+
+
+
+.RejestracjaContent {
+    /* overflow: hidden; */
+    
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100vh;
+    
+}
+
+.RejestracjaContent h1{
+    font-size: 8rem;
+    margin: 4% 1% 0 1%;
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+}
+
+.RejestracjaContent p{
+    font-size: 6.5rem;
+    margin: 8% 2% 0 5%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/**************************************************************************************/
