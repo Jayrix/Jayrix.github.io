@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(36);
+var isOnline = __webpack_require__(37);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23712,14 +23712,6 @@ var _Medea = __webpack_require__(23);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _CovidInfo = __webpack_require__(24);
-
-var _CovidInfo2 = _interopRequireDefault(_CovidInfo);
-
-var _SzczepieniaCovid = __webpack_require__(25);
-
-var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
-
 var _Antiviral = __webpack_require__(26);
 
 var _Antiviral2 = _interopRequireDefault(_Antiviral);
@@ -23740,10 +23732,6 @@ var _TestNaPrzeciwciala = __webpack_require__(30);
 
 var _TestNaPrzeciwciala2 = _interopRequireDefault(_TestNaPrzeciwciala);
 
-var _TrzeciaSzczepionka = __webpack_require__(31);
-
-var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
-
 var _Maseczki = __webpack_require__(32);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
@@ -23760,9 +23748,13 @@ var _Maseczki_Ukraina = __webpack_require__(35);
 
 var _Maseczki_Ukraina2 = _interopRequireDefault(_Maseczki_Ukraina);
 
-var _Rejestracja = __webpack_require__(40);
+var _Rejestracja = __webpack_require__(36);
 
 var _Rejestracja2 = _interopRequireDefault(_Rejestracja);
+
+var _CzwartaDawka = __webpack_require__(41);
+
+var _CzwartaDawka2 = _interopRequireDefault(_CzwartaDawka);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23771,6 +23763,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+//import CovidInfo from "./CovidInfo.jsx";
+//import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
+
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 40000;
@@ -23805,7 +23802,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_ProgramSzczepien2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_ProgramSzczepien2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24398,79 +24395,8 @@ var Medea = function Medea(props) {
 exports.default = Medea;
 
 /***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// const CovidInfo = (props) => {
-//     return (
-//         <div className="CovidInfo_imageContainer">
-//             <img src={`./dist/img/covidinfo/covidinfo${props.id}.jpg`} alt="Slajd informacyjny o szczepienia"/>
-//         </div>
-//     )
-// }
-
-var CovidInfo = function CovidInfo() {
-    return _react2.default.createElement(
-        "div",
-        { className: "CovidInfo_imageContainer" },
-        _react2.default.createElement("img", { src: "./dist/img/covidinfo/covidinfo1.jpg", alt: "Slajd informacyjny o szczepieniach na Covid" })
-    );
-};
-
-exports.default = CovidInfo;
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepieniaCovid = function SzczepieniaCovid(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "covidVaccineContent" },
-            _react2.default.createElement(
-                "p",
-                { className: "covidVaccineText" },
-                "COVID-19 ci\u0105gle gro\u017Any.",
-                _react2.default.createElement("br", null),
-                "W naszej przychodni dalej mo\u017Cna si\u0119 szczepi\u0107."
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaCovid;
-
-/***/ }),
+/* 24 */,
+/* 25 */,
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24719,58 +24645,7 @@ var TestNaPrzeciwciala = function TestNaPrzeciwciala(props) {
 exports.default = TestNaPrzeciwciala;
 
 /***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "TrzeciaSzczepionkaContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/trzecia.jpg", alt: "Szczepionka-Covid", title: "Szczepionka przeciw Covid" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "TRZECIA DAWKA SZCZEPIONKI"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "TrzeciaSzczepionkaText" },
-                "Szczepimy przeciwko COVID-19. Trzecia dawka szczepionki firmy ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "Pfizer"
-                ),
-                " dost\u0119pna niezale\u017Cnie od rodzaju poprzednich dawek."
-            )
-        )
-    );
-};
-
-exports.default = TrzeciaSzczepionka;
-
-/***/ }),
+/* 31 */,
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24981,7 +24856,48 @@ exports.default = Maseczki_Ukraina;
 "use strict";
 
 
-const publicIp = __webpack_require__(37);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Rejestracja = function Rejestracja(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "RejestracjaContent" },
+            _react2.default.createElement(
+                "h1",
+                null,
+                "SZANOWNI PACJENCI!"
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "Przed podej\u015Bciem do gabinetu lekarskiego, prosimy o udanie si\u0119 do rejestracji na pierwszym pi\u0119trze."
+            )
+        )
+    );
+};
+
+exports.default = Rejestracja;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(38);
 
 const defaults = {
 	timeout: 5000,
@@ -24995,12 +24911,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(38);
+const isIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000
@@ -25046,12 +24962,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(39);
+const ipRegex = __webpack_require__(40);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25059,7 +24975,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25090,7 +25006,7 @@ ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g')
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25106,29 +25022,36 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Rejestracja = function Rejestracja(props) {
+//CSS for TrzeciaSzczepionka.jsx used on purpose 
+
+var CzwartaDawka = function CzwartaDawka(props) {
 
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
             "article",
-            { className: "RejestracjaContent" },
+            { className: "TrzeciaSzczepionkaContent" },
             _react2.default.createElement(
-                "h1",
-                null,
-                "SZANOWNI PACJENCI!"
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/trzecia.jpg", alt: "Szczepionka-Covid", title: "Szczepionka przeciw Covid" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "CZWARTA DAWKA SZCZEPIONKI"
             ),
             _react2.default.createElement(
                 "p",
-                null,
-                "Przed podej\u015Bciem do gabinetu lekarskiego, prosimy o udanie si\u0119 do rejestracji na pierwszym pi\u0119trze."
+                { className: "TrzeciaSzczepionkaText" },
+                "Od 5 sierpnia 2022 r. ruszaj\u0105 zapisy na szczepienia drug\u0105 dawk\u0105 przypominaj\u0105c\u0105 (4 dawka) na COVID-19 dla os\xF3b, kt\xF3re uko\u0144czy\u0142y 60 lat."
             )
         )
     );
 };
 
-exports.default = Rejestracja;
+exports.default = CzwartaDawka;
 
 /***/ })
 /******/ ]);
