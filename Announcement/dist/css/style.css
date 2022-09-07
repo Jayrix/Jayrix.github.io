@@ -1194,8 +1194,8 @@ article.TrzeciaSzczepionkaContent {
 .TrzeciaSzczepionkaContent .imageContainer {
     display: inline-block;
     width: 30%;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 10%;
+    margin-top: 1%;
 }
 
 .TrzeciaSzczepionkaContent img {
@@ -1211,23 +1211,22 @@ article.TrzeciaSzczepionkaContent {
     width: 60%;
     font-size: 8rem;
     color:brown;
-    padding-left: 0%;
-    padding-top: 4%;
+    padding-left: 4%;
+    padding-top: 2%;
     font-weight: 900;
-    text-align: center;
 }
 
 .TrzeciaSzczepionkaContent p.TrzeciaSzczepionkaText{
     width: 100%;
     font-size: 5.5rem;
-    padding: 0 2% 1% 6%;
+    padding: 0 3% 0% 4%;
     /* text-indent: 7%; */
     font-weight: 600;
 }
 
 .TrzeciaSzczepionkaContent p.TrzeciaSzczepionkaText strong {
-    color: white;
-    background: rgb(0, 94, 201);
+    color: brown;
+    text-transform: uppercase;
 }
 
 
@@ -1305,9 +1304,10 @@ article.wstrzymanieSzczepienContent {
     width: 60%;
     font-size: 8.5rem;
     color:brown;
-    padding-left: 2%;
+    padding-left: 1%;
     padding-top: 0%;
     font-weight: 900;
+    text-align: center;
 }
 
 .wstrzymanieSzczepienContent .imageContainer {
@@ -1329,7 +1329,7 @@ article.wstrzymanieSzczepienContent {
 .wstrzymanieSzczepienContent p.wstrzymanieSzczepienText{
     width: 100%;
     font-size: 5.0rem;
-    padding: 0 2.5% 0 5%;
+    padding: 0 2.5% 0 4%;
     /* text-indent: 7%; */
     font-weight: 600;
     margin-top: -4%;
@@ -1488,5 +1488,60 @@ p.maseczki_UkrainaText strong {
 }
 
 
+/*
+*******************************************************************************
+*/
 
-/**************************************************************************************/
+
+article.KardiologContent {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    
+}
+
+.KardiologContent .imageContainer {
+    display: block;
+    width: 100%;
+    height: 33%;
+    margin-left: 0%;
+    margin-top: 1%;
+    padding-right: 0%;
+    text-align: center;
+}
+
+.KardiologContent img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.KardiologContent p#title {
+    display: block;
+    width: 100%;
+    height: 30%;
+    font-size: 8.5rem;
+    color:rgb(231, 4, 4);
+    padding-left: 0%;
+    padding-top: 0%;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+.KardiologContent p.KardiologText{
+    width: 100%;
+    height: 30%;
+    font-size: 5.0rem;
+    padding: 0 2.5% 0 4%;
+    font-weight: 600;
+    margin-top: -4%;
+}
+
+
+
+
+/*
+*******************************************************************************
+*/
