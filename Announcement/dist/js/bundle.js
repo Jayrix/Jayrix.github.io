@@ -24688,7 +24688,7 @@ var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
             _react2.default.createElement(
                 "p",
                 { className: "TrzeciaSzczepionkaText" },
-                "Informujemy, \u017Ce w dniach 13.10.2022 i 23.11.2022 na terenie NZOZ \"Ubezpieczalnia\" odb\u0119dzie si\u0119 badanie w kierunku ",
+                "Informujemy, \u017Ce w dniu 23.11.2022 na terenie NZOZ \"Ubezpieczalnia\" odb\u0119dzie si\u0119 badanie w kierunku ",
                 _react2.default.createElement(
                     "strong",
                     null,
