@@ -963,8 +963,17 @@ article.covidVaccineContent {
     font-weight: bold;
     margin-left: 6%;
     margin-right: 5%;
+    
+}
+
+.covidVaccineContent span {
+    font-size: 7.5rem;
     color: red;
     text-transform: uppercase;
+}
+
+.covidVaccineContent strong {
+    text-decoration: underline;
 }
 
 

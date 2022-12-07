@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(37);
+var isOnline = __webpack_require__(38);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23712,55 +23712,59 @@ var _Medea = __webpack_require__(23);
 
 var _Medea2 = _interopRequireDefault(_Medea);
 
-var _Antiviral = __webpack_require__(24);
+var _SzczepieniaCovid = __webpack_require__(24);
+
+var _SzczepieniaCovid2 = _interopRequireDefault(_SzczepieniaCovid);
+
+var _Antiviral = __webpack_require__(25);
 
 var _Antiviral2 = _interopRequireDefault(_Antiviral);
 
-var _DrFiedor = __webpack_require__(25);
+var _DrFiedor = __webpack_require__(26);
 
 var _DrFiedor2 = _interopRequireDefault(_DrFiedor);
 
-var _Profilaktyka40plus = __webpack_require__(26);
+var _Profilaktyka40plus = __webpack_require__(27);
 
 var _Profilaktyka40plus2 = _interopRequireDefault(_Profilaktyka40plus);
 
-var _Recepty = __webpack_require__(27);
+var _Recepty = __webpack_require__(28);
 
 var _Recepty2 = _interopRequireDefault(_Recepty);
 
-var _TestNaPrzeciwciala = __webpack_require__(28);
+var _TestNaPrzeciwciala = __webpack_require__(29);
 
 var _TestNaPrzeciwciala2 = _interopRequireDefault(_TestNaPrzeciwciala);
 
-var _TrzeciaSzczepionka = __webpack_require__(29);
+var _TrzeciaSzczepionka = __webpack_require__(30);
 
 var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
 
-var _Maseczki = __webpack_require__(30);
+var _Maseczki = __webpack_require__(31);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
 
-var _WstrzymanieSzczepien = __webpack_require__(31);
+var _WstrzymanieSzczepien = __webpack_require__(32);
 
 var _WstrzymanieSzczepien2 = _interopRequireDefault(_WstrzymanieSzczepien);
 
-var _ProgramSzczepien = __webpack_require__(32);
+var _ProgramSzczepien = __webpack_require__(33);
 
 var _ProgramSzczepien2 = _interopRequireDefault(_ProgramSzczepien);
 
-var _Maseczki_Ukraina = __webpack_require__(33);
+var _Maseczki_Ukraina = __webpack_require__(34);
 
 var _Maseczki_Ukraina2 = _interopRequireDefault(_Maseczki_Ukraina);
 
-var _Rejestracja = __webpack_require__(34);
+var _Rejestracja = __webpack_require__(35);
 
 var _Rejestracja2 = _interopRequireDefault(_Rejestracja);
 
-var _CzwartaDawka = __webpack_require__(35);
+var _CzwartaDawka = __webpack_require__(36);
 
 var _CzwartaDawka2 = _interopRequireDefault(_CzwartaDawka);
 
-var _Kardiolog = __webpack_require__(36);
+var _Kardiolog = __webpack_require__(37);
 
 var _Kardiolog2 = _interopRequireDefault(_Kardiolog);
 
@@ -23772,7 +23776,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 //import CovidInfo from "./CovidInfo.jsx";
-//import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 
 //import TestyNaGrype from "./TestyNaGrype.jsx";
 
@@ -23810,7 +23813,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24419,6 +24422,53 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var SzczepieniaCovid = function SzczepieniaCovid(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "covidVaccineContent" },
+            _react2.default.createElement(
+                "p",
+                { className: "covidVaccineText" },
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "Bezp\u0142atny ",
+                    _react2.default.createElement(
+                        "strong",
+                        null,
+                        "program chor\xF3b uk\u0142adu kr\u0105\u017Cenia"
+                    ),
+                    " dla os\xF3b od 35 roku \u017Cycia."
+                ),
+                " O szczeg\xF3\u0142y prosz\u0119 pyta\u0107 w rejestracji."
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaCovid;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var Antiviral = function Antiviral(props) {
 
     return _react2.default.createElement(
@@ -24449,7 +24499,7 @@ var Antiviral = function Antiviral(props) {
 exports.default = Antiviral;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24490,7 +24540,7 @@ var DrFiedor = function DrFiedor(props) {
 exports.default = DrFiedor;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24545,7 +24595,7 @@ var Profilaktyka40plus = function Profilaktyka40plus() {
 exports.default = Profilaktyka40plus;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24598,7 +24648,7 @@ var Recepty = function Recepty(props) {
 exports.default = Recepty;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24651,7 +24701,7 @@ var TestNaPrzeciwciala = function TestNaPrzeciwciala(props) {
 exports.default = TestNaPrzeciwciala;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24703,7 +24753,7 @@ var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
 exports.default = TrzeciaSzczepionka;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24754,7 +24804,7 @@ var Maseczki = function Maseczki(props) {
 exports.default = Maseczki;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24800,7 +24850,7 @@ var WstrzymanieSzczepien = function WstrzymanieSzczepien(props) {
 exports.default = WstrzymanieSzczepien;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24851,7 +24901,7 @@ var ProgramSzczepien = function ProgramSzczepien(props) {
 exports.default = ProgramSzczepien;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24902,7 +24952,7 @@ var Maseczki_Ukraina = function Maseczki_Ukraina(props) {
 exports.default = Maseczki_Ukraina;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24943,7 +24993,7 @@ var Rejestracja = function Rejestracja(props) {
 exports.default = Rejestracja;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24991,7 +25041,7 @@ var CzwartaDawka = function CzwartaDawka(props) {
 exports.default = CzwartaDawka;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25037,13 +25087,13 @@ var Kardiolog = function Kardiolog(props) {
 exports.default = Kardiolog;
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(38);
+const publicIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000,
@@ -25057,12 +25107,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(39);
+const isIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000
@@ -25108,12 +25158,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(40);
+const ipRegex = __webpack_require__(41);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25121,7 +25171,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
