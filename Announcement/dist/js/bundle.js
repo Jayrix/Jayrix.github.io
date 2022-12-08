@@ -23736,10 +23736,6 @@ var _TestNaPrzeciwciala = __webpack_require__(29);
 
 var _TestNaPrzeciwciala2 = _interopRequireDefault(_TestNaPrzeciwciala);
 
-var _TrzeciaSzczepionka = __webpack_require__(30);
-
-var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
-
 var _Maseczki = __webpack_require__(31);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
@@ -23747,10 +23743,6 @@ var _Maseczki2 = _interopRequireDefault(_Maseczki);
 var _WstrzymanieSzczepien = __webpack_require__(32);
 
 var _WstrzymanieSzczepien2 = _interopRequireDefault(_WstrzymanieSzczepien);
-
-var _ProgramSzczepien = __webpack_require__(33);
-
-var _ProgramSzczepien2 = _interopRequireDefault(_ProgramSzczepien);
 
 var _Maseczki_Ukraina = __webpack_require__(34);
 
@@ -23768,6 +23760,10 @@ var _Kardiolog = __webpack_require__(37);
 
 var _Kardiolog2 = _interopRequireDefault(_Kardiolog);
 
+var _GabinetNeurologiczny = __webpack_require__(42);
+
+var _GabinetNeurologiczny2 = _interopRequireDefault(_GabinetNeurologiczny);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23776,6 +23772,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 //import CovidInfo from "./CovidInfo.jsx";
+
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+
+//import ProgramSzczepien from "./ProgramSzczepien.jsx";
 
 //import TestyNaGrype from "./TestyNaGrype.jsx";
 
@@ -23813,7 +23813,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_WstrzymanieSzczepien2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_CzwartaDawka2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24701,58 +24701,7 @@ var TestNaPrzeciwciala = function TestNaPrzeciwciala(props) {
 exports.default = TestNaPrzeciwciala;
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "TrzeciaSzczepionkaContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza", title: "osteoporoza" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "BADANIE NA OSTEOPOROZ\u0118"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "TrzeciaSzczepionkaText" },
-                "Informujemy, \u017Ce w dniu 23.11.2022 na terenie NZOZ \"Ubezpieczalnia\" odb\u0119dzie si\u0119 badanie w kierunku ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "osteoporozy"
-                ),
-                ". Cena 45 z\u0142. Ch\u0119tnych prosimy o zapisywanie si\u0119 w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = TrzeciaSzczepionka;
-
-/***/ }),
+/* 30 */,
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24850,57 +24799,7 @@ var WstrzymanieSzczepien = function WstrzymanieSzczepien(props) {
 exports.default = WstrzymanieSzczepien;
 
 /***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ProgramSzczepien = function ProgramSzczepien(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "programSzczepienContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/programSzczepien/programSzczepien.jpg", alt: "programSzczepien", title: "programSzczepien" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW GRYPIE"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "programSzczepienText" },
-                "Informujemy, \u017Ce w sezonie 2022/2023 Burmistrz Cieszyna planuje uruchomi\u0107 program bezp\u0142atnych szczepie\u0144 przeciwko grypie, ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "dla mieszka\u0144c\xF3w Cieszyna powy\u017Cej 60 lub 65 roku \u017Cycia."
-                )
-            )
-        )
-    );
-};
-
-exports.default = ProgramSzczepien;
-
-/***/ }),
+/* 33 */,
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25200,6 +25099,59 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GabinetNeurologiczny = function GabinetNeurologiczny(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "gabinetNeurologicznyContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/gabinetNeurologiczny/neurologia.png", alt: "neurologia", title: "neurologia" })
+            ),
+            _react2.default.createElement(
+                "h3",
+                { id: "title" },
+                "GABINET NEUROLOGICZNY"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "gabinetNeurologicznyDane" },
+                "Dr Bartosz Tochowicz - Neurolog"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "gabinetNeurologicznyText" },
+                "Konsultacje i leczenie schorze\u0144 neurologicznych oraz Doppler naczy\u0144 szyjnych. ",
+                _react2.default.createElement("br", null),
+                "Szczeg\xF3\u0142y w rejestracji."
+            )
+        )
+    );
+};
+
+exports.default = GabinetNeurologiczny;
 
 /***/ })
 /******/ ]);
