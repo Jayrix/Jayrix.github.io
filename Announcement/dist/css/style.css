@@ -1228,7 +1228,7 @@ article.TrzeciaSzczepionkaContent {
 .TrzeciaSzczepionkaContent p.TrzeciaSzczepionkaText{
     width: 100%;
     font-size: 5.5rem;
-    padding: 0 1% 0 3%;
+    padding: 0 1% 0 5%;
     /* text-indent: 7%; */
     font-weight: 600;
 }
@@ -1236,6 +1236,10 @@ article.TrzeciaSzczepionkaContent {
 .TrzeciaSzczepionkaContent p.TrzeciaSzczepionkaText strong {
     color: brown;
     text-transform: uppercase;
+}
+
+.TrzeciaSzczepionkaContent span {
+    text-decoration: underline;
 }
 
 
@@ -1835,5 +1839,12 @@ article.poradniaKardiologicznaContent {
     font-size: 4rem;
     margin-top: 5%;
 }
+
+
+
+/*
+*******************************************************************************
+*/
+
 
 
