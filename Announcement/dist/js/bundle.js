@@ -23736,17 +23736,9 @@ var _TestNaPrzeciwciala = __webpack_require__(29);
 
 var _TestNaPrzeciwciala2 = _interopRequireDefault(_TestNaPrzeciwciala);
 
-var _TrzeciaSzczepionka = __webpack_require__(30);
-
-var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
-
 var _Maseczki = __webpack_require__(31);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
-
-var _WstrzymanieSzczepien = __webpack_require__(32);
-
-var _WstrzymanieSzczepien2 = _interopRequireDefault(_WstrzymanieSzczepien);
 
 var _Maseczki_Ukraina = __webpack_require__(33);
 
@@ -23785,6 +23777,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 //import CovidInfo from "./CovidInfo.jsx";
 
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+
+//import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
 
 //import CzwartaDawka from './CzwartaDawka.jsx';
@@ -23826,7 +23821,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_TestNaPrzeciwciala2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24714,63 +24709,7 @@ var TestNaPrzeciwciala = function TestNaPrzeciwciala(props) {
 exports.default = TestNaPrzeciwciala;
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "TrzeciaSzczepionkaContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza", title: "osteoporoza" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "BADANIE NA OSTEOPOROZ\u0118"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "TrzeciaSzczepionkaText" },
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "W dniu 21 marca 2023 roku"
-                ),
-                " odb\u0119d\u0105 si\u0119 badania ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "osteoporozy"
-                ),
-                " w osteobusie na naszym parkingu. Koszt badania 45 z\u0142. Zapisy w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = TrzeciaSzczepionka;
-
-/***/ }),
+/* 30 */,
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24822,52 +24761,7 @@ var Maseczki = function Maseczki(props) {
 exports.default = Maseczki;
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var WstrzymanieSzczepien = function WstrzymanieSzczepien(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "wstrzymanieSzczepienContent" },
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW GRYPIE"
-            ),
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "wstrzymanieSzczepienText" },
-                "Informujemy, \u017Ce NZOZ \"Ubezpieczalnia\" wykonuje szczepienia przeciwko grypie dla wszystkich ch\u0119tnych pacjent\xF3w. Zapisy w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = WstrzymanieSzczepien;
-
-/***/ }),
+/* 32 */,
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
