@@ -498,12 +498,12 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(40);
+var isOnline = __webpack_require__(38);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
-var STATUS_CHECK_MS = 600000;
-var PAGE_RELOAD_MS = 1800000;
+var STATUS_CHECK_MS = 1800000;
+var PAGE_RELOAD_MS = 7200000;
 //const STATUS_CHECK_MS = 2000;
 //const PAGE_RELOAD_MS = 3000;
 
@@ -23736,35 +23736,35 @@ var _TestNaPrzeciwciala = __webpack_require__(29);
 
 var _TestNaPrzeciwciala2 = _interopRequireDefault(_TestNaPrzeciwciala);
 
-var _Maseczki = __webpack_require__(31);
+var _Maseczki = __webpack_require__(30);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
 
-var _Maseczki_Ukraina = __webpack_require__(33);
+var _Maseczki_Ukraina = __webpack_require__(31);
 
 var _Maseczki_Ukraina2 = _interopRequireDefault(_Maseczki_Ukraina);
 
-var _Rejestracja = __webpack_require__(34);
+var _Rejestracja = __webpack_require__(32);
 
 var _Rejestracja2 = _interopRequireDefault(_Rejestracja);
 
-var _Kardiolog = __webpack_require__(35);
+var _Kardiolog = __webpack_require__(33);
 
 var _Kardiolog2 = _interopRequireDefault(_Kardiolog);
 
-var _GabinetNeurologiczny = __webpack_require__(36);
+var _GabinetNeurologiczny = __webpack_require__(34);
 
 var _GabinetNeurologiczny2 = _interopRequireDefault(_GabinetNeurologiczny);
 
-var _GabinetChirurgiiDzieciecej = __webpack_require__(37);
+var _GabinetChirurgiiDzieciecej = __webpack_require__(35);
 
 var _GabinetChirurgiiDzieciecej2 = _interopRequireDefault(_GabinetChirurgiiDzieciecej);
 
-var _PracowniaUSG = __webpack_require__(38);
+var _PracowniaUSG = __webpack_require__(36);
 
 var _PracowniaUSG2 = _interopRequireDefault(_PracowniaUSG);
 
-var _PoradniaKardiologiczna = __webpack_require__(39);
+var _PoradniaKardiologiczna = __webpack_require__(37);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
@@ -24709,8 +24709,7 @@ var TestNaPrzeciwciala = function TestNaPrzeciwciala(props) {
 exports.default = TestNaPrzeciwciala;
 
 /***/ }),
-/* 30 */,
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24761,8 +24760,7 @@ var Maseczki = function Maseczki(props) {
 exports.default = Maseczki;
 
 /***/ }),
-/* 32 */,
-/* 33 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24813,7 +24811,7 @@ var Maseczki_Ukraina = function Maseczki_Ukraina(props) {
 exports.default = Maseczki_Ukraina;
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24854,7 +24852,7 @@ var Rejestracja = function Rejestracja(props) {
 exports.default = Rejestracja;
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24900,7 +24898,7 @@ var Kardiolog = function Kardiolog(props) {
 exports.default = Kardiolog;
 
 /***/ }),
-/* 36 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24953,7 +24951,7 @@ var GabinetNeurologiczny = function GabinetNeurologiczny(props) {
 exports.default = GabinetNeurologiczny;
 
 /***/ }),
-/* 37 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25006,7 +25004,7 @@ var GabinetChirurgiiDzieciecej = function GabinetChirurgiiDzieciecej(props) {
 exports.default = GabinetChirurgiiDzieciecej;
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25112,7 +25110,7 @@ var PracowniaUSG = function PracowniaUSG(props) {
 exports.default = PracowniaUSG;
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25208,13 +25206,13 @@ var PoradniaKardiologiczna = function PoradniaKardiologiczna(props) {
 exports.default = PoradniaKardiologiczna;
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(41);
+const publicIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000,
@@ -25228,12 +25226,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(42);
+const isIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000
@@ -25279,12 +25277,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(43);
+const ipRegex = __webpack_require__(41);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25292,7 +25290,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

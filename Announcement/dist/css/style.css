@@ -1847,4 +1847,16 @@ article.poradniaKardiologicznaContent {
 */
 
 
-
+.referencyjna_klasa_pod_wget {
+    background-image: url('../img/antiviral/antiviral.jpg'), url('../img/vaccine.jpg'),url('../img/chirurgiaDziecieca/chirurgiaDziecieca.jpg'),
+    url('../img/covidinfo/covidinfo1.jpg'), url('../img/covidinfo/covidinfo1alt.jpg'), url('../img/covidinfo/covidinfo2.jpg'), url('../img/cr/czlowiek_lewy.png'),
+    url('../img/cr/czlowiek_prawy.png'), url('../img/cr/logo.png'), url('../img/fibroscan/fibro.png'), url('../img/gabinetNeurologiczny/neurologia.png'),
+    url('../img/geers/geers1.jpg'), url('../img/geers/geers2.jpg'), url('../img/geers/geers3.jpg'), url('../img/Kardiolog/kardiologia.jpg'),
+    url('../img/maseczki/maska.jpg'), url('../img/podomedis/podologia.jpg'), url('../img/podomedis/podomedis_logo.png'), url('../img/podomedis/podomedis_logo2.png'),
+    url('../img/poradniaKardiologiczna/poradniaKardiologiczna.jpg'), url('../img/pracowniaUSG/pracowniaUSG.jpg'), url('../img/profilaktyka40plus/profilaktyka40plus.png'),
+    url('../img/programSzczepien/programSzczepien.jpg'), url('../img/psp/psp1.png'), url('../img/psp/psp2.png'), url('../img/psp/psp3.png'), url('../img/psp/psp4.png'),
+    url('../img/psp/psp5.png'), url('../img/psp/psp6.png'), url('../img/psp/psp7.png'), url('../img/psp/psp8.png'), url('../img/psp/psp9.png'), url('../img/psp/psp10.png'),
+    url('../img/psp/psp11.png'), url('../img/recepty/recepta.jpg'), url('../img/trzeciaSzczepionka/osteoporoza.jpg'), url('../img/trzeciaSzczepionka/trzecia.jpg'),
+    url('../img/endokrynologia.jpg'), url('../img/grypa.jpg'), url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+}
