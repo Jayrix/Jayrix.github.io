@@ -1842,6 +1842,62 @@ article.poradniaKardiologicznaContent {
 
 
 
+
+/*
+*******************************************************************************
+*/
+
+
+
+article.HPVContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.HPVContent .imageContainer {
+    display: inline-block;
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.HPVContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+    display: block;
+    box-shadow: 10px -10px 12px 2px rgba(0,0,0,0.75);
+}
+
+.HPVContent strong#title {
+    display: inline-block;
+    width: 60%;
+    font-size: 8rem;
+    color:red;
+    padding-left: 0%;
+    padding-top: 2%;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.HPVContent p.HPVText{
+    width: 100%;
+    font-size: 4.5rem;
+    padding: 2.5% 2% 1% 3.5%;
+    /* text-indent: 7%; */
+    font-weight: 600;
+}
+
+p.HPVText strong{
+    color: red;
+    text-decoration: underline;
+}
+
+
+
 /*
 *******************************************************************************
 */
@@ -1857,6 +1913,6 @@ article.poradniaKardiologicznaContent {
     url('../img/programSzczepien/programSzczepien.jpg'), url('../img/psp/psp1.png'), url('../img/psp/psp2.png'), url('../img/psp/psp3.png'), url('../img/psp/psp4.png'),
     url('../img/psp/psp5.png'), url('../img/psp/psp6.png'), url('../img/psp/psp7.png'), url('../img/psp/psp8.png'), url('../img/psp/psp9.png'), url('../img/psp/psp10.png'),
     url('../img/psp/psp11.png'), url('../img/recepty/recepta.jpg'), url('../img/trzeciaSzczepionka/osteoporoza.jpg'), url('../img/trzeciaSzczepionka/trzecia.jpg'),
-    url('../img/endokrynologia.jpg'), url('../img/grypa.jpg'), url('../img/tlo_budynek.jpg');
+    url('../img/endokrynologia.jpg'), url('../img/grypa.jpg'), url('../img/tlo_budynek.jpg'), url('../img/HPV/HPV.jpg');
     background-repeat: no-repeat;
 }
