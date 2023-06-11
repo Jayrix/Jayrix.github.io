@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(38);
+var isOnline = __webpack_require__(40);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23768,9 +23768,13 @@ var _PoradniaKardiologiczna = __webpack_require__(37);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _HPV = __webpack_require__(42);
+var _HPV = __webpack_require__(38);
 
 var _HPV2 = _interopRequireDefault(_HPV);
+
+var _HPV9lat = __webpack_require__(39);
+
+var _HPV9lat2 = _interopRequireDefault(_HPV9lat);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23825,7 +23829,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_Maseczki_Ukraina2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -25220,7 +25224,105 @@ exports.default = PoradniaKardiologiczna;
 "use strict";
 
 
-const publicIp = __webpack_require__(39);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HPV = function HPV(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "HPVContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "Uwaga! Wa\u017Cne og\u0142oszenie."
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "HPVText" },
+                "Informujemy, \u017Ce m\u0142odzie\u017C urodzona w roku 2010 i 2011 od 1.06.2023 uczestniczy w ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    " bezp\u0142atnym programie szczepie\u0144 przeciwko wirusowi brodawczaka ludzkiego (HPV). "
+                ),
+                "Niestety, na t\u0119 chwil\u0119 ilo\u015B\u0107 szczepionek, kt\xF3re otrzymali\u015Bmy jest ograniczona do ok. 20% populacji i obowi\u0105zuje kolejno\u015B\u0107 zg\u0142osze\u0144.  Zapisy w rejestracji."
+            )
+        )
+    );
+};
+
+exports.default = HPV;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HPV9lat = function HPV9lat(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "HPV9latContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/HPV9lat/HPV9lat.jpeg", alt: "HPV-szczepionka", title: "HPV-szczepionka" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "SZCZEPIENIA PRZECIW HPV"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "HPV9latText" },
+                "Informujemy, \u017Ce dzieci w wieku powy\u017Cej 9 lat maj\u0105 mo\u017Cliwo\u015B\u0107 zaszczepienia si\u0119 przeciwko wirusowi brodawczaka ludzkiego (HPV) po wykupieniu w aptece szczepionki refundowanej w 50%. Nie dotyczy cz\u0119\u015Bci rocznik\xF3w 2010 i 2011, kt\xF3re w tym roku mog\u0105 skorzysta\u0107 ze szczepionki darmowej (szczeg\xF3\u0142y w innym og\u0142oszeniu)."
+            )
+        )
+    );
+};
+
+exports.default = HPV9lat;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(41);
 
 const defaults = {
 	timeout: 5000,
@@ -25234,12 +25336,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(40);
+const isIp = __webpack_require__(42);
 
 const defaults = {
 	timeout: 5000
@@ -25285,12 +25387,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(41);
+const ipRegex = __webpack_require__(43);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25298,7 +25400,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25327,58 +25429,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var HPV = function HPV(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "HPVContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "Uwaga! Wa\u017Cne og\u0142oszenie."
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "HPVText" },
-                "Informujemy, \u017Ce m\u0142odzie\u017C urodzona w roku 2010 i 2011 od 1.06.2023 uczestniczy w ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    " bezp\u0142atnym programie szczepie\u0144 przeciwko wirusowi brodawczaka ludzkiego (HPV). "
-                ),
-                "Niestety, na t\u0119 chwil\u0119 ilo\u015B\u0107 szczepionek, kt\xF3re otrzymali\u015Bmy jest ograniczona do ok. 20% populacji i obowi\u0105zuje kolejno\u015B\u0107 zg\u0142osze\u0144.  Zapisy w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = HPV;
 
 /***/ })
 /******/ ]);
