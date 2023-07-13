@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(40);
+var isOnline = __webpack_require__(38);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23732,39 +23732,35 @@ var _Recepty = __webpack_require__(28);
 
 var _Recepty2 = _interopRequireDefault(_Recepty);
 
-var _TrzeciaSzczepionka = __webpack_require__(29);
-
-var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
-
-var _Rejestracja = __webpack_require__(32);
+var _Rejestracja = __webpack_require__(30);
 
 var _Rejestracja2 = _interopRequireDefault(_Rejestracja);
 
-var _Kardiolog = __webpack_require__(33);
+var _Kardiolog = __webpack_require__(31);
 
 var _Kardiolog2 = _interopRequireDefault(_Kardiolog);
 
-var _GabinetNeurologiczny = __webpack_require__(34);
+var _GabinetNeurologiczny = __webpack_require__(32);
 
 var _GabinetNeurologiczny2 = _interopRequireDefault(_GabinetNeurologiczny);
 
-var _GabinetChirurgiiDzieciecej = __webpack_require__(35);
+var _GabinetChirurgiiDzieciecej = __webpack_require__(33);
 
 var _GabinetChirurgiiDzieciecej2 = _interopRequireDefault(_GabinetChirurgiiDzieciecej);
 
-var _PracowniaUSG = __webpack_require__(36);
+var _PracowniaUSG = __webpack_require__(34);
 
 var _PracowniaUSG2 = _interopRequireDefault(_PracowniaUSG);
 
-var _PoradniaKardiologiczna = __webpack_require__(37);
+var _PoradniaKardiologiczna = __webpack_require__(35);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _HPV = __webpack_require__(38);
+var _HPV = __webpack_require__(36);
 
 var _HPV2 = _interopRequireDefault(_HPV);
 
-var _HPV9lat = __webpack_require__(39);
+var _HPV9lat = __webpack_require__(37);
 
 var _HPV9lat2 = _interopRequireDefault(_HPV9lat);
 
@@ -23778,7 +23774,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //import CovidInfo from "./CovidInfo.jsx";
 
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 //import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -23823,7 +23819,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24658,66 +24654,8 @@ var Recepty = function Recepty(props) {
 exports.default = Recepty;
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "TrzeciaSzczepionkaContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza", title: "osteoporoza" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "BADANIE NA OSTEOPOROZ\u0118"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "TrzeciaSzczepionkaText" },
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "W dniu 28 czerwca 2023 roku"
-                ),
-                " odb\u0119d\u0105 si\u0119 badania ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "osteoporozy"
-                ),
-                " w osteobusie na naszym parkingu. Zapisy i szczeg\xF3\u0142y w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = TrzeciaSzczepionka;
-
-/***/ }),
-/* 30 */,
-/* 31 */,
-/* 32 */
+/* 29 */,
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24758,7 +24696,7 @@ var Rejestracja = function Rejestracja(props) {
 exports.default = Rejestracja;
 
 /***/ }),
-/* 33 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24804,7 +24742,7 @@ var Kardiolog = function Kardiolog(props) {
 exports.default = Kardiolog;
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24857,7 +24795,7 @@ var GabinetNeurologiczny = function GabinetNeurologiczny(props) {
 exports.default = GabinetNeurologiczny;
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24910,7 +24848,7 @@ var GabinetChirurgiiDzieciecej = function GabinetChirurgiiDzieciecej(props) {
 exports.default = GabinetChirurgiiDzieciecej;
 
 /***/ }),
-/* 36 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25016,7 +24954,7 @@ var PracowniaUSG = function PracowniaUSG(props) {
 exports.default = PracowniaUSG;
 
 /***/ }),
-/* 37 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25112,7 +25050,7 @@ var PoradniaKardiologiczna = function PoradniaKardiologiczna(props) {
 exports.default = PoradniaKardiologiczna;
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25164,7 +25102,7 @@ var HPV = function HPV(props) {
 exports.default = HPV;
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25210,13 +25148,13 @@ var HPV9lat = function HPV9lat(props) {
 exports.default = HPV9lat;
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(41);
+const publicIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000,
@@ -25230,12 +25168,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(42);
+const isIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000
@@ -25281,12 +25219,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(43);
+const ipRegex = __webpack_require__(41);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25294,7 +25232,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
