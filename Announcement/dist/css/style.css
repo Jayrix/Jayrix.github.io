@@ -931,9 +931,11 @@ div.CRContent #footerSection p:last-of-type {
     color:red;
     text-transform: uppercase;
     font-size: 6rem;
+    text-decoration: underline;
 }
 
 .osteoContent #timeInfo {
+    text-decoration: underline;
     color:red;
 }
 
