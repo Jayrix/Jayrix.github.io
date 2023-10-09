@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(39);
+var isOnline = __webpack_require__(40);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23732,47 +23732,39 @@ var _Recepty = __webpack_require__(28);
 
 var _Recepty2 = _interopRequireDefault(_Recepty);
 
-var _Rejestracja = __webpack_require__(30);
+var _Rejestracja = __webpack_require__(29);
 
 var _Rejestracja2 = _interopRequireDefault(_Rejestracja);
 
-var _Kardiolog = __webpack_require__(31);
+var _Kardiolog = __webpack_require__(30);
 
 var _Kardiolog2 = _interopRequireDefault(_Kardiolog);
 
-var _GabinetNeurologiczny = __webpack_require__(32);
+var _GabinetNeurologiczny = __webpack_require__(31);
 
 var _GabinetNeurologiczny2 = _interopRequireDefault(_GabinetNeurologiczny);
 
-var _GabinetChirurgiiDzieciecej = __webpack_require__(33);
+var _GabinetChirurgiiDzieciecej = __webpack_require__(32);
 
 var _GabinetChirurgiiDzieciecej2 = _interopRequireDefault(_GabinetChirurgiiDzieciecej);
 
-var _PracowniaUSG = __webpack_require__(34);
+var _PracowniaUSG = __webpack_require__(33);
 
 var _PracowniaUSG2 = _interopRequireDefault(_PracowniaUSG);
 
-var _PoradniaKardiologiczna = __webpack_require__(35);
+var _PoradniaKardiologiczna = __webpack_require__(34);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _HPV = __webpack_require__(36);
-
-var _HPV2 = _interopRequireDefault(_HPV);
-
-var _HPV9lat = __webpack_require__(37);
-
-var _HPV9lat2 = _interopRequireDefault(_HPV9lat);
-
-var _SzczepieniaRefundacja = __webpack_require__(38);
+var _SzczepieniaRefundacja = __webpack_require__(37);
 
 var _SzczepieniaRefundacja2 = _interopRequireDefault(_SzczepieniaRefundacja);
 
-var _SzczepieniaRefundacja3 = __webpack_require__(43);
+var _SzczepieniaRefundacja3 = __webpack_require__(38);
 
 var _SzczepieniaRefundacja4 = _interopRequireDefault(_SzczepieniaRefundacja3);
 
-var _Osteoporoza = __webpack_require__(44);
+var _Osteoporoza = __webpack_require__(39);
 
 var _Osteoporoza2 = _interopRequireDefault(_Osteoporoza);
 
@@ -23796,6 +23788,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //import TestyNaGrype from "./TestyNaGrype.jsx";
 
 //import BozenaHandzlik from "./BozenaHandzlik.jsx";
+
+//import HPV from "./HPV.jsx";
+//import HPV9lat from "./HPV9lat.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -23831,7 +23826,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_HPV9lat2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24666,8 +24661,7 @@ var Recepty = function Recepty(props) {
 exports.default = Recepty;
 
 /***/ }),
-/* 29 */,
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24708,7 +24702,7 @@ var Rejestracja = function Rejestracja(props) {
 exports.default = Rejestracja;
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24754,7 +24748,7 @@ var Kardiolog = function Kardiolog(props) {
 exports.default = Kardiolog;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24807,7 +24801,7 @@ var GabinetNeurologiczny = function GabinetNeurologiczny(props) {
 exports.default = GabinetNeurologiczny;
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24860,7 +24854,7 @@ var GabinetChirurgiiDzieciecej = function GabinetChirurgiiDzieciecej(props) {
 exports.default = GabinetChirurgiiDzieciecej;
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24966,7 +24960,7 @@ var PracowniaUSG = function PracowniaUSG(props) {
 exports.default = PracowniaUSG;
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25062,105 +25056,9 @@ var PoradniaKardiologiczna = function PoradniaKardiologiczna(props) {
 exports.default = PoradniaKardiologiczna;
 
 /***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var HPV = function HPV(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "HPVContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "Uwaga! Wa\u017Cne og\u0142oszenie."
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "HPVText" },
-                "Informujemy, \u017Ce m\u0142odzie\u017C urodzona w roku 2010 i 2011 od 1.06.2023 uczestniczy w ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    " bezp\u0142atnym programie szczepie\u0144 przeciwko wirusowi brodawczaka ludzkiego (HPV). "
-                ),
-                "Niestety, na t\u0119 chwil\u0119 ilo\u015B\u0107 szczepionek, kt\xF3re otrzymali\u015Bmy jest ograniczona do ok. 20% populacji i obowi\u0105zuje kolejno\u015B\u0107 zg\u0142osze\u0144.  Zapisy w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = HPV;
-
-/***/ }),
+/* 35 */,
+/* 36 */,
 /* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var HPV9lat = function HPV9lat(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "HPV9latContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/HPV9lat/HPV9lat.jpeg", alt: "HPV-szczepionka", title: "HPV-szczepionka" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW HPV"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "HPV9latText" },
-                "Informujemy, \u017Ce dzieci w wieku powy\u017Cej 9 lat maj\u0105 mo\u017Cliwo\u015B\u0107 zaszczepienia si\u0119 przeciwko wirusowi brodawczaka ludzkiego (HPV) po wykupieniu w aptece szczepionki refundowanej w 50%. Nie dotyczy cz\u0119\u015Bci rocznik\xF3w 2010 i 2011, kt\xF3re w tym roku mog\u0105 skorzysta\u0107 ze szczepionki darmowej (szczeg\xF3\u0142y w innym og\u0142oszeniu)."
-            )
-        )
-    );
-};
-
-exports.default = HPV9lat;
-
-/***/ }),
-/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25196,122 +25094,7 @@ var SzczepieniaRefundacja1 = function SzczepieniaRefundacja1(props) {
 exports.default = SzczepieniaRefundacja1;
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const publicIp = __webpack_require__(40);
-
-const defaults = {
-	timeout: 5000,
-	version: 'v4'
-};
-
-module.exports = options => {
-	options = Object.assign({}, defaults, options);
-	return publicIp[options.version](options).then(() => true).catch(() => false);
-};
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const isIp = __webpack_require__(41);
-
-const defaults = {
-	timeout: 5000
-};
-
-const urls = {
-	v4: 'https://ipv4.icanhazip.com/',
-	v6: 'https://ipv6.icanhazip.com/'
-};
-
-function queryHttps(version, opts) {
-	return new Promise((resolve, reject) => {
-		const doReject = () => reject(new Error('Couldn\'t find your IP'));
-		const xhr = new XMLHttpRequest();
-
-		xhr.onerror = doReject;
-		xhr.ontimeout = doReject;
-		xhr.onload = () => {
-			const ip = xhr.responseText.trim();
-
-			if (!ip || !isIp[version](ip)) {
-				doReject();
-			}
-
-			resolve(ip);
-		};
-
-		xhr.open('GET', urls[version]);
-		xhr.timeout = opts.timeout;
-		xhr.send();
-	});
-}
-
-module.exports.v4 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v4', opts);
-};
-
-module.exports.v6 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v6', opts);
-};
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const ipRegex = __webpack_require__(42);
-
-const isIp = module.exports = x => ipRegex({exact: true}).test(x);
-isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
-isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
-
-const v6seg = '[0-9a-fA-F]{1,4}';
-const v6 = `
-(
-(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
-(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
-(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
-(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
-(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
-(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
-(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
-(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
-)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
-`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
-
-const ip = module.exports = opts => opts && opts.exact ?
-	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
-	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
-
-ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
-ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
-
-
-/***/ }),
-/* 43 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25347,7 +25130,7 @@ var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
 exports.default = SzczepieniaRefundacja2;
 
 /***/ }),
-/* 44 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25404,6 +25187,121 @@ var Osteoporoza = function Osteoporoza(props) {
 };
 
 exports.default = Osteoporoza;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(41);
+
+const defaults = {
+	timeout: 5000,
+	version: 'v4'
+};
+
+module.exports = options => {
+	options = Object.assign({}, defaults, options);
+	return publicIp[options.version](options).then(() => true).catch(() => false);
+};
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const isIp = __webpack_require__(42);
+
+const defaults = {
+	timeout: 5000
+};
+
+const urls = {
+	v4: 'https://ipv4.icanhazip.com/',
+	v6: 'https://ipv6.icanhazip.com/'
+};
+
+function queryHttps(version, opts) {
+	return new Promise((resolve, reject) => {
+		const doReject = () => reject(new Error('Couldn\'t find your IP'));
+		const xhr = new XMLHttpRequest();
+
+		xhr.onerror = doReject;
+		xhr.ontimeout = doReject;
+		xhr.onload = () => {
+			const ip = xhr.responseText.trim();
+
+			if (!ip || !isIp[version](ip)) {
+				doReject();
+			}
+
+			resolve(ip);
+		};
+
+		xhr.open('GET', urls[version]);
+		xhr.timeout = opts.timeout;
+		xhr.send();
+	});
+}
+
+module.exports.v4 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v4', opts);
+};
+
+module.exports.v6 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v6', opts);
+};
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const ipRegex = __webpack_require__(43);
+
+const isIp = module.exports = x => ipRegex({exact: true}).test(x);
+isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
+isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
+
+const v6seg = '[0-9a-fA-F]{1,4}';
+const v6 = `
+(
+(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
+(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
+(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
+(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
+(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
+(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
+(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
+(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
+)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
+`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
+
+const ip = module.exports = opts => opts && opts.exact ?
+	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
+	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
+
+ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
+ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
+
 
 /***/ })
 /******/ ]);
