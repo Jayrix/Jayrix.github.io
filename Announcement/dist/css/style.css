@@ -1114,7 +1114,7 @@ article.ReceptyContent {
     font-size: 8rem;
     color:brown;
     padding-left: 0%;
-    padding-top: 2%;
+    padding-top: 0%;
     font-weight: 900;
 }
 
@@ -1122,7 +1122,7 @@ article.ReceptyContent {
     display: inline-block;
     width: 30%;
     margin-left: 0%;
-    margin-top: 1%;
+    margin-top: 0%;
 }
 
 .ReceptyContent img {
@@ -1135,7 +1135,7 @@ article.ReceptyContent {
 
 .ReceptyContent p.ReceptyText{
     width: 100%;
-    font-size: 5.0rem;
+    font-size: 5rem;
     padding: 0 3% 0 3%;
     /* text-indent: 7%; */
     font-weight: 600;
@@ -1146,6 +1146,7 @@ article.ReceptyContent {
     background: rgb(0, 94, 201);
     color: white;
 }
+
 
 
 
@@ -1998,6 +1999,37 @@ article.SzczepieniaRefundacja2Content {
     height: auto;
     display: inline-block;
     text-align: center;
+}
+
+/*
+********************************************************************************
+*/
+
+
+article.zleceniaReceptContent {
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.zleceniaReceptContent p {
+    font-size: 8rem;
+    font-weight: bold;
+    margin-left: 6%;
+    margin-right: 5%;
+    
+}
+
+
+.zleceniaReceptContent strong {
+    text-decoration: underline;
+    color:brown;
 }
 
 /*
