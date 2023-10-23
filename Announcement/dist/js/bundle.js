@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(38);
+var isOnline = __webpack_require__(39);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23764,11 +23764,7 @@ var _SzczepieniaRefundacja3 = __webpack_require__(36);
 
 var _SzczepieniaRefundacja4 = _interopRequireDefault(_SzczepieniaRefundacja3);
 
-var _Osteoporoza = __webpack_require__(37);
-
-var _Osteoporoza2 = _interopRequireDefault(_Osteoporoza);
-
-var _ZleceniaRecept = __webpack_require__(42);
+var _ZleceniaRecept = __webpack_require__(38);
 
 var _ZleceniaRecept2 = _interopRequireDefault(_ZleceniaRecept);
 
@@ -23795,6 +23791,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 //import HPV from "./HPV.jsx";
 //import HPV9lat from "./HPV9lat.jsx";
+
+//import Osteoporoza from "./Osteoporoza.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -23830,7 +23828,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_Osteoporoza2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -25132,7 +25130,8 @@ var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
 exports.default = SzczepieniaRefundacja2;
 
 /***/ }),
-/* 37 */
+/* 37 */,
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25148,56 +25147,38 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Osteoporoza = function Osteoporoza(props) {
+var ZleceniaRecept = function ZleceniaRecept(props) {
 
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
             "article",
-            { className: "osteoContent" },
+            { className: "zleceniaReceptContent" },
             _react2.default.createElement(
                 "p",
-                null,
-                "Zapraszamy na ",
+                { className: "zleceniaReceptText" },
+                "Uprzejmie informujemy, \u017Ce ",
                 _react2.default.createElement(
                     "strong",
                     null,
-                    "badanie osteoporozy"
-                ),
-                " z odcinka l\u0119d\u017Awiowego kr\u0119gos\u0142upa lub z szyjki ko\u015Bci udowej, w OSTEOBUSIE na naszym parkingu ",
-                _react2.default.createElement(
-                    "span",
-                    { id: "timeInfo" },
-                    "w dniu 23.10.2023, od godziny 9:00 do 13:00"
-                ),
-                "."
-            ),
-            _react2.default.createElement(
-                "p",
-                null,
-                "Zapisy w rejestracji osobi\u015Bcie lub ",
-                _react2.default.createElement(
-                    "span",
-                    { id: "contactInfo" },
-                    "pod numerem 33 851 40 23."
-                ),
-                " Koszt badania 45 z\u0142."
+                    "zlecenia na recepty realizowane s\u0105 do 3 dni roboczych."
+                )
             )
         )
     );
 };
 
-exports.default = Osteoporoza;
+exports.default = ZleceniaRecept;
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(39);
+const publicIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000,
@@ -25211,12 +25192,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(40);
+const isIp = __webpack_require__(41);
 
 const defaults = {
 	timeout: 5000
@@ -25262,12 +25243,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(41);
+const ipRegex = __webpack_require__(42);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25275,7 +25256,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25304,47 +25285,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ZleceniaRecept = function ZleceniaRecept(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "zleceniaReceptContent" },
-            _react2.default.createElement(
-                "p",
-                { className: "zleceniaReceptText" },
-                "Uprzejmie informujemy, \u017Ce ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "zlecenia na recepty realizowane s\u0105 do 3 dni roboczych."
-                )
-            )
-        )
-    );
-};
-
-exports.default = ZleceniaRecept;
 
 /***/ })
 /******/ ]);
