@@ -23764,9 +23764,13 @@ var _SzczepieniaRefundacja3 = __webpack_require__(36);
 
 var _SzczepieniaRefundacja4 = _interopRequireDefault(_SzczepieniaRefundacja3);
 
-var _ZleceniaRecept = __webpack_require__(38);
+var _ZleceniaRecept = __webpack_require__(37);
 
 var _ZleceniaRecept2 = _interopRequireDefault(_ZleceniaRecept);
+
+var _DrPerchala = __webpack_require__(38);
+
+var _DrPerchala2 = _interopRequireDefault(_DrPerchala);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23828,7 +23832,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_DrPerchala2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_DrPerchala2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24541,12 +24545,12 @@ var DrFiedor = function DrFiedor(props) {
             _react2.default.createElement(
                 "p",
                 null,
-                "INFORMACJA DLA PACJENT\xD3W PANI DR FIEDOR"
+                "INFORMACJA DLA PACJENT\xD3W PANI DR. FIEDOR"
             ),
             _react2.default.createElement(
                 "p",
                 null,
-                "W zwi\u0105zku z przej\u015Bciem Pani Dr Fiedor na emerytur\u0119, pacjenci proszeni s\u0105 o przepisywanie deklaracji do innych lekarzy."
+                "W zwi\u0105zku z przej\u015Bciem Pani Dr. Fiedor na emerytur\u0119, pacjenci proszeni s\u0105 o przepisywanie deklaracji do innych lekarzy."
             )
         )
     );
@@ -25130,8 +25134,7 @@ var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
 exports.default = SzczepieniaRefundacja2;
 
 /***/ }),
-/* 37 */,
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25170,6 +25173,58 @@ var ZleceniaRecept = function ZleceniaRecept(props) {
 };
 
 exports.default = ZleceniaRecept;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DrPerchala = function DrPerchala(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "drPerchalaContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/drPerchala/drPerchala.png", alt: "Asclepius", title: "Asclepius" })
+            ),
+            _react2.default.createElement(
+                "h2",
+                { id: "title" },
+                "Informacja dla pacjent\xF3w DR. PERCHA\u0141Y"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "drPerchalaText" },
+                "W zwi\u0105zku z ",
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "przej\u015Bciem Pani Dr. Wandy Percha\u0142y na emerytur\u0119,"
+                ),
+                " prosimy pacjent\xF3w o kontakt z rejestracj\u0105 w celu przepisania deklaracji do innych lekarzy."
+            )
+        )
+    );
+};
+
+exports.default = DrPerchala;
 
 /***/ }),
 /* 39 */

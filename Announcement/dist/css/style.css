@@ -2036,6 +2036,63 @@ article.zleceniaReceptContent {
 ********************************************************************************
 */
 
+article.drPerchalaContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.drPerchalaContent .imageContainer {
+    display: inline-block;
+    width: 26%;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.drPerchalaContent img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.drPerchalaContent h2#title {
+    display: inline-block;
+    width: 60%;
+    font-size: 8rem;
+    color:rgb(223, 0, 0);
+    padding-left: 0%;
+    padding-top: 2%;
+    font-weight: 900;
+    text-align: center;
+}
+
+.drPerchalaContent .drPerchalaText{
+    width: 100%;
+    font-size: 5.5rem;
+    padding: 1% 2% 1% 6%;
+    font-weight: 600;
+}
+
+.drPerchalaText span {
+    text-decoration: underline;
+    color: brown;
+}
+
+
+/*
+*******************************************************************************
+*/
+
+
+
+
+/*
+
+NIE MA WSZYSTKICH OBRAZKOW - DO DODANIA
 
 .referencyjna_klasa_pod_wget {
     background-image: url('../img/antiviral/antiviral.jpg'), url('../img/vaccine.jpg'),url('../img/chirurgiaDziecieca/chirurgiaDziecieca.jpg'),
@@ -2051,4 +2108,4 @@ article.zleceniaReceptContent {
     background-repeat: no-repeat;
 }
 
-
+*/
