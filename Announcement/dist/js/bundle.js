@@ -24743,7 +24743,7 @@ var Kardiolog = function Kardiolog(props) {
             _react2.default.createElement(
                 "p",
                 { className: "KardiologText" },
-                "Kardiolog w NZOZ \"Ubezpieczalnia\" - r\xF3wnie\u017C wizyty prywatne - Konsultacja + EKG + UKG w cenie 240 z\u0142."
+                "Kardiolog w NZOZ \"Ubezpieczalnia\" - r\xF3wnie\u017C wizyty prywatne - Pakiet (wizyta + USG) w cenie 300 z\u0142."
             )
         )
     );
