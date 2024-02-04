@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(38);
+var isOnline = __webpack_require__(36);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23756,15 +23756,7 @@ var _PoradniaKardiologiczna = __webpack_require__(34);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _SzczepieniaRefundacja = __webpack_require__(35);
-
-var _SzczepieniaRefundacja2 = _interopRequireDefault(_SzczepieniaRefundacja);
-
-var _SzczepieniaRefundacja3 = __webpack_require__(36);
-
-var _SzczepieniaRefundacja4 = _interopRequireDefault(_SzczepieniaRefundacja3);
-
-var _ZleceniaRecept = __webpack_require__(37);
+var _ZleceniaRecept = __webpack_require__(35);
 
 var _ZleceniaRecept2 = _interopRequireDefault(_ZleceniaRecept);
 
@@ -23791,7 +23783,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 //import HPV from "./HPV.jsx";
 //import HPV9lat from "./HPV9lat.jsx";
-
+//import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
+//import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
 //import Osteoporoza from "./Osteoporoza.jsx";
 
 
@@ -23799,6 +23792,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 20000;
+//const SLIDE_INTERVAL_MS = 5000;
 var PSP_SLIDE_INTERVAL_MS = 10000;
 var GEERS_SLIDE_INTERVAL_MS = 12000;
 var FIRST_ANN_REMOVAL_MS = 4000;
@@ -23830,7 +23824,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_SzczepieniaRefundacja2.default, null), _react2.default.createElement(_SzczepieniaRefundacja4.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -25076,78 +25070,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var SzczepieniaRefundacja1 = function SzczepieniaRefundacja1(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "SzczepieniaRefundacja1Content" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja1.png", alt: "SzczepieniaRefundacja1", title: "SzczepieniaRefundacja1" })
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaRefundacja1;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "SzczepieniaRefundacja2Content" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja2.jpg", alt: "SzczepieniaRefundacja2", title: "SzczepieniaRefundacja2" })
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaRefundacja2;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var ZleceniaRecept = function ZleceniaRecept(props) {
 
     return _react2.default.createElement(
@@ -25173,13 +25095,13 @@ var ZleceniaRecept = function ZleceniaRecept(props) {
 exports.default = ZleceniaRecept;
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(39);
+const publicIp = __webpack_require__(37);
 
 const defaults = {
 	timeout: 5000,
@@ -25193,12 +25115,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(40);
+const isIp = __webpack_require__(38);
 
 const defaults = {
 	timeout: 5000
@@ -25244,12 +25166,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(41);
+const ipRegex = __webpack_require__(39);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25257,7 +25179,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
