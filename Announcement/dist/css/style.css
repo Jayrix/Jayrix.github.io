@@ -1878,7 +1878,7 @@ article.HPVContent {
     display: inline-block;
     width: 60%;
     font-size: 8rem;
-    color:red;
+    color:brown;
     padding-left: 0%;
     padding-top: 2%;
     font-weight: 900;
@@ -1888,14 +1888,14 @@ article.HPVContent {
 
 .HPVContent p.HPVText{
     width: 100%;
-    font-size: 4.5rem;
+    font-size: 5rem;
     padding: 2.5% 2% 1% 3.5%;
     /* text-indent: 7%; */
     font-weight: 600;
 }
 
 p.HPVText strong{
-    color: red;
+    color: brown;
     text-decoration: underline;
 }
 
