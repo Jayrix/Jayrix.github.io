@@ -2034,6 +2034,71 @@ article.zleceniaReceptContent {
 
 /*
 ********************************************************************************
+*/
+
+article.KtomalekContent {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+.KtomalekContent h3#title {
+    display: inline-block;
+    width: 50%;
+    font-size: 8.5rem;
+    color:brown;
+    padding-left: 0%;
+    padding-top: 0%;
+    padding-right: 10%;
+    font-weight: 900;
+    text-align: center;
+}
+
+.KtomalekContent .imageContainer {
+    display: inline-block;
+    width: 30%;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.KtomalekContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+    display: block;
+    box-shadow: 10px -10px 12px 2px rgba(0,0,0,0.75);
+}
+
+.KtomalekContent p.KtomalekText{
+    width: 100%;
+    font-size: 5rem;
+    padding: 0 3% 0 3%;
+    /* text-indent: 7%; */
+    font-weight: 600;
+    margin-top: -4%;
+}
+
+.KtomalekContent snap {
+    background-color: rgb(30,63,110);
+    color: white;
+}
+
+
+
+
+/*
+*******************************************************************************
+*/
+
+
+
+
+/*
+********************************************************************************
 
 
 article.drPerchalaContent {

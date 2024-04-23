@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(36);
+var isOnline = __webpack_require__(37);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23756,13 +23756,17 @@ var _PoradniaKardiologiczna = __webpack_require__(34);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _HPV = __webpack_require__(40);
+var _HPV = __webpack_require__(35);
 
 var _HPV2 = _interopRequireDefault(_HPV);
 
-var _ZleceniaRecept = __webpack_require__(35);
+var _ZleceniaRecept = __webpack_require__(36);
 
 var _ZleceniaRecept2 = _interopRequireDefault(_ZleceniaRecept);
+
+var _Ktomalek = __webpack_require__(41);
+
+var _Ktomalek2 = _interopRequireDefault(_Ktomalek);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23790,8 +23794,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
 //import Osteoporoza from "./Osteoporoza.jsx";
 
-
 //import DrPerchala from "./DrPerchala.jsx";
+
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 20000;
@@ -23827,7 +23831,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -25073,6 +25077,58 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var HPV = function HPV(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "HPVContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "SZCZEPIENIA PRZECIW HPV"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "HPVText" },
+                "Informujemy, \u017Ce m\u0142odzie\u017C urodzona w roku 2011, 2012 i 2013 (dziewczynki i ch\u0142opcy) uczestniczy w ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "bezp\u0142atnym programie szczepie\u0144 przeciwko wirusowi brodawczaka ludzkiego (HPV)"
+                ),
+                " - szczepionki Gardasil. Zapisy w rejestracji."
+            )
+        )
+    );
+};
+
+exports.default = HPV;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var ZleceniaRecept = function ZleceniaRecept(props) {
 
     return _react2.default.createElement(
@@ -25098,13 +25154,13 @@ var ZleceniaRecept = function ZleceniaRecept(props) {
 exports.default = ZleceniaRecept;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(37);
+const publicIp = __webpack_require__(38);
 
 const defaults = {
 	timeout: 5000,
@@ -25118,12 +25174,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(38);
+const isIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000
@@ -25169,12 +25225,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(39);
+const ipRegex = __webpack_require__(40);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25182,7 +25238,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25213,7 +25269,7 @@ ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g')
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25229,40 +25285,46 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HPV = function HPV(props) {
+var Ktomalek = function Ktomalek(props) {
 
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
             "article",
-            { className: "HPVContent" },
+            { className: "KtomalekContent" },
+            _react2.default.createElement(
+                "h3",
+                { id: "title" },
+                "DOST\u0118PNO\u015A\u0106 LEK\xD3W"
+            ),
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW HPV"
+                _react2.default.createElement("img", { src: "./dist/img/ktomalek/ktomalek.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119", title: "Ktomalek" })
             ),
             _react2.default.createElement(
                 "p",
-                { className: "HPVText" },
-                "Informujemy, \u017Ce m\u0142odzie\u017C urodzona w roku 2011, 2012 i 2013 (dziewczynki i ch\u0142opcy) uczestniczy w ",
+                { className: "KtomalekText" },
+                "Informujemy, \u017Ce dost\u0119pno\u015B\u0107 lek\xF3w w aptekach mo\u017Cna sprawdzi\u0107 na stronach internetowych: ",
                 _react2.default.createElement(
-                    "strong",
+                    "snap",
                     null,
-                    "bezp\u0142atnym programie szczepie\u0144 przeciwko wirusowi brodawczaka ludzkiego (HPV)"
+                    "ktomalek.pl"
                 ),
-                " - szczepionki Gardasil. Zapisy w rejestracji."
+                " oraz ",
+                _react2.default.createElement(
+                    "snap",
+                    null,
+                    "gdziepolek.pl"
+                ),
+                ", podaj\u0105c najpierw miejscowo\u015B\u0107, a potem nazw\u0119 lekarstwa oraz wybieraj\u0105c dawk\u0119."
             )
         )
     );
 };
 
-exports.default = HPV;
+exports.default = Ktomalek;
 
 /***/ })
 /******/ ]);
