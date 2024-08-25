@@ -915,7 +915,8 @@ div.CRContent #footerSection p:last-of-type {
 
 .osteoContent {
     /* overflow: hidden; */
-    
+    height: 100vh;
+    width: 100vw;
     background-image: url('../img/tlo_budynek.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -923,7 +924,7 @@ div.CRContent #footerSection p:last-of-type {
 
  .osteoContent p{
     font-size: 5rem;
-    margin: 6% 3.5% 0 3.5%;
+    margin: 9% 3.5% 0 3.5%;
     font-weight: bold;
 }
 
