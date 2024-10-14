@@ -2088,6 +2088,89 @@ article.KtomalekContent {
     color: white;
 }
 
+/*
+*******************************************************************************
+*/
+
+
+article.poradniaDietetycznaContent {
+    height: 100vh;
+    width: 100vw;
+}
+
+.poradniaDietetycznaContent .poradniaDietetycznaIntro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.poradniaDietetycznaContent .imageContainer {
+    display: inline-block;
+    width: 25%;
+    margin-left: 0%;
+    margin-top: 2%;
+    padding-left: 5%;
+}
+
+.poradniaDietetycznaContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+    display: block;
+}
+
+.poradniaDietetycznaContent h3#title {
+    display: inline-block;
+    width: 72%;
+    font-size: 5.0rem;
+    color:green;
+    font-weight: 900;
+    margin-top: 6%;
+    margin-left: 0%;
+    padding-right: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.poradniaDietetycznaContent h3#title span{
+    text-decoration: underline;
+}
+
+.poradniaDietetycznaContent .poradniaDietetycznaData{
+    font-size: 2.0rem;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 3.5%;
+}
+
+
+
+.poradniaDietetycznaContent .listsContainer {
+    margin-top: 0%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.poradniaDietetycznaContent .listsContainer ul {
+    width:45%;
+    font-size: 3.8rem;
+    font-weight: bold;
+    list-style-type: disc;
+    margin-left: 5%;
+}
+
+
+
+
+
+
+/*
+*******************************************************************************
+*/
+
 
 
 
