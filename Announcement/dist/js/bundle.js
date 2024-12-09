@@ -498,14 +498,18 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(39);
+var isOnline = __webpack_require__(41);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
-var STATUS_CHECK_MS = 1800000;
-var PAGE_RELOAD_MS = 7200000;
-//const STATUS_CHECK_MS = 2000;
-//const PAGE_RELOAD_MS = 3000;
+
+//w obecnej konfiguracji reloadThePage odpala sie dopiero w nocy, 17 godzin po restarcie systemu
+var STATUS_CHECK_MS = 900000;
+var PAGE_RELOAD_MS = 61200000;
+//const STATUS_CHECK_MS = 1800000;
+//const PAGE_RELOAD_MS = 7200000;
+// const STATUS_CHECK_MS = 2000;
+// const PAGE_RELOAD_MS = 3000;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
@@ -23772,11 +23776,11 @@ var _PoradniaDietetyczna = __webpack_require__(38);
 
 var _PoradniaDietetyczna2 = _interopRequireDefault(_PoradniaDietetyczna);
 
-var _SzczepionkiGrypa = __webpack_require__(43);
+var _SzczepionkiGrypa = __webpack_require__(39);
 
 var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
 
-var _AktualizacjaInfo = __webpack_require__(44);
+var _AktualizacjaInfo = __webpack_require__(40);
 
 var _AktualizacjaInfo2 = _interopRequireDefault(_AktualizacjaInfo);
 
@@ -24401,11 +24405,11 @@ var Medea = function Medea(props) {
                             null,
                             "30"
                         ),
-                        "-19.",
+                        "-18.",
                         _react2.default.createElement(
                             "sup",
                             null,
-                            "30"
+                            "00"
                         )
                     ),
                     _react2.default.createElement(
@@ -25326,121 +25330,6 @@ exports.default = PoradniaDietetyczna;
 "use strict";
 
 
-const publicIp = __webpack_require__(40);
-
-const defaults = {
-	timeout: 5000,
-	version: 'v4'
-};
-
-module.exports = options => {
-	options = Object.assign({}, defaults, options);
-	return publicIp[options.version](options).then(() => true).catch(() => false);
-};
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const isIp = __webpack_require__(41);
-
-const defaults = {
-	timeout: 5000
-};
-
-const urls = {
-	v4: 'https://ipv4.icanhazip.com/',
-	v6: 'https://ipv6.icanhazip.com/'
-};
-
-function queryHttps(version, opts) {
-	return new Promise((resolve, reject) => {
-		const doReject = () => reject(new Error('Couldn\'t find your IP'));
-		const xhr = new XMLHttpRequest();
-
-		xhr.onerror = doReject;
-		xhr.ontimeout = doReject;
-		xhr.onload = () => {
-			const ip = xhr.responseText.trim();
-
-			if (!ip || !isIp[version](ip)) {
-				doReject();
-			}
-
-			resolve(ip);
-		};
-
-		xhr.open('GET', urls[version]);
-		xhr.timeout = opts.timeout;
-		xhr.send();
-	});
-}
-
-module.exports.v4 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v4', opts);
-};
-
-module.exports.v6 = opts => {
-	opts = Object.assign({}, defaults, opts);
-	return queryHttps('v6', opts);
-};
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-const ipRegex = __webpack_require__(42);
-
-const isIp = module.exports = x => ipRegex({exact: true}).test(x);
-isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
-isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
-
-const v6seg = '[0-9a-fA-F]{1,4}';
-const v6 = `
-(
-(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
-(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
-(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
-(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
-(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
-(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
-(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
-(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
-)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
-`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
-
-const ip = module.exports = opts => opts && opts.exact ?
-	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
-	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
-
-ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
-ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -25487,7 +25376,7 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
 exports.default = SzczepionkiGrypa;
 
 /***/ }),
-/* 44 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25528,6 +25417,121 @@ var AktualizacjaInfo = function AktualizacjaInfo(props) {
 };
 
 exports.default = AktualizacjaInfo;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(42);
+
+const defaults = {
+	timeout: 5000,
+	version: 'v4'
+};
+
+module.exports = options => {
+	options = Object.assign({}, defaults, options);
+	return publicIp[options.version](options).then(() => true).catch(() => false);
+};
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const isIp = __webpack_require__(43);
+
+const defaults = {
+	timeout: 5000
+};
+
+const urls = {
+	v4: 'https://ipv4.icanhazip.com/',
+	v6: 'https://ipv6.icanhazip.com/'
+};
+
+function queryHttps(version, opts) {
+	return new Promise((resolve, reject) => {
+		const doReject = () => reject(new Error('Couldn\'t find your IP'));
+		const xhr = new XMLHttpRequest();
+
+		xhr.onerror = doReject;
+		xhr.ontimeout = doReject;
+		xhr.onload = () => {
+			const ip = xhr.responseText.trim();
+
+			if (!ip || !isIp[version](ip)) {
+				doReject();
+			}
+
+			resolve(ip);
+		};
+
+		xhr.open('GET', urls[version]);
+		xhr.timeout = opts.timeout;
+		xhr.send();
+	});
+}
+
+module.exports.v4 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v4', opts);
+};
+
+module.exports.v6 = opts => {
+	opts = Object.assign({}, defaults, opts);
+	return queryHttps('v6', opts);
+};
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+const ipRegex = __webpack_require__(44);
+
+const isIp = module.exports = x => ipRegex({exact: true}).test(x);
+isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
+isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const v4 = '(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])){3}';
+
+const v6seg = '[0-9a-fA-F]{1,4}';
+const v6 = `
+(
+(?:${v6seg}:){7}(?:${v6seg}|:)|                                // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
+(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                         // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
+(?:${v6seg}:){5}(?::${v4}|(:${v6seg}){1,2}|:)|                 // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
+(?:${v6seg}:){4}(?:(:${v6seg}){0,1}:${v4}|(:${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
+(?:${v6seg}:){3}(?:(:${v6seg}){0,2}:${v4}|(:${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
+(?:${v6seg}:){2}(?:(:${v6seg}){0,3}:${v4}|(:${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
+(?:${v6seg}:){1}(?:(:${v6seg}){0,4}:${v4}|(:${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
+(?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))           // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
+)(%[0-9a-zA-Z]{1,})?                                           // %eth0            %1
+`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
+
+const ip = module.exports = opts => opts && opts.exact ?
+	new RegExp(`(?:^${v4}$)|(?:^${v6}$)`) :
+	new RegExp(`(?:${v4})|(?:${v6})`, 'g');
+
+ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
+ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
+
 
 /***/ })
 /******/ ]);
