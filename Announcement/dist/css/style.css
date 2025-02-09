@@ -1259,13 +1259,15 @@ article.maseczkiContent {
     background-image: url('../img/tlo_budynek.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 .maseczkiContent .imageContainer {
     display: inline-block;
     width: 35%;
     margin-left: 2%;
-    margin-top: 3%;
+    margin-top: 0%;
 }
 
 .maseczkiContent img {
@@ -1290,8 +1292,9 @@ article.maseczkiContent {
 
 .maseczkiContent p.maseczkiText{
     width: 100%;
-    font-size: 5.5rem;
-    padding: 3% 2% 1% 5%;
+    font-size: 6rem;
+    margin-top: -10%;
+    padding: 0% 2% 1% 5%;
     /* text-indent: 7%; */
     font-weight: 600;
 }
