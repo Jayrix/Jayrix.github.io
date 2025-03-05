@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(43);
+var isOnline = __webpack_require__(44);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23792,6 +23792,10 @@ var _AktualizacjaInfo = __webpack_require__(42);
 
 var _AktualizacjaInfo2 = _interopRequireDefault(_AktualizacjaInfo);
 
+var _DaneRejestracja = __webpack_require__(43);
+
+var _DaneRejestracja2 = _interopRequireDefault(_DaneRejestracja);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23854,7 +23858,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PoradniaDietetyczna2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PoradniaDietetyczna2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -25555,7 +25559,48 @@ exports.default = AktualizacjaInfo;
 "use strict";
 
 
-const publicIp = __webpack_require__(44);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DaneRejestracja = function DaneRejestracja(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "DaneRejestracjaContent" },
+            _react2.default.createElement(
+                "h1",
+                null,
+                "REJESTRACJA DO LEK. POZ"
+            ),
+            _react2.default.createElement(
+                "p",
+                null,
+                "Pacjent rejestruj\u0105cy si\u0119 na wizyt\u0119 do lekarza POZ proszony jest poda\u0107 personelowi rejestracji sw\xF3j aktualny wzrost,wag\u0119 oraz informacj\u0119 o paleniu tytoniu."
+            )
+        )
+    );
+};
+
+exports.default = DaneRejestracja;
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(45);
 
 const defaults = {
 	timeout: 5000,
@@ -25569,12 +25614,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(45);
+const isIp = __webpack_require__(46);
 
 const defaults = {
 	timeout: 5000
@@ -25620,12 +25665,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(46);
+const ipRegex = __webpack_require__(47);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25633,7 +25678,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

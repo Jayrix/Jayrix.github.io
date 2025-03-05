@@ -2207,6 +2207,32 @@ article.poradniaDietetycznaContent {
 
 
 
+.DaneRejestracjaContent {
+    /* overflow: hidden; */
+    
+    background-image: url('../img/tlo_budynek.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height:100vh;
+    
+}
+
+.DaneRejestracjaContent h1{
+    font-size: 8rem;
+    padding: 4% 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+}
+
+.DaneRejestracjaContent p{
+    font-size: 6rem;
+    padding: 6% 3% 0 3%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
 
 /*
 *******************************************************************************
