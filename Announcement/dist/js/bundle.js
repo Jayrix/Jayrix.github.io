@@ -24680,7 +24680,7 @@ var Recepty = function Recepty(props) {
                 _react2.default.createElement(
                     "strong",
                     null,
-                    " rejestracja.ubezpieczalnia@gmail.com "
+                    " rejestracja@ubezpieczalniacieszyn.com "
                 )
             )
         )
