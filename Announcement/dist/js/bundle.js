@@ -23728,10 +23728,6 @@ var _DrFiedor = __webpack_require__(26);
 
 var _DrFiedor2 = _interopRequireDefault(_DrFiedor);
 
-var _Profilaktyka40plus = __webpack_require__(27);
-
-var _Profilaktyka40plus2 = _interopRequireDefault(_Profilaktyka40plus);
-
 var _Recepty = __webpack_require__(28);
 
 var _Recepty2 = _interopRequireDefault(_Recepty);
@@ -23801,6 +23797,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 //import CovidInfo from "./CovidInfo.jsx";
 
+//import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
+
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
 //import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 
@@ -23855,7 +23853,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PoradniaDietetyczna2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka40plus2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PoradniaDietetyczna2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_GabinetChirurgiiDzieciecej2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24582,61 +24580,7 @@ var DrFiedor = function DrFiedor(props) {
 exports.default = DrFiedor;
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Profilaktyka40plus = function Profilaktyka40plus() {
-    return _react2.default.createElement(
-        "article",
-        { className: "Profilaktyka40plusContent" },
-        _react2.default.createElement(
-            "p",
-            { id: "ageInfo" },
-            _react2.default.createElement(
-                "strong",
-                null,
-                "Masz 40 lat lub wi\u0119cej?"
-            ),
-            _react2.default.createElement("br", null),
-            _react2.default.createElement("br", null),
-            "Skorzystaj z pakietu bezp\u0142atnych bada\u0144 diagnostycznych ",
-            _react2.default.createElement(
-                "strong",
-                null,
-                _react2.default.createElement("br", null),
-                "i b\u0105d\u017A zdr\xF3w!"
-            )
-        ),
-        _react2.default.createElement(
-            "p",
-            { id: "urlInfo" },
-            "SPRAWD\u0179 NA:",
-            _react2.default.createElement("br", null),
-            _react2.default.createElement(
-                "pre",
-                null,
-                " www.pacjent.gov.pl/profilaktyka "
-            )
-        )
-    );
-};
-
-exports.default = Profilaktyka40plus;
-
-/***/ }),
+/* 27 */,
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
