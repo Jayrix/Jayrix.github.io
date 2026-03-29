@@ -23732,10 +23732,6 @@ var _Recepty = __webpack_require__(27);
 
 var _Recepty2 = _interopRequireDefault(_Recepty);
 
-var _TrzeciaSzczepionka = __webpack_require__(28);
-
-var _TrzeciaSzczepionka2 = _interopRequireDefault(_TrzeciaSzczepionka);
-
 var _Maseczki = __webpack_require__(29);
 
 var _Maseczki2 = _interopRequireDefault(_Maseczki);
@@ -23772,10 +23768,6 @@ var _Ktomalek = __webpack_require__(37);
 
 var _Ktomalek2 = _interopRequireDefault(_Ktomalek);
 
-var _SzczepionkiGrypa = __webpack_require__(38);
-
-var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
-
 var _AktualizacjaInfo = __webpack_require__(39);
 
 var _AktualizacjaInfo2 = _interopRequireDefault(_AktualizacjaInfo);
@@ -23796,6 +23788,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -23815,6 +23808,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 //import DrPerchala from "./DrPerchala.jsx";
 
 //import PoradniaDietetyczna from "./PoradniaDietetyczna.jsx";
+//import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -23851,7 +23845,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24631,63 +24625,7 @@ var Recepty = function Recepty(props) {
 exports.default = Recepty;
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "TrzeciaSzczepionkaContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza", title: "osteoporoza" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "BADANIE NA OSTEOPOROZ\u0118"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "TrzeciaSzczepionkaText" },
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "W dniu 09.02.2026"
-                ),
-                " odb\u0119d\u0105 si\u0119 badania ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "osteoporozy"
-                ),
-                " w osteobusie na naszym parkingu. Zapisy w rejestracji na I pi\u0119trze."
-            )
-        )
-    );
-};
-
-exports.default = TrzeciaSzczepionka;
-
-/***/ }),
+/* 28 */,
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25248,58 +25186,7 @@ var Ktomalek = function Ktomalek(props) {
 exports.default = Ktomalek;
 
 /***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "vaccineContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW GRYPIE"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "vaccineText" },
-                "Zbli\u017Ca si\u0119 okres sezonowej grypy. Prosimy o zadbanie o sw\xF3j stan zdrowia i zg\u0142aszanie si\u0119 do szczepie\u0144. ",
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "Szczepionki s\u0105 za darmo w wieku 0-18 lat i powy\u017Cej 65 roku \u017Cycia, w przypadku pozosta\u0142ych os\xF3b kosztuj\u0105 26,60 z\u0142."
-                ),
-                "\xA0Informacje u lekarzy i w rejestracji."
-            )
-        )
-    );
-};
-
-exports.default = SzczepionkiGrypa;
-
-/***/ }),
+/* 38 */,
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
