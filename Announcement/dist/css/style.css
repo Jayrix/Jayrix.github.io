@@ -1232,7 +1232,7 @@ article.TrzeciaSzczepionkaContent {
 .TrzeciaSzczepionkaContent p.TrzeciaSzczepionkaText{
     width: 100%;
     font-size: 5.5rem;
-    padding: 0 1% 0 5%;
+    padding: 0 3% 0 3%;
     /* text-indent: 7%; */
     font-weight: 600;
 }
