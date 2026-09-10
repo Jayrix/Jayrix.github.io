@@ -23780,6 +23780,10 @@ var _DaneRejestracja = __webpack_require__(39);
 
 var _DaneRejestracja2 = _interopRequireDefault(_DaneRejestracja);
 
+var _CHUK = __webpack_require__(44);
+
+var _CHUK2 = _interopRequireDefault(_CHUK);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23848,7 +23852,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_CHUK2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24829,7 +24833,13 @@ var Kardiolog = function Kardiolog(props) {
             _react2.default.createElement(
                 "p",
                 { className: "KardiologText" },
-                "Kardiolog w NZOZ \"Ubezpieczalnia\" - r\xF3wnie\u017C wizyty prywatne. Szczeg\xF3\u0142y w rejestracji."
+                "Kardiolog w NZOZ \"Ubezpieczalnia\" - r\xF3wnie\u017C wizyty prywatne ",
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "(w tym dla dzieci od 15 roku \u017Cycia)"
+                ),
+                ". Szczeg\xF3\u0142y w rejestracji."
             )
         )
     );
@@ -25442,6 +25452,42 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CHUK = function CHUK(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "CHUKContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/CHUK/CHUK_256.png", alt: "CHUK", title: "CHUK" })
+            )
+        )
+    );
+};
+
+exports.default = CHUK;
 
 /***/ })
 /******/ ]);
