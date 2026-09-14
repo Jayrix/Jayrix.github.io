@@ -2267,6 +2267,32 @@ article.CHUKContent {
 ********************************************************************************
 */
 
+article.ProfilaktykaContent {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    
+}
+
+.ProfilaktykaContent .imageContainer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.ProfilaktykaContent img {
+    max-width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*
+********************************************************************************
+*/
+
+
 
 /*
 *******************************************************************************
