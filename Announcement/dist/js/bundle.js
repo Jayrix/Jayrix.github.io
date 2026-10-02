@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(41);
+var isOnline = __webpack_require__(42);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23784,9 +23784,17 @@ var _CHUK = __webpack_require__(40);
 
 var _CHUK2 = _interopRequireDefault(_CHUK);
 
-var _Profilaktyka = __webpack_require__(45);
+var _Profilaktyka = __webpack_require__(41);
 
 var _Profilaktyka2 = _interopRequireDefault(_Profilaktyka);
+
+var _Refleksologia = __webpack_require__(46);
+
+var _Refleksologia2 = _interopRequireDefault(_Refleksologia);
+
+var _Refleksologia3 = __webpack_require__(47);
+
+var _Refleksologia4 = _interopRequireDefault(_Refleksologia3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23856,7 +23864,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Profilaktyka2.default, null), _react2.default.createElement(_CHUK2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
+            announcements: [_react2.default.createElement(_Refleksologia2.default, null), _react2.default.createElement(_Refleksologia4.default, null), _react2.default.createElement(_Profilaktyka2.default, null), _react2.default.createElement(_CHUK2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Maseczki2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_Ktomalek2.default, null), _react2.default.createElement(_HPV2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_PoradniaKardiologiczna2.default, null), _react2.default.createElement(_GabinetNeurologiczny2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Rejestracja2.default, null), _react2.default.createElement(_Kardiolog2.default, null), _react2.default.createElement(_PracowniaUSG2.default, null), _react2.default.createElement(_Recepty2.default, null), _react2.default.createElement(_Profilaktyka2.default, null), _react2.default.createElement(_TrzeciaSzczepionka2.default, null), _react2.default.createElement(_DaneRejestracja2.default, null), _react2.default.createElement(_Antiviral2.default, null), _react2.default.createElement(_AktualizacjaInfo2.default, null), _react2.default.createElement(_ZleceniaRecept2.default, null), _react2.default.createElement(_SzczepieniaCovid2.default, null), _react2.default.createElement(_Medea2.default, null), _react2.default.createElement(_DrFiedor2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -24056,7 +24064,7 @@ var CR = function CR(props) {
                     _react2.default.createElement(
                         "div",
                         { className: "logoContainer" },
-                        _react2.default.createElement("img", { id: "logo", src: "./dist/img/cr/logo.png", alt: "Logo", title: "Logo" })
+                        _react2.default.createElement("img", { id: "logo", src: "./dist/img/cr/logo.png", alt: "Logo" })
                     ),
                     _react2.default.createElement(
                         "div",
@@ -24523,7 +24531,7 @@ var Antiviral = function Antiviral(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/antiviral/antiviral.jpg", alt: "Leki_przeciwwirusowe", title: "Leki_przeciwwirusowe" })
+                _react2.default.createElement("img", { src: "./dist/img/antiviral/antiviral.jpg", alt: "Leki_przeciwwirusowe" })
             ),
             _react2.default.createElement(
                 "strong",
@@ -24615,7 +24623,7 @@ var Recepty = function Recepty(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/recepty/recepta.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119", title: "Recepta" })
+                _react2.default.createElement("img", { src: "./dist/img/recepty/recepta.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119" })
             ),
             _react2.default.createElement(
                 "p",
@@ -24663,7 +24671,7 @@ var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza", title: "osteoporoza" })
+                _react2.default.createElement("img", { src: "./dist/img/trzeciaSzczepionka/osteoporoza.jpg", alt: "osteoporoza" })
             ),
             _react2.default.createElement(
                 "strong",
@@ -24720,7 +24728,7 @@ var Maseczki = function Maseczki(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/maseczki/maska.jpg", alt: "maska", title: "maska" })
+                _react2.default.createElement("img", { src: "./dist/img/maseczki/maska.jpg", alt: "maska" })
             ),
             _react2.default.createElement(
                 "strong",
@@ -24827,7 +24835,7 @@ var Kardiolog = function Kardiolog(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/Kardiolog/kardiologia.jpg", alt: "kardiologia", title: "kardiologia" })
+                _react2.default.createElement("img", { src: "./dist/img/Kardiolog/kardiologia.jpg", alt: "kardiologia" })
             ),
             _react2.default.createElement(
                 "p",
@@ -24879,7 +24887,7 @@ var GabinetNeurologiczny = function GabinetNeurologiczny(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/gabinetNeurologiczny/neurologia.png", alt: "neurologia", title: "neurologia" })
+                _react2.default.createElement("img", { src: "./dist/img/gabinetNeurologiczny/neurologia.png", alt: "neurologia" })
             ),
             _react2.default.createElement(
                 "h3",
@@ -24935,7 +24943,7 @@ var PracowniaUSG = function PracowniaUSG(props) {
                 _react2.default.createElement(
                     "div",
                     { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/pracowniaUSG/pracowniaUSG.jpg", alt: "pracowniaUSG", title: "pracowniaUSG" })
+                    _react2.default.createElement("img", { src: "./dist/img/pracowniaUSG/pracowniaUSG.jpg", alt: "pracowniaUSG" })
                 ),
                 _react2.default.createElement(
                     "h3",
@@ -25041,7 +25049,7 @@ var PoradniaKardiologiczna = function PoradniaKardiologiczna(props) {
                 _react2.default.createElement(
                     "div",
                     { className: "imageContainer" },
-                    _react2.default.createElement("img", { src: "./dist/img/poradniaKardiologiczna/poradniaKardiologiczna.jpg", alt: "poradniaKardiologiczna", title: "poradniaKardiologiczna" })
+                    _react2.default.createElement("img", { src: "./dist/img/poradniaKardiologiczna/poradniaKardiologiczna.jpg", alt: "poradniaKardiologiczna" })
                 ),
                 _react2.default.createElement(
                     "h3",
@@ -25134,7 +25142,7 @@ var HPV = function HPV(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV", title: "HPV" })
+                _react2.default.createElement("img", { src: "./dist/img/HPV/HPV.jpg", alt: "HPV" })
             ),
             _react2.default.createElement(
                 "strong",
@@ -25233,7 +25241,7 @@ var Ktomalek = function Ktomalek(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/ktomalek/ktomalek.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119", title: "Ktomalek" })
+                _react2.default.createElement("img", { src: "./dist/img/ktomalek/ktomalek.jpg", alt: "Obraz przedstawiaj\u0105cy recept\u0119" })
             ),
             _react2.default.createElement(
                 "p",
@@ -25370,7 +25378,7 @@ var CHUK = function CHUK(props) {
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/CHUK/CHUK_256.png", alt: "CHUK", title: "CHUK" })
+                _react2.default.createElement("img", { src: "./dist/img/CHUK/CHUK_256.png", alt: "CHUK" })
             )
         )
     );
@@ -25385,7 +25393,43 @@ exports.default = CHUK;
 "use strict";
 
 
-const publicIp = __webpack_require__(42);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Profilaktyka = function Profilaktyka(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "ProfilaktykaContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/profilaktyka/profilaktyka256.png", alt: "profilaktyka" })
+            )
+        )
+    );
+};
+
+exports.default = Profilaktyka;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(43);
 
 const defaults = {
 	timeout: 5000,
@@ -25399,12 +25443,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(43);
+const isIp = __webpack_require__(44);
 
 const defaults = {
 	timeout: 5000
@@ -25450,12 +25494,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(44);
+const ipRegex = __webpack_require__(45);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25463,7 +25507,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25494,7 +25538,7 @@ ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g')
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25510,24 +25554,60 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Profilaktyka = function Profilaktyka(props) {
+var Refleksologia1 = function Refleksologia1(props) {
 
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(
             "article",
-            { className: "ProfilaktykaContent" },
+            { className: "RefleksologiaContent" },
             _react2.default.createElement(
                 "div",
                 { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/profilaktyka/profilaktyka256.png", alt: "profilaktyka", title: "profilaktyka" })
+                _react2.default.createElement("img", { src: "./dist/img/Refleksologia/01.jpg", alt: "Refleksologia" })
             )
         )
     );
 };
 
-exports.default = Profilaktyka;
+exports.default = Refleksologia1;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Refleksologia2 = function Refleksologia2(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "RefleksologiaContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/Refleksologia/02.jpg", alt: "Refleksologia" })
+            )
+        )
+    );
+};
+
+exports.default = Refleksologia2;
 
 /***/ })
 /******/ ]);
